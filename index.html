@@ -1,164 +1,307 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-
   <title>Shriraghav Tech | Laptop Repair Delhi</title>
   <meta name="description" content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
 
   <!-- Tailwind -->
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Icons -->
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- EmailJS -->
-
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <style>
-    body { background:#000; color:#fff; font-family:sans-serif; }
-    .gold { color:#D4AF37; }
-    .btn { background:#B91C1C; padding:12px 24px; border-radius:999px; }
+    :root {
+      --bg-primary: #000;
+      --text-primary: #fff;
+      --gold: #D4AF37;
+      --bg-secondary: #111;
+      --border-color: #333;
+    }
+    
+    [data-theme="day"] {
+      --bg-primary: #fff;
+      --text-primary: #000;
+      --gold: #B8860B;
+      --bg-secondary: #f8f9fa;
+      --border-color: #e0e0e0;
+    }
+
+    body { 
+      background: var(--bg-primary); 
+      color: var(--text-primary); 
+      font-family: sans-serif; 
+      transition: all 0.3s ease;
+    }
+    
+    .gold { color: var(--gold); }
+    .btn { 
+      background: #B91C1C; 
+      padding: 12px 24px; 
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #991b1b; transform: translateY(-2px); }
+    
+    /* Form inputs */
+    input, textarea {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Borders adapt to theme */
+    .border { border-color: var(--border-color); }
+    .bg-gray-900 { background: var(--bg-secondary) !important; }
+    .border-t { border-color: var(--border-color) !important; }
+    .border-gray-700 { border-color: var(--border-color) !important; }
     
     /* Animation */
     .fade-up {
-      opacity:0;
-      transform:translateY(30px);
-      transition:0.8s;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.8s;
     }
     .fade-up.show {
-      opacity:1;
-      transform:translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-  </style>
 
+    /* Navbar shadow */
+    nav { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  </style>
 </head>
 
-<body>
+<body data-theme="night">
 
 <!-- NAVBAR -->
-
 <nav class="flex justify-between p-5 bg-black fixed w-full z-50">
   <h1 class="text-xl font-bold gold">Shriraghav Tech</h1>
-  <div class="space-x-4 hidden md:block">
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <div class="flex items-center space-x-4">
+    <div class="hidden md:block">
+      <a href="#services" class="hover:gold transition-colors">Services</a>
+      <a href="#contact" class="hover:gold transition-colors">Contact</a>
+    </div>
+    <!-- THEME TOGGLE BUTTON -->
+    <button id="themeToggle" class="theme-toggle md:block hidden" title="Toggle Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <!-- MOBILE MENU (hamburger) -->
+    <button class="md:hidden p-2">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
   </div>
 </nav>
 
 <!-- HERO -->
-
-<section class="h-screen flex flex-col justify-center items-center text-center px-4">
+<section class="h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
   <h1 class="text-5xl font-bold mb-4 fade-up">Fix Your Laptop Today</h1>
   <p class="gold text-xl mb-6 fade-up">Trusted Tech Support in Delhi</p>
   <a href="#contact" class="btn fade-up">Get Free Diagnosis</a>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services" class="py-20 text-center">
   <h2 class="text-3xl mb-10 fade-up">Our Services</h2>
 
   <div class="grid md:grid-cols-3 gap-6 px-6">
-    <div class="p-6 border rounded fade-up">Hardware Repair</div>
-    <div class="p-6 border rounded fade-up">Software Fix</div>
-    <div class="p-6 border rounded fade-up">Data Recovery</div>
+    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
+      <i class="fas fa-tools text-3xl gold mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Hardware Repair</h3>
+      <p class="text-sm opacity-80">Motherboard, screen, battery replacement</p>
+    </div>
+    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
+      <i class="fas fa-laptop-code text-3xl gold mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Software Fix</h3>
+      <p class="text-sm opacity-80">OS reinstall, virus removal, optimization</p>
+    </div>
+    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
+      <i class="fas fa-hdd text-3xl gold mb-4"></i>
+      <h3 class="text-xl font-bold mb-2">Data Recovery</h3>
+      <p class="text-sm opacity-80">Recover lost files from crashed drives</p>
+    </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-
-<section class="py-20 text-center bg-gray-900">
+<section class="py-20 text-center">
   <h2 class="text-3xl mb-10">What Clients Say</h2>
 
   <div class="max-w-3xl mx-auto space-y-6">
-    <div class="border p-4 rounded">
-      ⭐⭐⭐⭐⭐ "Fixed my laptop in 1 day!"  
+    <div class="border p-6 rounded-xl bg-[var(--bg-secondary)] hover:shadow-lg transition-all">
+      <div class="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
+      <p>"Fixed my laptop in 1 day! Amazing service."</p>
+      <p class="text-sm opacity-75 mt-2">- Priya S., Delhi</p>
     </div>
-    <div class="border p-4 rounded">
-      ⭐⭐⭐⭐⭐ "Best service in Delhi"  
+    <div class="border p-6 rounded-xl bg-[var(--bg-secondary)] hover:shadow-lg transition-all">
+      <div class="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
+      <p>"Best laptop repair service in Delhi. Highly recommended!"</p>
+      <p class="text-sm opacity-75 mt-2">- Rohan K., Palam</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="py-20 text-center px-4">
   <h2 class="text-3xl mb-6">Contact Us</h2>
+  <p class="gold text-xl mb-8 max-w-2xl mx-auto">Get your free diagnosis today. Same-day service available!</p>
 
   <form id="contactForm" class="max-w-md mx-auto space-y-4">
-    <input type="text" id="name" placeholder="Name" required class="w-full p-3 text-black">
-    <input type="email" id="email" placeholder="Email" required class="w-full p-3 text-black">
-    <textarea id="message" placeholder="Message" required class="w-full p-3 text-black"></textarea>
-
-```
-<button class="btn w-full">Send Message</button>
-```
-
+    <input type="text" id="name" placeholder="Your Name" required class="w-full p-4 rounded-xl">
+    <input type="email" id="email" placeholder="your@email.com" required class="w-full p-4 rounded-xl">
+    <textarea id="message" placeholder="Describe your laptop issue..." required rows="4" class="w-full p-4 rounded-xl"></textarea>
+    <button type="submit" class="btn w-full text-lg font-semibold">Send Message</button>
   </form>
 </section>
 
 <!-- MAP -->
-
 <section class="px-6 pb-20">
   <iframe 
     src="https://www.google.com/maps?q=Palam+Delhi&output=embed"
-    class="w-full h-80 rounded-xl">
+    class="w-full h-80 rounded-xl shadow-2xl"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
   </iframe>
 </section>
 
 <!-- FOOTER -->
-
-<footer class="text-center py-10 border-t border-gray-700">
-  <p>© 2026 Shriraghav Tech</p>
-  <p class="gold">Delhi | +91 85128 32150</p>
+<footer class="text-center py-10 border-t">
+  <p>© 2026 Shriraghav Tech. All rights reserved.</p>
+  <p class="gold text-lg mt-2">📍 Palam, Delhi | 📞 +91 85128 32150</p>
 </footer>
 
 <!-- WHATSAPP -->
+<a href="https://wa.me/918512832150?text=Hi%20I%20need%20laptop%20repair" 
+   class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:shadow-xl transition-all z-40" 
+   target="_blank">
+  <i class="fab fa-whatsapp text-xl"></i>
+</a>
 
-<a href="https://wa.me/918512832150?text=Hi%20I%20need%20laptop%20repair"
-class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full"> <i class="fab fa-whatsapp text-xl"></i> </a>
+<!-- MOBILE THEME TOGGLE -->
+<button id="mobileThemeToggle" class="fixed top-20 right-5 theme-toggle md:hidden z-50" title="Toggle Theme">
+  <i class="fas fa-moon"></i>
+</button>
 
 <!-- EMAILJS INIT -->
-
 <script>
 (function(){
   emailjs.init("YOUR_PUBLIC_KEY");
 })();
 </script>
 
-<!-- FORM SEND -->
-
+<!-- FORM HANDLER -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
+  
+  // Simulate loading
+  const btn = e.target.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = "Sending...";
+  btn.disabled = true;
 
   emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
     from_name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     message: document.getElementById("message").value
   }).then(()=>{
-    alert("Message sent successfully!");
+    alert("✅ Message sent successfully! We'll contact you soon.");
+    document.getElementById("contactForm").reset();
+  }).catch(()=>{
+    alert("❌ Failed to send message. Please try again.");
+  }).finally(()=>{
+    btn.textContent = originalText;
+    btn.disabled = false;
   });
 });
 </script>
 
-<!-- SCROLL ANIMATION -->
+<!-- THEME TOGGLE SCRIPT -->
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+const body = document.body;
+let isNight = true;
 
+function toggleTheme() {
+  isNight = !isNight;
+  body.setAttribute('data-theme', isNight ? 'night' : 'day');
+  
+  // Update icons
+  const icons = document.querySelectorAll('.theme-toggle i');
+  icons.forEach(icon => {
+    if (isNight) {
+      icon.className = 'fas fa-moon';
+    } else {
+      icon.className = 'fas fa-sun';
+    }
+  });
+  
+  // Save preference
+  localStorage.setItem('theme', isNight ? 'night' : 'day');
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'night';
+isNight = savedTheme === 'night';
+body.setAttribute('data-theme', savedTheme);
+document.querySelectorAll('.theme-toggle i').forEach(icon => {
+  icon.className = isNight ? 'fas fa-moon' : 'fas fa-sun';
+});
+
+// Event listeners
+themeToggle.addEventListener('click', toggleTheme);
+mobileThemeToggle.addEventListener('click', toggleTheme);
+</script>
+
+<!-- SCROLL ANIMATION -->
 <script>
 const elements = document.querySelectorAll(".fade-up");
 
 window.addEventListener("scroll", () => {
   elements.forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 50){
+    if (top < window.innerHeight - 50) {
       el.classList.add("show");
     }
   });
