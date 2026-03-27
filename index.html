@@ -1,582 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shriraghav Tech - Expert Hardware & Software Support</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 
-    Accessible inline SVG logo symbol. 
-    Use in the page with: <svg><use href="#shriraghav-logo-symbol"></use></svg>
+  <!-- SEO -->
+
+  <title>Shriraghav Tech | Laptop Repair Delhi</title>
+  <meta name="description" content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
+
+  <!-- Tailwind -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- EmailJS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <style>
+    body { background:#000; color:#fff; font-family:sans-serif; }
+    .gold { color:#D4AF37; }
+    .btn { background:#B91C1C; padding:12px 24px; border-radius:999px; }
     
-    FIX: Increased font size for company name (24 -> 28) and tagline (14 -> 16) and adjusted y-coordinates.
-    -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-      <symbol id="shriraghav-logo-symbol" viewBox="0 0 320 72" preserveAspectRatio="xMinYMid meet" role="img" aria-labelledby="logoTitle logoDesc">
-        <title id="logoTitle">Shriraghav Tech logo</title>
-        <desc id="logoDesc">Stylized SR monogram in a blue rounded square to the left with the text Shriraghav Tech and the tagline Expert hardware and software support to the right; professional and trustworthy tone</desc>
+    /* Animation */
+    .fade-up {
+      opacity:0;
+      transform:translateY(30px);
+      transition:0.8s;
+    }
+    .fade-up.show {
+      opacity:1;
+      transform:translateY(0);
+    }
+  </style>
 
-        <!-- Red rounded square background with white monogram. This gets overridden by CSS variables. -->
-        <rect x="8" y="6" width="60" height="60" rx="12" fill="#B91C1C"></rect>
-        <text x="38" y="44" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff" dominant-baseline="middle">SR</text>
-
-        <!-- Company name (Increased Font Size and adjusted Y) -->
-        <text x="86" y="26" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="28" fill="#0f172a">Shriraghav Tech</text>
-
-        <!-- Tagline (Increased Font Size and adjusted Y) -->
-        <text x="86" y="50" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="16" fill="#D4AF37">Expert Hardware &amp; Software Support</text>
-      </symbol>
-    </svg>
-    
-    <!-- Custom Tailwind Configuration (must be declared before loading the CDN) -->
-    <script>
-        tailwind = window.tailwind || {};
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    // Colors are defined in the <style> block below to allow for CSS variables
-                }
-            }
-        };
-    </script>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <style>
-        /* Small style enhancement for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* --- Theme: Black (secondary), Red (primary) and Gold (accent) overrides --- */
-        :root{
-          --theme-red: #B91C1C;
-          --theme-red-dark: #7F1D1D;
-          --theme-gold: #D4AF37;
-          --theme-black: #000000;
-        }
-
-        /* Primary utilities */
-        .bg-primary-600{ background-color: var(--theme-red) !important; }
-        .bg-primary-700{ background-color: var(--theme-red-dark) !important; }
-        .text-primary-600{ color: var(--theme-red) !important; }
-        .text-primary-700{ color: var(--theme-red-dark) !important; }
-        .focus\:ring-primary-600:focus{ box-shadow: 0 0 0 4px rgba(185,28,28,0.20) !important; }
-
-        /* Secondary / Footer */
-        .bg-secondary{ background-color: var(--theme-black) !important; }
-
-        /* Gold accents (These already exist) */
-        .text-gray-300{ color: var(--theme-gold) !important; }
-        .text-gray-400{ color: rgba(212,175,55,0.9) !important; }
-        .text-blue-100{ color: var(--theme-gold) !important; } /* Hero subtitle */
-
-        /* Forms / borders */
-        .border-gray-300{ border-color: rgba(212,175,55,0.18) !important; }
-
-        /* CTA adjustments */
-        .bg-white.text-primary-600{ background-color: #fff !important; color: var(--theme-red) !important; }
-        .bg-primary-600.text-white{ background-color: var(--theme-red) !important; color: #fff !important; }
-
-        /* Hover states */
-        .hover\:text-primary-600:hover{ color: var(--theme-red) !important; }
-        .hover\:bg-primary-700:hover{ background-color: var(--theme-red-dark) !important; }
-
-        /* SVG Logo Tweaks */
-        footer #shriraghav-logo-symbol rect{ fill: var(--theme-black) !important; }
-        footer #shriraghav-logo-symbol text[fill="#0f172a"], 
-        footer #shriraghav-logo-symbol text[fill="#D4AF37"]{ 
-             fill: var(--theme-gold) !important; 
-        }
-
-        /* NEW: Global Text Color Change to GOLD in Light Mode (Night Mode OFF) */
-        html:not(.dark) .text-gray-800,
-        html:not(.dark) .text-black,
-        html:not(.dark) .text-gray-700,
-        html:not(.dark) .text-gray-600 {
-            /* Applies gold color to all standard dark text classes in Light Mode */
-            color: var(--theme-gold) !important; 
-        }
-
-        /* Override: Ensure Logo Company Name is readable in Light Mode (Header) on white background */
-        nav:not(.dark) #shriraghav-logo-symbol text[fill="#0f172a"] {
-            fill: var(--theme-red-dark) !important; /* Use dark red for strong contrast on white background */
-        }
-
-
-        /* --- Simple dark-mode overrides (scoped to .dark on <html>) --- */
-        html.dark { background-color: #081024; color: #e6eef8; }
-
-        /* Common element overrides used by the page in dark mode */
-        .dark .bg-white { background-color: #0f1724 !important; }
-        .dark .bg-gray-50 { background-color: #071227 !important; }
-        .dark .text-gray-600 { color: #cbd5e1 !important; }
-        .dark .text-gray-700 { color: #94a3b8 !important; }
-        .dark .text-gray-800 { color: #e6eef8 !important; } /* Main body text */
-        .dark .text-gray-400 { color: #94a3b8 !important; }
-        .dark .text-gray-300 { color: #a3aed6 !important; }
-        .dark .text-black { color: #e6eef8 !important; }
-        .dark .bg-secondary { background-color: #071227 !important; } /* Footer bg in dark mode */
-
-        /* Fix for logo text in dark mode (header) - ensures the company name is light */
-        .dark nav #shriraghav-logo-symbol text[fill="#0f172a"] {
-            fill: #e6eef8 !important;
-        }
-
-        /* Toggle styling */
-        #theme-toggle { border: 1px solid rgba(15,23,42,0.06); }
-        .dark #theme-toggle { background: transparent; border-color: rgba(255,255,255,0.08); color: #e6eef8; }
-
-        /* Custom utility for the hero section background image */
-        .hero-bg {
-            background-image: url('https://placehold.co/1920x800/1e293b/d1d5db/png?text=Modern+Tech+Background');
-            background-size: cover;
-            background-position: center;
-        }
-        .dark .hero-bg {
-            background-image: url('https://placehold.co/1920x800/0f172a/94a3b8/png?text=Modern+Tech+Background+Dark');
-        }
-
-        /* Input field focus glow */
-        .input-focus-glow:focus {
-            border-color: var(--theme-red);
-            box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.4);
-            outline: none;
-        }
-    </style>
 </head>
-<body class="font-sans text-gray-800 antialiased">
 
-    <!-- Header & Navigation Bar -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo/Company Name -->
-            <a href="#">
-                <!-- Use the new, complete logo symbol. Height is 10 (40px) -->
-                <svg class="w-auto h-10" preserveAspectRatio="xMinYMid meet"><use href="#shriraghav-logo-symbol"></use></svg>
-            </a>
-            
-            <!-- Desktop Navigation Links -->
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#services" class="text-black hover:text-primary-600 transition duration-300">Services</a>
-                <a href="#about" class="text-black hover:text-primary-600 transition duration-300">About Us</a>
-                <a href="https://iamnikhilraghav.blogspot.com/2025/11/blog-post.html" target="_blank" rel="noopener noreferrer" class="text-black hover:text-primary-600 transition duration-300">Blog</a>
-                <a href="#contact" class="text-black hover:text-primary-600 transition duration-300">Contact</a>
-                <div class="flex items-center space-x-4">
-                    <a href="#contact" class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300 font-medium shadow-lg">
-                        Get Support
-                    </a>
+<body>
 
-                    <!-- Day / Night Toggle -->
-                    <button id="theme-toggle" aria-label="Toggle color mode" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 transition shadow-sm">
-                        <i id="theme-icon" class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl text-black">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
-            <a href="#services" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 mobile-nav-item">Services</a>
-            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 mobile-nav-item">About Us</a>
-            <a href="https://iamnikhilraghav.blogspot.com/2025/11/blog-post.html" target="_blank" rel="noopener noreferrer" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 mobile-nav-item">Blog</a>
-            <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 mobile-nav-item">Contact</a>
-            <a href="#contact" class="block px-6 py-4 text-center bg-primary-600 text-white font-medium hover:bg-primary-700 shadow-md">
-                Get Support
-            </a>
-        </div>
-    </nav>
+<!-- NAVBAR -->
 
-    <!-- Main Content -->
-    <main class="mt-16">
-        
-        <!-- Hero Section -->
-        <section class="hero-bg py-24 md:py-36 relative overflow-hidden" id="home">
-            <div class="absolute inset-0 bg-secondary bg-opacity-80 dark:bg-opacity-90"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-4 leading-tight">
-                    Reliable Tech Solutions for Every Challenge
-                </h1>
-                <p class="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto font-medium">
-                    From complex hardware repairs to cutting-edge software deployment, Shriraghav Tech delivers expertise you can trust.
-                </p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#contact" class="bg-primary-600 text-white text-lg px-8 py-3 rounded-full hover:bg-primary-700 transition duration-300 font-semibold shadow-xl transform hover:scale-105">
-                        Start Your Free Consultation
-                    </a>
-                    <a href="#services" class="bg-white text-primary-600 text-lg px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 font-semibold shadow-xl transform hover:scale-105">
-                        View Our Services
-                    </a>
-                </div>
-            </div>
-        </section>
+<nav class="flex justify-between p-5 bg-black fixed w-full z-50">
+  <h1 class="text-xl font-bold gold">Shriraghav Tech</h1>
+  <div class="space-x-4 hidden md:block">
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-        <!-- Services Section -->
-        <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-900" id="services">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 text-black">Our Core Expertise</h2>
-                <p class="text-center text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                    We cover the full spectrum of technical support, ensuring your systems are running optimally, securely, and efficiently.
-                </p>
+<!-- HERO -->
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Service Card 1: Hardware Repair -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-microchip"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Advanced Hardware Repair</h3>
-                        <p class="text-gray-700">
-                            Component-level diagnostics and repair for PCs, laptops, servers, and specialized equipment. We fix what others replace, saving you time and money.
-                        </p>
-                    </div>
+<section class="h-screen flex flex-col justify-center items-center text-center px-4">
+  <h1 class="text-5xl font-bold mb-4 fade-up">Fix Your Laptop Today</h1>
+  <p class="gold text-xl mb-6 fade-up">Trusted Tech Support in Delhi</p>
+  <a href="#contact" class="btn fade-up">Get Free Diagnosis</a>
+</section>
 
-                    <!-- Service Card 2: Software Development & Support -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-code"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Software & System Optimization</h3>
-                        <p class="text-gray-700">
-                            Operating system reinstallation, performance tuning, data migration, and custom scripting for efficient workflow automation.
-                        </p>
-                    </div>
+<!-- SERVICES -->
 
-                    <!-- Service Card 3: Network & Security -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Cybersecurity & Networking</h3>
-                        <p class="text-gray-700">
-                            Secure network setup, firewall configuration, virus removal, and comprehensive protection against modern cyber threats.
-                        </p>
-                    </div>
+<section id="services" class="py-20 text-center">
+  <h2 class="text-3xl mb-10 fade-up">Our Services</h2>
 
-                    <!-- Service Card 4: Data Recovery -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-database"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Critical Data Recovery</h3>
-                        <p class="text-gray-700">
-                            Specialized recovery services for accidental deletion, corrupted drives, or system failures to retrieve your valuable business and personal data.
-                        </p>
-                    </div>
+  <div class="grid md:grid-cols-3 gap-6 px-6">
+    <div class="p-6 border rounded fade-up">Hardware Repair</div>
+    <div class="p-6 border rounded fade-up">Software Fix</div>
+    <div class="p-6 border rounded fade-up">Data Recovery</div>
+  </div>
+</section>
 
-                    <!-- Service Card 5: Remote Support -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-headset"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">24/7 Remote Assistance</h3>
-                        <p class="text-gray-700">
-                            Immediate troubleshooting and support via secure remote connection, solving most software issues without needing an on-site visit.
-                        </p>
-                    </div>
+<!-- TESTIMONIALS -->
 
-                    <!-- Service Card 6: IT Consulting -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl hover:shadow-primary-600/30 transition duration-500 border border-gray-100 dark:border-gray-700">
-                        <div class="text-4xl text-primary-600 mb-4"><i class="fas fa-lightbulb"></i></div>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Strategic IT Consulting</h3>
-                        <p class="text-gray-700">
-                            Guidance on IT infrastructure planning, hardware procurement, and cloud migration strategies to future-proof your business.
-                        </p>
-                    </div>
+<section class="py-20 text-center bg-gray-900">
+  <h2 class="text-3xl mb-10">What Clients Say</h2>
 
-                </div>
-            </div>
-        </section>
+  <div class="max-w-3xl mx-auto space-y-6">
+    <div class="border p-4 rounded">
+      ⭐⭐⭐⭐⭐ "Fixed my laptop in 1 day!"  
+    </div>
+    <div class="border p-4 rounded">
+      ⭐⭐⭐⭐⭐ "Best service in Delhi"  
+    </div>
+  </div>
+</section>
 
-        <!-- About Us Section -->
-        <section class="py-16 md:py-24" id="about">
-            <div class="container mx-auto px-6">
-                <div class="lg:flex lg:space-x-12 items-center">
-                    
-                    <!-- Text Content -->
-                    <div class="lg:w-1/2 mb-10 lg:mb-0">
-                        <h2 class="text-4xl font-bold mb-4 text-black">Driven by Expertise, Focused on You</h2>
-                        <p class="text-xl text-gray-700 mb-6">
-                            Shriraghav Tech was founded on the principle that superior technical support should be accessible, transparent, and driven by deep expertise. We are not just repair people; we are problem-solvers who invest time in understanding your unique needs.
-                        </p>
-                        <p class="text-gray-600 mb-8">
-                            Our team holds industry certifications and has decades of combined experience across corporate IT, consumer electronics, and specialized hardware. We handle every device and system with the utmost care, ensuring longevity and peak performance. When you choose us, you choose a long-term technology partner.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="bg-primary-600 text-white px-6 py-3 rounded-full hover:bg-primary-700 transition duration-300 font-medium">
-                                Meet Our Team
-                            </a>
-                            <a href="#services" class="border border-primary-600 text-primary-600 px-6 py-3 rounded-full hover:bg-primary-600 hover:text-white transition duration-300 font-medium">
-                                See Our Commitment
-                            </a>
-                        </div>
-                    </div>
+<!-- CONTACT -->
 
-                    <!-- Image/Visual -->
-                    <div class="lg:w-1/2">
-                        <img src="https://placehold.co/600x400/B91C1C/ffffff?text=Professional+IT+Team" 
-                             alt="A group of smiling, professional IT technicians working in an office setting." 
-                             class="rounded-xl shadow-2xl w-full h-auto object-cover transform rotate-1 transition duration-500 hover:rotate-0">
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="contact" class="py-20 text-center px-4">
+  <h2 class="text-3xl mb-6">Contact Us</h2>
 
-        <!-- Why Trust Shriraghav Tech Section (New Details Added) -->
-        <section class="py-16 md:py-24 bg-secondary dark:bg-black" id="trust">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 text-white">Why Trust Shriraghav Tech?</h2>
-                <p class="text-center text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                    We deliver peace of mind through a commitment to quality, speed, and fairness.
-                </p>
+  <form id="contactForm" class="max-w-md mx-auto space-y-4">
+    <input type="text" id="name" placeholder="Name" required class="w-full p-3 text-black">
+    <input type="email" id="email" placeholder="Email" required class="w-full p-3 text-black">
+    <textarea id="message" placeholder="Message" required class="w-full p-3 text-black"></textarea>
 
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    
-                    <!-- Feature 1: Transparent Pricing -->
-                    <div class="p-6 rounded-xl border border-gray-700 bg-black/50 transition duration-300 hover:bg-black/70">
-                        <div class="text-5xl text-primary-600 mb-4"><i class="fas fa-tags"></i></div>
-                        <h3 class="text-xl font-semibold mb-3 text-white">Transparent Pricing</h3>
-                        <p class="text-gray-400">
-                            No hidden fees, no surprises. We provide upfront quotes and clear breakdowns before any work begins.
-                        </p>
-                    </div>
+```
+<button class="btn w-full">Send Message</button>
+```
 
-                    <!-- Feature 2: Certified Experts -->
-                    <div class="p-6 rounded-xl border border-gray-700 bg-black/50 transition duration-300 hover:bg-black/70">
-                        <div class="text-5xl text-primary-600 mb-4"><i class="fas fa-medal"></i></div>
-                        <h3 class="text-xl font-semibold mb-3 text-white">Certified Professionals</h3>
-                        <p class="text-gray-400">
-                            Our team holds recognized industry certifications ensuring the highest standard of technical competence.
-                        </p>
-                    </div>
+  </form>
+</section>
 
-                    <!-- Feature 3: Fast Turnaround -->
-                    <div class="p-6 rounded-xl border border-gray-700 bg-black/50 transition duration-300 hover:bg-black/70">
-                        <div class="text-5xl text-primary-600 mb-4"><i class="fas fa-tachometer-alt"></i></div>
-                        <h3 class="text-xl font-semibold mb-3 text-white">Rapid Turnaround</h3>
-                        <p class="text-gray-400">
-                            We prioritize efficient service, minimizing downtime so you can get back to work or play faster.
-                        </p>
-                    </div>
+<!-- MAP -->
 
-                </div>
-            </div>
-        </section>
+<section class="px-6 pb-20">
+  <iframe 
+    src="https://www.google.com/maps?q=Palam+Delhi&output=embed"
+    class="w-full h-80 rounded-xl">
+  </iframe>
+</section>
 
-        <!-- Call to Action / Trust Banner -->
-        <section class="py-16 bg-primary-600 dark:bg-primary-700">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-2">Ready to End Your Tech Troubles?</h2>
-                <p class="text-xl text-gray-100 mb-8">
-                    Join hundreds of satisfied clients who trust Shriraghav Tech for speed and reliability.
-                </p>
-                <a href="#contact" class="bg-white text-primary-600 text-lg px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300 font-semibold shadow-xl transform hover:scale-105">
-                    Schedule Your Repair Now
-                </a>
-            </div>
-        </section>
+<!-- FOOTER -->
 
-        <!-- Contact Section -->
-        <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-900" id="contact">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-4 text-black">Get in Touch</h2>
-                <p class="text-center text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Fill out the form below or call us directly. We aim to respond to all inquiries within 1 business hour.
-                </p>
+<footer class="text-center py-10 border-t border-gray-700">
+  <p>© 2026 Shriraghav Tech</p>
+  <p class="gold">Delhi | +91 85128 32150</p>
+</footer>
 
-                <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700">
-                    <form action="#" method="POST" class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                        
-                        <!-- Name Field -->
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name</label>
-                            <input type="text" id="name" name="name" required
-                                   class="input-focus-glow w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white transition duration-200"
-                                   placeholder="John Doe">
-                        </div>
+<!-- WHATSAPP -->
 
-                        <!-- Email Field -->
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" required
-                                   class="input-focus-glow w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white transition duration-200"
-                                   placeholder="you@example.com">
-                        </div>
+<a href="https://wa.me/918512832150?text=Hi%20I%20need%20laptop%20repair"
+class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full"> <i class="fab fa-whatsapp text-xl"></i> </a>
 
-                        <!-- Phone Field -->
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number (Optional)</label>
-                            <input type="tel" id="phone" name="phone"
-                                   class="input-focus-glow w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white transition duration-200"
-                                   placeholder="(555) 123-4567">
-                        </div>
+<!-- EMAILJS INIT -->
 
-                        <!-- Service Type Field -->
-                        <div>
-                            <label for="service" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Service Type</label>
-                            <select id="service" name="service" required
-                                    class="input-focus-glow w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white transition duration-200">
-                                <option value="" disabled selected>Select a Service</option>
-                                <option value="hardware">Hardware Repair</option>
-                                <option value="software">Software Optimization</option>
-                                <option value="security">Network & Security</option>
-                                <option value="data">Data Recovery</option>
-                                <option value="consulting">IT Consulting</option>
-                                <option value="other">Other Inquiry</option>
-                            </select>
-                        </div>
+<script>
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+</script>
 
-                        <!-- Message Field (Full width) -->
-                        <div class="sm:col-span-2">
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Describe Your Issue</label>
-                            <textarea id="message" name="message" rows="4" required
-                                      class="input-focus-glow w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white transition duration-200"
-                                      placeholder="My laptop won't turn on..."
-                                      maxlength="500"></textarea>
-                            <p class="text-xs text-gray-500 mt-1">Maximum 500 characters.</p>
-                        </div>
+<!-- FORM SEND -->
 
-                        <!-- Submit Button (Full width) -->
-                        <div class="sm:col-span-2 pt-4">
-                            <button type="submit" 
-                                    class="w-full bg-primary-600 text-white text-lg px-6 py-3 rounded-full hover:bg-primary-700 transition duration-300 font-semibold shadow-xl transform hover:scale-[1.01]">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-    </main>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-    <!-- Footer -->
-    <footer class="bg-secondary dark:bg-secondary text-gray-400 py-12 border-t border-gray-700 dark:border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                
-                <!-- Logo & Socials -->
-                <div>
-                    <a href="#">
-                        <!-- This uses the same symbol, but CSS overrides change it to black/gold -->
-                        <svg class="w-auto h-12 mb-4" preserveAspectRatio="xMinYMid meet"><use href="#shriraghav-logo-symbol"></use></svg>
-                    </a>
-                    <p class="text-sm">Expert hardware and software support.</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://twitter.com/iamnikhilraghav" class="text-gray-400 hover:text-primary-600 transition duration-300" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="https://linkedin.com/in/iamnikhilraghav" class="text-gray-400 hover:text-primary-600 transition duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
-                        <a href="mailto:nikhilraghav.dev@gmail.com" class="text-gray-400 hover:text-primary-600 transition duration-300" aria-label="Email"><i class="fas fa-envelope text-xl"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="hover:text-primary-600 transition duration-300">Home</a></li>
-                        <li><a href="#services" class="hover:text-primary-600 transition duration-300">Services</a></li>
-                        <li><a href="#about" class="hover:text-primary-600 transition duration-300">About Us</a></li>
-                        <li><a href="https://iamnikhilraghav.blogspot.com/2025/11/blog-post.html" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition duration-300">Blog</a></li>
-                    </ul>
-                </div>
+  emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+    from_name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  }).then(()=>{
+    alert("Message sent successfully!");
+  });
+});
+</script>
 
-                <!-- Legal -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="hover:text-primary-600 transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-primary-600 transition duration-300">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-primary-600 transition duration-300">Sitemap</a></li>
-                    </ul>
-                </div>
+<!-- SCROLL ANIMATION -->
 
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
-                    <p class="mb-2"><strong>Email:</strong> <a href="mailto:nikhilraghav.dev@gmail.com" class="hover:text-primary-600">iamnikhilraghav@gmail.com</a></p>
-                    <p class="mb-2"><strong>Phone:</strong> <a href="tel:+919782559098" class="hover:text-primary-600">+91 85128 32150</a></p>
-                    <p><strong>Office:</strong> Palam, Delhi, India</p>
-                </div>
-            </div>
+<script>
+const elements = document.querySelectorAll(".fade-up");
 
-            <!-- Copyright -->
-            <div class="text-center mt-12 pt-8 border-t border-gray-700 dark:border-gray-800 text-sm">
-                &copy; <span id="current-year"></span> Shriraghav Tech. All rights reserved.
-                <p class="mt-1">Designed with <span class="text-primary-600">&hearts;</span> by <a href="https://i-nikhilraghav.github.io/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-600 transition duration-300">Nikhil Raghav</a>.</p>
-            </div>
-        </div>
-    </footer>
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      el.classList.add("show");
+    }
+  });
+});
+</script>
 
-    <script>
-        // --- Dark Mode / Theme Toggle Logic ---
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const html = document.documentElement;
-
-        // Function to set the theme based on local storage or system preference
-        function setInitialTheme() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const currentTheme = localStorage.getItem('theme');
-
-            if (currentTheme === 'dark' || (!currentTheme && prefersDark)) {
-                html.classList.add('dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                html.classList.remove('dark');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        }
-
-        // Handle the theme toggle click
-        themeToggle.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            } else {
-                html.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
-        });
-
-        // Initialize theme on load
-        document.addEventListener('DOMContentLoaded', setInitialTheme);
-        
-        // --- Mobile Menu Toggle Logic ---
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-
-        menuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            // Toggle the visibility
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                menuBtn.querySelector('i').classList.replace('fa-bars', 'fa-times');
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-            }
-        });
-
-        // Close mobile menu on nav link click
-        mobileNavItems.forEach(item => {
-            item.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
-        // --- Current Year in Footer ---
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
