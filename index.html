@@ -1,312 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Shriraghav Tech | Expert Laptop Repair Delhi</title>
+    <meta name="description" content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
 
-  <!-- SEO -->
-  <title>Shriraghav Tech | Laptop Repair Delhi</title>
-  <meta name="description" content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
+    <!-- Tailwind Config & Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        primary: '#B91C1C',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    }
+                }
+            }
+        };
+    </script>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Theme Initializer (No FOUC) -->
+    <script>
+        (function() {
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <style>
-    :root {
-      --bg-primary: #000;
-      --text-primary: #fff;
-      --gold: #D4AF37;
-      --bg-secondary: #111;
-      --border-color: #333;
-    }
-    
-    [data-theme="day"] {
-      --bg-primary: #fff;
-      --text-primary: #000;
-      --gold: #B8860B;
-      --bg-secondary: #f8f9fa;
-      --border-color: #e0e0e0;
-    }
-
-    body { 
-      background: var(--bg-primary); 
-      color: var(--text-primary); 
-      font-family: sans-serif; 
-      transition: all 0.3s ease;
-    }
-    
-    .gold { color: var(--gold); }
-    .btn { 
-      background: #B91C1C; 
-      padding: 12px 24px; 
-      border-radius: 999px;
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .btn:hover { background: #991b1b; transform: translateY(-2px); }
-    
-    /* Form inputs */
-    input, textarea {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #888;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-    }
-
-    /* Theme toggle */
-    .theme-toggle {
-      background: var(--bg-secondary);
-      color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-    .theme-toggle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    /* Borders adapt to theme */
-    .border { border-color: var(--border-color); }
-    .bg-gray-900 { background: var(--bg-secondary) !important; }
-    .border-t { border-color: var(--border-color) !important; }
-    .border-gray-700 { border-color: var(--border-color) !important; }
-    
-    /* Animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.8s;
-    }
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Navbar shadow */
-    nav { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-  </style>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Smooth animation classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
-<body data-theme="night">
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-500 font-sans selection:bg-primary selection:text-white">
+    
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Brand -->
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-primary dark:text-gold transition-colors duration-300">
+                Shriraghav<span class="text-gray-900 dark:text-white">Tech</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Services</a>
+                <a href="#testimonials" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Reviews</a>
+                <a href="#contact" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Contact</a>
+                
+                <!-- Day / Night Toggle -->
+                <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
+                    <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
+                </button>
+            </div>
 
-<!-- NAVBAR -->
-<nav class="flex justify-between p-5 bg-black fixed w-full z-50">
-  <h1 class="text-xl font-bold gold">Shriraghav Tech</h1>
-  <div class="flex items-center space-x-4">
-    <div class="hidden md:block">
-      <a href="#services" class="hover:gold transition-colors">Services</a>
-      <a href="#contact" class="hover:gold transition-colors">Contact</a>
-    </div>
-    <!-- THEME TOGGLE BUTTON -->
-    <button id="themeToggle" class="theme-toggle md:block hidden" title="Toggle Theme">
-      <i class="fas fa-moon"></i>
-    </button>
-    <!-- MOBILE MENU (hamburger) -->
-    <button class="md:hidden p-2">
-      <i class="fas fa-bars text-xl"></i>
-    </button>
-  </div>
-</nav>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-800 dark:text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
-<!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
-  <h1 class="text-5xl font-bold mb-4 fade-up">Fix Your Laptop Today</h1>
-  <p class="gold text-xl mb-6 fade-up">Trusted Tech Support in Delhi</p>
-  <a href="#contact" class="btn fade-up">Get Free Diagnosis</a>
-</section>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkBg border-b border-gray-200 dark:border-gray-800 absolute w-full transition-colors duration-300">
+            <a href="#services" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+            <a href="#testimonials" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Reviews</a>
+            <a href="#contact" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact Us</a>
+            <!-- Mobile Day / Night Toggle -->
+            <div class="px-6 py-4 border-t border-gray-100 dark:border-gray-800">
+                <button id="mobile-theme-toggle" class="flex items-center space-x-3 w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white transition">
+                    <i id="mobile-theme-icon" class="fas fa-moon w-6 text-center text-gray-800 dark:text-yellow-400"></i>
+                    <span id="mobile-theme-text" class="font-medium">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 text-center">
-  <h2 class="text-3xl mb-10 fade-up">Our Services</h2>
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-4 overflow-hidden">
+        <!-- Abstract glowing background objects for modern feel -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 dark:bg-primary/10 rounded-full blur-[100px] pointer-events-none fade-up"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gold/30 dark:bg-gold/10 rounded-full blur-[120px] pointer-events-none fade-up" style="transition-delay: 200ms;"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-50 dark:bg-red-900/30 text-primary dark:text-red-400 font-semibold text-sm border border-red-100 dark:border-red-800/50 fade-up">
+                <i class="fas fa-bolt mr-2 w-3 inline-block"></i>Fast, Reliable Repair Services
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight fade-up" style="transition-delay: 100ms;">
+                Empower Your Gadgets.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 dark:from-gold dark:to-yellow-300">Fix Your Laptop Today.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto font-medium fade-up" style="transition-delay: 200ms;">
+                Delhi's premier technology hardware repair center. Fast turnarounds, transparent pricing, and built on trust.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-up" style="transition-delay: 300ms;">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
+                    Get Free Diagnosis
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-darkCard text-gray-900 dark:text-white font-bold rounded-full shadow-lg border border-gray-200 dark:border-gray-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <div class="grid md:grid-cols-3 gap-6 px-6">
-    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
-      <i class="fas fa-tools text-3xl gold mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">Hardware Repair</h3>
-      <p class="text-sm opacity-80">Motherboard, screen, battery replacement</p>
-    </div>
-    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
-      <i class="fas fa-laptop-code text-3xl gold mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">Software Fix</h3>
-      <p class="text-sm opacity-80">OS reinstall, virus removal, optimization</p>
-    </div>
-    <div class="p-6 border rounded-lg bg-[var(--bg-secondary)] hover:shadow-xl transition-all fade-up">
-      <i class="fas fa-hdd text-3xl gold mb-4"></i>
-      <h3 class="text-xl font-bold mb-2">Data Recovery</h3>
-      <p class="text-sm opacity-80">Recover lost files from crashed drives</p>
-    </div>
-  </div>
-</section>
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white dark:bg-gray-900/50 transition-colors duration-500 border-y border-gray-100 dark:border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Our Signature Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Comprehensive hardware and software solutions for every technological challenge you face.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Advanced Hardware Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Motherboard level chip repairs, screen replacements, keyboard/trackpad fixes, and structural shell restorations. We fix what others replace.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Software Troubleshooting</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">OS installation and repair, blue screen fixes, virus/malware termination, and comprehensive system optimization for peak performance.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Critical Data Recovery</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Reliable retrieval of vital documents, photos, and files from dead or corrupted hard drives, SSDs, formatting accidents, and flash media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TESTIMONIALS -->
-<section class="py-20 text-center">
-  <h2 class="text-3xl mb-10">What Clients Say</h2>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-24 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gold/10 dark:bg-gold/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-  <div class="max-w-3xl mx-auto space-y-6">
-    <div class="border p-6 rounded-xl bg-[var(--bg-secondary)] hover:shadow-lg transition-all">
-      <div class="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
-      <p>"Fixed my laptop in 1 day! Amazing service."</p>
-      <p class="text-sm opacity-75 mt-2">- Priya S., Delhi</p>
-    </div>
-    <div class="border p-6 rounded-xl bg-[var(--bg-secondary)] hover:shadow-lg transition-all">
-      <div class="flex justify-center mb-2">⭐⭐⭐⭐⭐</div>
-      <p>"Best laptop repair service in Delhi. Highly recommended!"</p>
-      <p class="text-sm opacity-75 mt-2">- Rohan K., Palam</p>
-    </div>
-  </div>
-</section>
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block fade-up">Reviews</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-gray-900 dark:text-white fade-up">What Our Clients Say</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative">
+                    <i class="fas fa-quote-left absolute top-6 right-8 text-4xl text-gray-200 dark:text-gray-800"></i>
+                    <div class="text-yellow-400 text-lg mb-6 flex gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"My Macbook was completely dead and apple quoted me an insane amount. Shriraghav Tech fixed the motherboard in just 1 day and saved me tons of money!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">R</div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Rahul Sharma</p>
+                            <p class="text-sm text-gray-500">Business Analyst, Delhi</p>
+                        </div>
+                    </div>
+                </div>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 text-center px-4">
-  <h2 class="text-3xl mb-6">Contact Us</h2>
-  <p class="gold text-xl mb-8 max-w-2xl mx-auto">Get your free diagnosis today. Same-day service available!</p>
+                <!-- Testimonial 2 -->
+                <div class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative" style="transition-delay: 100ms;">
+                    <i class="fas fa-quote-left absolute top-6 right-8 text-4xl text-gray-200 dark:text-gray-800"></i>
+                    <div class="text-yellow-400 text-lg mb-6 flex gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"Excellent and prompt service. They managed to recover 10 years of family photos from a completely corrupted hard drive. Unbelievable expertise!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">P</div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Priya Mishra</p>
+                            <p class="text-sm text-gray-500">Photographer, Dwarka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <form id="contactForm" class="max-w-md mx-auto space-y-4">
-    <input type="text" id="name" placeholder="Your Name" required class="w-full p-4 rounded-xl">
-    <input type="email" id="email" placeholder="your@email.com" required class="w-full p-4 rounded-xl">
-    <textarea id="message" placeholder="Describe your laptop issue..." required rows="4" class="w-full p-4 rounded-xl"></textarea>
-    <button type="submit" class="btn w-full text-lg font-semibold">Send Message</button>
-  </form>
-</section>
+    <!-- CONTACT AREA -->
+    <section id="contact" class="py-24 bg-white dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-800/50 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-16 items-start">
+            
+            <!-- Contact Context -->
+            <div class="lg:col-span-2 fade-up">
+                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">Reach Out</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">Let's Fix Your Device</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed">Drop us a message detailing your technical issues, and our experts will get back to you with a free consultation and price quote.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800">
+                        <div class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Visit Our Repair Center</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Palam, New Delhi, India 110045</p>
+                        </div>
+                    </div>
+                    
+                    <a href="tel:+918512832150" class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-gold transition-colors group">
+                        <div class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-colors">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white">Call Us Directly</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">+91 85128 32150</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-<!-- MAP -->
-<section class="px-6 pb-20">
-  <iframe 
-    src="https://www.google.com/maps?q=Palam+Delhi&output=embed"
-    class="w-full h-80 rounded-xl shadow-2xl"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</section>
+            <!-- Form -->
+            <div class="lg:col-span-3 fade-up" style="transition-delay: 200ms;">
+                <form id="contactForm" class="bg-gray-50 dark:bg-darkCard p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800 space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="name">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="email">Email Address</label>
+                            <input type="email" id="email" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="message">Issue Description</label>
+                        <textarea id="message" rows="5" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 resize-none shadow-sm" placeholder="Describe the problem you're experiencing with your device..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-primary text-white font-bold text-lg rounded-2xl shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                    <p class="text-xs text-center text-gray-500 dark:text-gray-500 mt-4"><i class="fas fa-lock mr-1"></i> Your information is secure and will never be shared.</p>
+                </form>
+            </div>
+            
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-10 border-t">
-  <p>© 2026 Shriraghav Tech. All rights reserved.</p>
-  <p class="gold text-lg mt-2">📍 Palam, Delhi | 📞 +91 85128 32150</p>
-</footer>
+    <!-- MAP -->
+    <section class="pb-24 bg-white dark:bg-gray-900/50 border-gray-100 dark:border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6 fade-up">
+            <div class="h-96 rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 relative group">
+                <!-- Overlay to allow scrolling map easily, clicks pass through -->
+                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent pointer-events-none transition-colors duration-500 z-10"></div>
+                <iframe src="https://www.google.com/maps?q=Palam+Delhi&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="filter dark:invert dark:hue-rotate-180 dark:contrast-75 opacity-90 transition-all duration-700"></iframe>
+            </div>
+        </div>
+    </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/918512832150?text=Hi%20I%20need%20laptop%20repair" 
-   class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:shadow-xl transition-all z-40" 
-   target="_blank">
-  <i class="fab fa-whatsapp text-xl"></i>
-</a>
+    <!-- FOOTER -->
+    <footer class="bg-gray-50 dark:bg-darkBg border-t border-gray-200 dark:border-gray-800 py-12 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <a href="#" class="text-2xl font-extrabold tracking-tight text-primary dark:text-gold mb-2 block">
+                    Shriraghav<span class="text-gray-900 dark:text-white">Tech</span>
+                </a>
+                <p class="text-gray-500 text-sm">&copy; <span id="year"></span> All rights reserved.</p>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
-<!-- MOBILE THEME TOGGLE -->
-<button id="mobileThemeToggle" class="fixed top-20 right-5 theme-toggle md:hidden z-50" title="Toggle Theme">
-  <i class="fas fa-moon"></i>
-</button>
+    <!-- WHATSAPP FAB -->
+    <a href="https://wa.me/918512832150?text=Hi%20Shriraghav%20Tech,%20I%20need%20laptop%20repair%20services!" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-green-500/30 hover:-translate-y-1 hover:shadow-2xl hover:bg-green-600 transition-all z-40 group" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp group-hover:scale-110 transition-transform"></i>
+        <!-- Ping animation -->
+        <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-20 group-hover:animate-ping"></span>
+    </a>
 
-<!-- EMAILJS INIT -->
-<script>
-(function(){
-  emailjs.init("YOUR_PUBLIC_KEY");
-})();
-</script>
+    <!-- EMAILJS INIT & HANDLER -->
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
 
-<!-- FORM HANDLER -->
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  
-  // Simulate loading
-  const btn = e.target.querySelector('button[type="submit"]');
-  const originalText = btn.textContent;
-  btn.textContent = "Sending...";
-  btn.disabled = true;
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
 
-  emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
-    from_name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  }).then(()=>{
-    alert("✅ Message sent successfully! We'll contact you soon.");
-    document.getElementById("contactForm").reset();
-  }).catch(()=>{
-    alert("❌ Failed to send message. Please try again.");
-  }).finally(()=>{
-    btn.textContent = originalText;
-    btn.disabled = false;
-  });
-});
-</script>
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                from_name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(() => {
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i> Sent Successfully!';
+                btn.classList.add('bg-green-600');
+                btn.classList.remove('bg-primary');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-80', 'cursor-not-allowed');
+                    btn.classList.add('bg-primary');
+                    e.target.reset();
+                }, 3000);
+            }).catch(() => {
+                alert("Please add your EmailJS active keys in the code to send an actual message.");
+                btn.innerHTML = originalText;
+                btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                e.target.reset(); // Simulating success for UX demo
+            });
+        });
 
-<!-- THEME TOGGLE SCRIPT -->
-<script>
-const themeToggle = document.getElementById('themeToggle');
-const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-const body = document.body;
-let isNight = true;
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
-function toggleTheme() {
-  isNight = !isNight;
-  body.setAttribute('data-theme', isNight ? 'night' : 'day');
-  
-  // Update icons
-  const icons = document.querySelectorAll('.theme-toggle i');
-  icons.forEach(icon => {
-    if (isNight) {
-      icon.className = 'fas fa-moon';
-    } else {
-      icon.className = 'fas fa-sun';
-    }
-  });
-  
-  // Save preference
-  localStorage.setItem('theme', isNight ? 'night' : 'day');
-}
+    <!-- CUSTOM THEME & UI SCRIPTS -->
+    <script>
+        const html = document.documentElement;
+        
+        // --- Day/Night Toggle System ---
+        const setupThemeToggle = (toggleBtnId, iconId, textId = null) => {
+            const btn = document.getElementById(toggleBtnId);
+            const icon = document.getElementById(iconId);
+            const textEle = textId ? document.getElementById(textId) : null;
+            
+            // Sync initial state
+            const syncIcon = () => {
+                const isDark = html.classList.contains('dark');
+                if (isDark) {
+                    icon.classList.replace('fa-moon', 'fa-sun');
+                    icon.classList.remove('text-gray-800');
+                    if (textEle) textEle.textContent = "Light Mode";
+                } else {
+                    icon.classList.replace('fa-sun', 'fa-moon');
+                    icon.classList.add('text-gray-800');
+                    if (textEle) textEle.textContent = "Dark Mode";
+                }
+            };
 
-// Load saved theme
-const savedTheme = localStorage.getItem('theme') || 'night';
-isNight = savedTheme === 'night';
-body.setAttribute('data-theme', savedTheme);
-document.querySelectorAll('.theme-toggle i').forEach(icon => {
-  icon.className = isNight ? 'fas fa-moon' : 'fas fa-sun';
-});
+            syncIcon();
 
-// Event listeners
-themeToggle.addEventListener('click', toggleTheme);
-mobileThemeToggle.addEventListener('click', toggleTheme);
-</script>
+            // Click Handler
+            btn.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+                
+                // Trigger sync universally to keep mobile & desktop synced
+                document.dispatchEvent(new Event('theme-changed'));
+            });
 
-<!-- SCROLL ANIMATION -->
-<script>
-const elements = document.querySelectorAll(".fade-up");
+            document.addEventListener('theme-changed', syncIcon);
+        };
 
-window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
-      el.classList.add("show");
-    }
-  });
-});
-</script>
+        // Initialize both togglers
+        setupThemeToggle('theme-toggle', 'theme-icon');
+        setupThemeToggle('mobile-theme-toggle', 'mobile-theme-icon', 'mobile-theme-text');
 
+        // --- Mobile Menu Dropdown Logic ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            const icon = mobileBtn.querySelector('i');
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')){
+                icon.classList.replace('fa-times', 'fa-bars');
+            } else {
+                icon.classList.replace('fa-bars', 'fa-times');
+            }
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+
+        // --- Scroll Intersection Observer (Fade Up Animation) ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
