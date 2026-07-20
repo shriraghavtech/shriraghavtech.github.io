@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO -->
     <title>Shriraghav Tech | Expert Laptop Repair Delhi</title>
-    <meta name="description" content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
+    <meta name="description"
+        content="Fast & reliable laptop repair in Delhi. Hardware, software, data recovery & IT support.">
 
-    <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/png" href="images/logo_transparent.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <!-- Favicon & Chrome App Icons -->
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Shriraghav Tech">
+    <meta name="application-name" content="Shriraghav Tech">
+    <meta name="theme-color" content="#0f172a">
 
     <!-- Tailwind Config & Script -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +42,7 @@
 
     <!-- Theme Initializer (No FOUC) -->
     <script>
-        (function() {
+        (function () {
             if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark');
             } else {
@@ -49,15 +57,21 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; }
-        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
         /* Smooth animation classes */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .fade-up.show {
             opacity: 1;
             transform: translateY(0);
@@ -65,24 +79,34 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-500 font-sans selection:bg-primary selection:text-white">
+<body
+    class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-gray-100 transition-colors duration-500 font-sans selection:bg-primary selection:text-white">
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Brand -->
-            <a href="#" class="text-2xl font-extrabold tracking-tight text-primary dark:text-gold transition-colors duration-300">
-                Shriraghav<span class="text-gray-900 dark:text-white">Tech</span>
+            <a href="#"
+                class="flex items-center gap-3 text-2xl font-extrabold tracking-tight text-primary dark:text-gold transition-colors duration-300">
+                <img src="logo_transparent.png" alt="Shri Raghav Tech Emblem"
+                    class="h-10 w-10 object-contain rounded-full border border-gray-200 dark:border-gray-700 shadow-sm bg-white dark:bg-gray-800 p-0.5">
+                <span>Shriraghav<span class="text-gray-900 dark:text-white">Tech</span></span>
             </a>
-            
+
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Services</a>
-                <a href="#testimonials" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Reviews</a>
-                <a href="#contact" class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Contact</a>
-                
+                <a href="#services"
+                    class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Services</a>
+                <a href="#testimonials"
+                    class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Reviews</a>
+                <a href="#contact"
+                    class="font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-gold transition duration-300">Contact</a>
+
                 <!-- Day / Night Toggle -->
-                <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner border border-gray-200 dark:border-gray-700" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle"
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-inner border border-gray-200 dark:border-gray-700"
+                    aria-label="Toggle Dark Mode">
                     <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-yellow-400"></i>
                 </button>
             </div>
@@ -94,14 +118,21 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkBg border-b border-gray-200 dark:border-gray-800 absolute w-full transition-colors duration-300">
-            <a href="#services" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
-            <a href="#testimonials" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Reviews</a>
-            <a href="#contact" class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact Us</a>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-darkBg border-b border-gray-200 dark:border-gray-800 absolute w-full transition-colors duration-300">
+            <a href="#services"
+                class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+            <a href="#testimonials"
+                class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Reviews</a>
+            <a href="#contact"
+                class="block px-6 py-4 font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">Contact
+                Us</a>
             <!-- Mobile Day / Night Toggle -->
             <div class="px-6 py-4 border-t border-gray-100 dark:border-gray-800">
-                <button id="mobile-theme-toggle" class="flex items-center space-x-3 w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white transition">
-                    <i id="mobile-theme-icon" class="fas fa-moon w-6 text-center text-gray-800 dark:text-yellow-400"></i>
+                <button id="mobile-theme-toggle"
+                    class="flex items-center space-x-3 w-full p-2 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white transition">
+                    <i id="mobile-theme-icon"
+                        class="fas fa-moon w-6 text-center text-gray-800 dark:text-yellow-400"></i>
                     <span id="mobile-theme-text" class="font-medium">Dark Mode</span>
                 </button>
             </div>
@@ -111,28 +142,46 @@
     <!-- HERO -->
     <section class="relative min-h-screen flex items-center justify-center pt-24 px-4 overflow-hidden">
         <!-- Abstract glowing background objects for modern feel -->
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 dark:bg-primary/10 rounded-full blur-[100px] pointer-events-none fade-up"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gold/30 dark:bg-gold/10 rounded-full blur-[120px] pointer-events-none fade-up" style="transition-delay: 200ms;"></div>
-        
+        <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 dark:bg-primary/10 rounded-full blur-[100px] pointer-events-none fade-up">
+        </div>
+        <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gold/30 dark:bg-gold/10 rounded-full blur-[120px] pointer-events-none fade-up"
+            style="transition-delay: 200ms;"></div>
+
         <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-50 dark:bg-red-900/30 text-primary dark:text-red-400 font-semibold text-sm border border-red-100 dark:border-red-800/50 fade-up">
+            <!-- Official Logo Emblem Badge -->
+            <div class="flex justify-center mb-6 fade-up">
+                <div class="relative p-2 rounded-full bg-white/80 dark:bg-darkCard/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-xl">
+                    <img src="logo_transparent.png" alt="Shri Raghav Tech Emblem" class="w-24 h-24 md:w-28 md:h-28 object-contain">
+                </div>
+            </div>
+
+            <div
+                class="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-50 dark:bg-red-900/30 text-primary dark:text-red-400 font-semibold text-sm border border-red-100 dark:border-red-800/50 fade-up">
                 <i class="fas fa-bolt mr-2 w-3 inline-block"></i>Fast, Reliable Repair Services
             </div>
-            
+
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight fade-up" style="transition-delay: 100ms;">
                 Empower Your Gadgets.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 dark:from-gold dark:to-yellow-300">Fix Your Laptop Today.</span>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 dark:from-gold dark:to-yellow-300">Fix
+                    Your Laptop Today.</span>
             </h1>
-            
-            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto font-medium fade-up" style="transition-delay: 200ms;">
-                Delhi's premier technology hardware repair center. Fast turnarounds, transparent pricing, and built on trust.
+
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto font-medium fade-up"
+                style="transition-delay: 200ms;">
+                Delhi's premier technology hardware repair center. Fast turnarounds, transparent pricing, and built on
+                trust.
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-up" style="transition-delay: 300ms;">
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 fade-up"
+                style="transition-delay: 300ms;">
+                <a href="#contact"
+                    class="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
                     Get Free Diagnosis
                 </a>
-                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-darkCard text-gray-900 dark:text-white font-bold rounded-full shadow-lg border border-gray-200 dark:border-gray-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
+                <a href="#services"
+                    class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-darkCard text-gray-900 dark:text-white font-bold rounded-full shadow-lg border border-gray-200 dark:border-gray-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
                     Explore Services
                 </a>
             </div>
@@ -140,40 +189,56 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="py-24 bg-white dark:bg-gray-900/50 transition-colors duration-500 border-y border-gray-100 dark:border-gray-800/50">
+    <section id="services"
+        class="py-24 bg-white dark:bg-gray-900/50 transition-colors duration-500 border-y border-gray-100 dark:border-gray-800/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 fade-up">
-                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">What We Do</span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Our Signature Services</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Comprehensive hardware and software solutions for every technological challenge you face.</p>
+                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">What We
+                    Do</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Our Signature
+                    Services</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Comprehensive hardware and
+                    software solutions for every technological challenge you face.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service Card 1 -->
-                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group">
-                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                <div
+                    class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group">
+                    <div
+                        class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Advanced Hardware Repair</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Motherboard level chip repairs, screen replacements, keyboard/trackpad fixes, and structural shell restorations. We fix what others replace.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Motherboard level chip repairs, screen
+                        replacements, keyboard/trackpad fixes, and structural shell restorations. We fix what others
+                        replace.</p>
                 </div>
-                
+
                 <!-- Service Card 2 -->
-                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Software Troubleshooting</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">OS installation and repair, blue screen fixes, virus/malware termination, and comprehensive system optimization for peak performance.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">OS installation and repair, blue screen
+                        fixes, virus/malware termination, and comprehensive system optimization for peak performance.
+                    </p>
                 </div>
-                
+
                 <!-- Service Card 3 -->
-                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
+                <div class="p-8 bg-gray-50 dark:bg-darkCard rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 fade-up group"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 bg-red-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center text-primary dark:text-gold text-2xl mb-8 group-hover:scale-110 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-all duration-300 shadow-sm">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Critical Data Recovery</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Reliable retrieval of vital documents, photos, and files from dead or corrupted hard drives, SSDs, formatting accidents, and flash media.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">Reliable retrieval of vital documents,
+                        photos, and files from dead or corrupted hard drives, SSDs, formatting accidents, and flash
+                        media.</p>
                 </div>
             </div>
         </div>
@@ -182,22 +247,32 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-24 relative overflow-hidden">
         <!-- Decoration -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-gold/10 dark:bg-gold/5 rounded-full blur-[80px] pointer-events-none"></div>
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-gold/10 dark:bg-gold/5 rounded-full blur-[80px] pointer-events-none">
+        </div>
 
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block fade-up">Reviews</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-gray-900 dark:text-white fade-up">What Our Clients Say</h2>
-            
+            <span
+                class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block fade-up">Reviews</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-gray-900 dark:text-white fade-up">What Our Clients
+                Say</h2>
+
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative">
+                <div
+                    class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative">
                     <i class="fas fa-quote-left absolute top-6 right-8 text-4xl text-gray-200 dark:text-gray-800"></i>
                     <div class="text-yellow-400 text-lg mb-6 flex gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"My Macbook was completely dead and apple quoted me an insane amount. Shriraghav Tech fixed the motherboard in just 1 day and saved me tons of money!"</p>
+                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"My Macbook
+                        was completely dead and apple quoted me an insane amount. Shriraghav Tech fixed the motherboard
+                        in just 1 day and saved me tons of money!"</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">R</div>
+                        <div
+                            class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">
+                            R</div>
                         <div>
                             <p class="font-bold text-gray-900 dark:text-white">Rahul Sharma</p>
                             <p class="text-sm text-gray-500">Business Analyst, Delhi</p>
@@ -206,14 +281,20 @@
                 </div>
 
                 <!-- Testimonial 2 -->
-                <div class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative" style="transition-delay: 100ms;">
+                <div class="p-8 bg-white dark:bg-darkCard rounded-3xl shadow-lg border border-gray-200 dark:border-gray-800 text-left fade-up relative"
+                    style="transition-delay: 100ms;">
                     <i class="fas fa-quote-left absolute top-6 right-8 text-4xl text-gray-200 dark:text-gray-800"></i>
                     <div class="text-yellow-400 text-lg mb-6 flex gap-1">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"Excellent and prompt service. They managed to recover 10 years of family photos from a completely corrupted hard drive. Unbelievable expertise!"</p>
+                    <p class="text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 relative z-10">"Excellent
+                        and prompt service. They managed to recover 10 years of family photos from a completely
+                        corrupted hard drive. Unbelievable expertise!"</p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">P</div>
+                        <div
+                            class="w-12 h-12 bg-primary/20 dark:bg-gold/20 rounded-full flex items-center justify-center text-primary dark:text-gold font-bold text-lg">
+                            P</div>
                         <div>
                             <p class="font-bold text-gray-900 dark:text-white">Priya Mishra</p>
                             <p class="text-sm text-gray-500">Photographer, Dwarka</p>
@@ -225,18 +306,25 @@
     </section>
 
     <!-- CONTACT AREA -->
-    <section id="contact" class="py-24 bg-white dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-800/50 transition-colors duration-500">
+    <section id="contact"
+        class="py-24 bg-white dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-800/50 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-5 gap-16 items-start">
-            
+
             <!-- Contact Context -->
             <div class="lg:col-span-2 fade-up">
-                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">Reach Out</span>
-                <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">Let's Fix Your Device</h2>
-                <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed">Drop us a message detailing your technical issues, and our experts will get back to you with a free consultation and price quote.</p>
-                
+                <span class="text-primary dark:text-gold font-bold tracking-wider uppercase text-sm mb-2 block">Reach
+                    Out</span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 text-gray-900 dark:text-white">Let's Fix Your Device
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed">Drop us a message detailing
+                    your technical issues, and our experts will get back to you with a free consultation and price
+                    quote.</p>
+
                 <div class="space-y-6">
-                    <div class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800">
-                        <div class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl">
+                    <div
+                        class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800">
+                        <div
+                            class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
@@ -244,9 +332,11 @@
                             <p class="text-gray-600 dark:text-gray-400 text-sm">Palam, New Delhi, India 110045</p>
                         </div>
                     </div>
-                    
-                    <a href="tel:+918512832150" class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-gold transition-colors group">
-                        <div class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-colors">
+
+                    <a href="tel:+918512832150"
+                        class="flex items-center gap-5 p-4 rounded-2xl bg-gray-50 dark:bg-darkCard border border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-gold transition-colors group">
+                        <div
+                            class="w-12 h-12 bg-red-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-primary dark:text-gold text-xl group-hover:bg-primary group-hover:text-white dark:group-hover:bg-gold dark:group-hover:text-gray-900 transition-colors">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
@@ -259,65 +349,95 @@
 
             <!-- Form -->
             <div class="lg:col-span-3 fade-up" style="transition-delay: 200ms;">
-                <form id="contactForm" class="bg-gray-50 dark:bg-darkCard p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800 space-y-6">
+                <form id="contactForm"
+                    class="bg-gray-50 dark:bg-darkCard p-8 md:p-10 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800 space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="name">Your Name</label>
-                            <input type="text" id="name" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm" placeholder="John Doe">
+                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1"
+                                for="name">Your Name</label>
+                            <input type="text" id="name" required
+                                class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm"
+                                placeholder="John Doe">
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="email">Email Address</label>
-                            <input type="email" id="email" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm" placeholder="john@example.com">
+                            <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1"
+                                for="email">Email Address</label>
+                            <input type="email" id="email" required
+                                class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 shadow-sm"
+                                placeholder="john@example.com">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1" for="message">Issue Description</label>
-                        <textarea id="message" rows="5" required class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 resize-none shadow-sm" placeholder="Describe the problem you're experiencing with your device..."></textarea>
+                        <label class="block text-sm font-bold mb-2 text-gray-800 dark:text-gray-300 ml-1"
+                            for="message">Issue Description</label>
+                        <textarea id="message" rows="5" required
+                            class="w-full px-5 py-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-primary/50 focus:border-primary dark:focus:ring-gold/50 dark:focus:border-gold outline-none transition-all text-gray-900 dark:text-white placeholder-gray-400 resize-none shadow-sm"
+                            placeholder="Describe the problem you're experiencing with your device..."></textarea>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-primary text-white font-bold text-lg rounded-2xl shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <button type="submit"
+                        class="w-full py-4 bg-primary text-white font-bold text-lg rounded-2xl shadow-lg shadow-primary/30 hover:bg-red-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
                         <i class="fas fa-paper-plane mr-2"></i> Send Message
                     </button>
-                    <p class="text-xs text-center text-gray-500 dark:text-gray-500 mt-4"><i class="fas fa-lock mr-1"></i> Your information is secure and will never be shared.</p>
+                    <p class="text-xs text-center text-gray-500 dark:text-gray-500 mt-4"><i
+                            class="fas fa-lock mr-1"></i> Your information is secure and will never be shared.</p>
                 </form>
             </div>
-            
+
         </div>
     </section>
 
     <!-- MAP -->
     <section class="pb-24 bg-white dark:bg-gray-900/50 border-gray-100 dark:border-gray-800/50">
         <div class="max-w-7xl mx-auto px-6 fade-up">
-            <div class="h-96 rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 relative group">
+            <div
+                class="h-96 rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 relative group">
                 <!-- Overlay to allow scrolling map easily, clicks pass through -->
-                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent pointer-events-none transition-colors duration-500 z-10"></div>
-                <iframe src="https://www.google.com/maps?q=Palam+Delhi&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="filter dark:invert dark:hue-rotate-180 dark:contrast-75 opacity-90 transition-all duration-700"></iframe>
+                <div
+                    class="absolute inset-0 bg-black/5 group-hover:bg-transparent pointer-events-none transition-colors duration-500 z-10">
+                </div>
+                <iframe src="https://www.google.com/maps?q=Palam+Delhi&output=embed" width="100%" height="100%"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    class="filter dark:invert dark:hue-rotate-180 dark:contrast-75 opacity-90 transition-all duration-700"></iframe>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-50 dark:bg-darkBg border-t border-gray-200 dark:border-gray-800 py-12 transition-colors duration-500">
+    <footer
+        class="bg-gray-50 dark:bg-darkBg border-t border-gray-200 dark:border-gray-800 py-12 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <a href="#" class="text-2xl font-extrabold tracking-tight text-primary dark:text-gold mb-2 block">
-                    Shriraghav<span class="text-gray-900 dark:text-white">Tech</span>
+                <a href="#" class="flex items-center justify-center md:justify-start gap-3 text-2xl font-extrabold tracking-tight text-primary dark:text-gold mb-2">
+                    <img src="logo_transparent.png" alt="Shri Raghav Tech Emblem"
+                        class="h-9 w-9 object-contain rounded-full border border-gray-200 dark:border-gray-700 shadow-sm bg-white dark:bg-gray-800 p-0.5">
+                    <span>Shriraghav<span class="text-gray-900 dark:text-white">Tech</span></span>
                 </a>
                 <p class="text-gray-500 text-sm">&copy; <span id="year"></span> All rights reserved.</p>
             </div>
-            
+
             <div class="flex items-center gap-6">
-                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-gold dark:hover:text-gray-900 shadow transition-all hover:-translate-y-1"><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- WHATSAPP FAB -->
-    <a href="https://wa.me/918512832150?text=Hi%20Shriraghav%20Tech,%20I%20need%20laptop%20repair%20services!" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-green-500/30 hover:-translate-y-1 hover:shadow-2xl hover:bg-green-600 transition-all z-40 group" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/918512832150?text=Hi%20Shriraghav%20Tech,%20I%20need%20laptop%20repair%20services!"
+        target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-green-500/30 hover:-translate-y-1 hover:shadow-2xl hover:bg-green-600 transition-all z-40 group"
+        aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp group-hover:scale-110 transition-transform"></i>
         <!-- Ping animation -->
-        <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-20 group-hover:animate-ping"></span>
+        <span
+            class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-20 group-hover:animate-ping"></span>
     </a>
 
     <!-- EMAILJS INIT & HANDLER -->
@@ -362,22 +482,26 @@
     <!-- CUSTOM THEME & UI SCRIPTS -->
     <script>
         const html = document.documentElement;
-        
+
         // --- Day/Night Toggle System ---
         const setupThemeToggle = (toggleBtnId, iconId, textId = null) => {
             const btn = document.getElementById(toggleBtnId);
             const icon = document.getElementById(iconId);
             const textEle = textId ? document.getElementById(textId) : null;
-            
+
+            if (!btn || !icon) return;
+
             // Sync initial state
             const syncIcon = () => {
                 const isDark = html.classList.contains('dark');
                 if (isDark) {
-                    icon.classList.replace('fa-moon', 'fa-sun');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
                     icon.classList.remove('text-gray-800');
                     if (textEle) textEle.textContent = "Light Mode";
                 } else {
-                    icon.classList.replace('fa-sun', 'fa-moon');
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
                     icon.classList.add('text-gray-800');
                     if (textEle) textEle.textContent = "Dark Mode";
                 }
@@ -394,7 +518,7 @@
                     html.classList.add('dark');
                     localStorage.setItem('theme', 'dark');
                 }
-                
+
                 // Trigger sync universally to keep mobile & desktop synced
                 document.dispatchEvent(new Event('theme-changed'));
             });
@@ -409,24 +533,36 @@
         // --- Mobile Menu Dropdown Logic ---
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileBtn.addEventListener('click', () => {
-            const icon = mobileBtn.querySelector('i');
-            mobileMenu.classList.toggle('hidden');
-            if(mobileMenu.classList.contains('hidden')){
-                icon.classList.replace('fa-times', 'fa-bars');
-            } else {
-                icon.classList.replace('fa-bars', 'fa-times');
-            }
-        });
 
-        // Close menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                const icon = mobileBtn.querySelector('i');
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                } else {
+                    if (icon) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                }
             });
-        });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        }
 
         // --- Scroll Intersection Observer (Fade Up Animation) ---
         const observerOptions = {
@@ -449,4 +585,5 @@
         });
     </script>
 </body>
+
 </html>
