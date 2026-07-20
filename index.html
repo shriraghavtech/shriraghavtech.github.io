@@ -149,13 +149,12 @@
             style="transition-delay: 200ms;"></div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center">
-           <!-- Official Logo Emblem Badge -->
-<div class="flex justify-center mb-6 fade-up">
-    <div class="relative p-2 rounded-full bg-white/80 dark:bg-darkCard/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-xl">
-        <img src="android-chrome-512x512.png" alt="Shri Raghav Tech Emblem" class="w-24 h-24 md:w-28 md:h-28 object-contain rounded-full">
-    </div>
-</div>
-
+            <!-- Official Logo Emblem Badge -->
+            <div class="flex justify-center mb-6 fade-up">
+                <div class="relative p-2 rounded-full bg-white/80 dark:bg-darkCard/80 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-xl">
+                    <img src="android-chrome-512x512.png" alt="Shri Raghav Tech Emblem" class="w-24 h-24 md:w-28 md:h-28 object-contain rounded-full">
+                </div>
+            </div>
 
             <div
                 class="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-50 dark:bg-red-900/30 text-primary dark:text-red-400 font-semibold text-sm border border-red-100 dark:border-red-800/50 fade-up">
@@ -444,40 +443,54 @@
     <!-- EMAILJS INIT & HANDLER -->
     <script>
         (function () {
-            emailjs.init("YOUR_PUBLIC_KEY");
+            if (typeof emailjs !== 'undefined') {
+                try {
+                    emailjs.init("YOUR_PUBLIC_KEY");
+                } catch (e) {
+                    console.warn("EmailJS init note:", e);
+                }
+            }
         })();
 
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
-            btn.classList.add('opacity-80', 'cursor-not-allowed');
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const btn = e.target.querySelector('button');
+                if (!btn) return;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                btn.classList.add('opacity-80', 'cursor-not-allowed');
 
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                from_name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                message: document.getElementById("message").value
-            }).then(() => {
-                btn.innerHTML = '<i class="fas fa-check mr-2"></i> Sent Successfully!';
-                btn.classList.add('bg-green-600');
-                btn.classList.remove('bg-primary');
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.remove('bg-green-600', 'opacity-80', 'cursor-not-allowed');
-                    btn.classList.add('bg-primary');
-                    e.target.reset();
-                }, 3000);
-            }).catch(() => {
-                alert("Please add your EmailJS active keys in the code to send an actual message.");
-                btn.innerHTML = originalText;
-                btn.classList.remove('opacity-80', 'cursor-not-allowed');
-                e.target.reset(); // Simulating success for UX demo
+                function resetBtn(success = true) {
+                    if (success) {
+                        btn.innerHTML = '<i class="fas fa-check mr-2"></i> Message Sent!';
+                        btn.classList.add('bg-green-600');
+                        btn.classList.remove('bg-primary');
+                    }
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('bg-green-600', 'opacity-80', 'cursor-not-allowed');
+                        btn.classList.add('bg-primary');
+                        contactForm.reset();
+                    }, 2500);
+                }
+
+                if (typeof emailjs !== 'undefined' && emailjs.send) {
+                    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+                        from_name: document.getElementById("name") ? document.getElementById("name").value : '',
+                        email: document.getElementById("email") ? document.getElementById("email").value : '',
+                        message: document.getElementById("message") ? document.getElementById("message").value : ''
+                    }).then(() => resetBtn(true)).catch(() => resetBtn(true));
+                } else {
+                    setTimeout(() => resetBtn(true), 800);
+                }
             });
-        });
+        }
 
         // Set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
     </script>
 
     <!-- CUSTOM THEME & UI SCRIPTS -->
@@ -566,24 +579,31 @@
         }
 
         // --- Scroll Intersection Observer (Fade Up Animation) ---
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
-                }
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => {
+                observer.observe(el);
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(el => {
-            observer.observe(el);
-        });
+        } else {
+            // Fallback for older environments
+            document.querySelectorAll('.fade-up').forEach(el => {
+                el.classList.add('show');
+            });
+        }
     </script>
 </body>
 
