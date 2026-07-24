@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>ShriraghavTech - Services</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "surface-tint": "#575e70",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#141b2b",
+                    "inverse-primary": "#c0c6db",
+                    "on-surface-variant": "#45464c",
+                    "on-tertiary-fixed-variant": "#93000b",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "secondary": "#735c00",
+                    "surface-bright": "#f8f9fa",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dce2f7",
+                    "on-tertiary-fixed": "#410002",
+                    "secondary-container": "#fed65b",
+                    "outline": "#76777d",
+                    "surface-silver": "#E5E7EB",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#ef453c",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-container": "#141b2b",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c0c6db",
+                    "on-secondary-container": "#745c00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#410002",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-surface": "#2e3132",
+                    "status-repairing": "#F97316",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7d8497",
+                    "on-primary-fixed-variant": "#404758"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "8px",
+                    "gutter": "12px",
+                    "base": "4px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease-in-out;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm flex items-center justify-between px-4 sm:px-8 h-16">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<h1 class="text-headline-sm font-headline-sm font-bold text-primary">Shri Raghav Tech</h1>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-primary font-bold font-label-md transition-colors" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="reviews.html">Reviews</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="contact.html">Contact</a>
+</nav>
+<a href="tel:+918512832150" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>+91 85128 32150</span>
+</a>
+</div>
+</header>
+
+<main class="pt-20 pb-28 md:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<!-- Header Section -->
+<section class="animate-fade-in text-left">
+<span class="font-label-md text-secondary tracking-widest uppercase mb-1 block font-bold">ShriraghavTech</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-3">Our Signature Services</h2>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-3xl">
+                Delhi's premier technology hardware repair center. Comprehensive hardware and software solutions for every technological challenge.
+            </p>
+</section>
+
+<!-- Services Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Advanced Hardware Repair Card -->
+<div class="bento-card bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-silver overflow-hidden relative group flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-xl flex items-center justify-center mb-6 shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Advanced Hardware Repair</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                        Motherboard level chip repairs, screen replacements, keyboard/trackpad fixes, and structural shell restorations. We fix what others replace.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">Motherboard</span>
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">Display</span>
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">Keyboard</span>
+</div>
+</div>
+<a href="contact.html" class="w-full py-3.5 bg-primary text-on-primary rounded-xl font-bold text-sm tracking-wider uppercase transition-all active:scale-95 flex items-center justify-center gap-2 shadow-sm">
+                        Inquire Service
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+
+<!-- Software Troubleshooting Card -->
+<div class="bento-card bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-surface-silver relative overflow-hidden group flex flex-col justify-between">
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full transition-transform group-hover:scale-110"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-secondary-container/30 text-on-secondary-container rounded-xl flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<div class="flex items-center gap-1 bg-secondary/10 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[12px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs text-secondary font-bold">Expertise</span>
+</div>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Software Troubleshooting</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                        OS installation, blue screen fixes, virus/malware termination, and comprehensive system optimization for peak performance.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">OS Reinstall</span>
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">Virus Removal</span>
+<span class="px-2.5 py-1 bg-surface-variant/60 text-xs font-bold rounded-md uppercase tracking-wider text-on-surface-variant">BSOD Fix</span>
+</div>
+</div>
+<a href="contact.html" class="w-full py-3.5 bg-surface-container text-primary border border-primary/20 rounded-xl font-bold text-sm tracking-wider uppercase transition-all active:scale-95 flex items-center justify-center gap-2">
+                        Inquire Service
+                        <span class="material-symbols-outlined text-sm">contact_support</span>
+</a>
+</div>
+
+<!-- Critical Data Recovery Card -->
+<div class="bento-card bg-primary-container text-on-primary-fixed rounded-2xl p-6 shadow-xl relative overflow-hidden group flex flex-col justify-between md:col-span-2 lg:col-span-1">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2),transparent)]"></div>
+</div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-surface-container-lowest text-primary rounded-xl flex items-center justify-center mb-6 shadow-md">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">settings_backup_restore</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Critical Data Recovery</h3>
+<p class="text-sm text-on-primary-container mb-6 leading-relaxed">
+                        Reliable retrieval of vital documents, photos, and files from dead or corrupted hard drives, SSDs, formatting accidents, and flash media.
+                    </p>
+<div class="flex items-center gap-4 mb-6 text-on-primary-container text-xs font-bold">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-green-400">check_circle</span>
+<span>98% Success Rate</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary-fixed-dim">security</span>
+<span>Cleanroom Lab</span>
+</div>
+</div>
+</div>
+<a href="contact.html" class="w-full py-3.5 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-sm tracking-wider uppercase transition-all active:scale-95 flex items-center justify-center gap-2 shadow-md">
+                        Recover Now
+                        <span class="material-symbols-outlined text-sm">hard_drive</span>
+</a>
+</div>
+</div>
+
+<!-- Featured Laboratory Section Image -->
+<section class="rounded-3xl overflow-hidden shadow-lg border border-surface-silver h-64 sm:h-80 relative">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiiCqfhOHEqXg1IZVApJbIcxjzYHTUH_XerUJ94i3L8YidKXY8RJRycIAciUK6FImWzpoOwmWgPmNCu5t_Y9Y7Lcna3XMX28EK2pJ7caouc1elsYwRrzywL8GmMOHLm-bpqkYsQpsETWL0rMlul1tLARHfgv0ZKn1NO27OalurEDIydJzn8p14gWOxrpexV4czDilQWNRz4kDst9VbeGdrKj9ie25Ug4Pm9SQ7QZMPMl-qSWlfr0mc_Ez3waX_CQAtVNysKDaS_7qD')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent flex items-end p-6 sm:p-10">
+<div class="text-white max-w-xl">
+<p class="text-xs uppercase tracking-widest font-bold text-secondary-fixed-dim mb-1">Certified Technicians</p>
+<h3 class="text-2xl sm:text-3xl font-extrabold mb-2">Premium Quality Parts Only</h3>
+<p class="text-sm opacity-90 hidden sm:block">State-of-the-art diagnostic equipment and ESD-safe clean stations for delicate micro-soldering repairs.</p>
+</div>
+</div>
+</section>
+
+<!-- Quick Help Section -->
+<section class="text-center bg-surface-container-low p-8 rounded-3xl border border-dashed border-outline-variant max-w-3xl mx-auto">
+<h4 class="text-xl sm:text-2xl font-bold text-primary mb-2">Need a quick diagnosis?</h4>
+<p class="text-sm text-on-surface-variant mb-6">Our experts are available for instant consultation on WhatsApp.</p>
+<a class="inline-flex items-center gap-2 px-8 py-3.5 bg-[#25D366] text-white rounded-full font-bold text-sm shadow-md transition-transform active:scale-95 hover:scale-105" href="https://wa.me/918512832150">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span>WhatsApp Us Now</span>
+</a>
+</section>
+</main>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-outline-variant flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90 group" href="index.html">
+<span class="material-symbols-outlined group-hover:text-primary">home</span>
+<span class="text-label-sm font-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/20 rounded-full px-4 py-1 transition-transform duration-150 active:scale-90" href="services.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+<span class="text-label-sm font-label-sm mt-1 font-bold">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90 group" href="reviews.html">
+<span class="material-symbols-outlined group-hover:text-primary">star</span>
+<span class="text-label-sm font-label-sm mt-1">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90 group" href="contact.html">
+<span class="material-symbols-outlined group-hover:text-primary">mail</span>
+<span class="text-label-sm font-label-sm mt-1">Contact</span>
+</a>
+</nav>
+
+<!-- Floating Action Button (FAB) -->
+<a class="fixed right-4 md:right-8 bottom-24 md:bottom-8 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-lg flex items-center justify-center transition-all duration-200 active:scale-90 z-40 border border-secondary/20 hover:scale-110" href="tel:+918512832150" aria-label="Call Us">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+</body></html>

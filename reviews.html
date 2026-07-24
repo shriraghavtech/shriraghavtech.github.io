@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Reviews | ShriraghavTech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "surface-tint": "#575e70",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#141b2b",
+                    "inverse-primary": "#c0c6db",
+                    "on-surface-variant": "#45464c",
+                    "on-tertiary-fixed-variant": "#93000b",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "secondary": "#735c00",
+                    "surface-bright": "#f8f9fa",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dce2f7",
+                    "on-tertiary-fixed": "#410002",
+                    "secondary-container": "#fed65b",
+                    "outline": "#76777d",
+                    "surface-silver": "#E5E7EB",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#ef453c",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-container": "#141b2b",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c0c6db",
+                    "on-secondary-container": "#745c00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#410002",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-surface": "#2e3132",
+                    "status-repairing": "#F97316",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7d8497",
+                    "on-primary-fixed-variant": "#404758"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "8px",
+                    "gutter": "12px",
+                    "base": "4px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm flex items-center justify-between px-4 sm:px-8 h-16">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">handyman</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">Shri Raghav Tech</span>
+</a>
+
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="services.html">Services</a>
+<a class="text-primary font-bold font-label-md transition-colors" href="reviews.html">Reviews</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+
+<a href="tel:+918512832150" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>+91 85128 32150</span>
+</a>
+</div>
+</header>
+
+<main class="pt-20 pb-28 md:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+<!-- Header Section -->
+<section class="animate-in fade-in duration-700">
+<span class="text-label-md font-label-md text-secondary uppercase tracking-widest mb-1 block font-bold">Client Stories</span>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-3">What Our Clients Say</h1>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-3xl">Real testimonials from people who trusted ShriraghavTech with their essential hardware and data.</p>
+</section>
+
+<!-- Metrics/Stats Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+<div class="bg-primary-container text-on-primary-container p-5 rounded-2xl shadow-sm">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-2xl font-bold">4.9 / 5</span>
+</div>
+<span class="text-xs font-bold opacity-80 uppercase tracking-wider">Avg. Google Rating</span>
+</div>
+
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-surface-silver shadow-sm">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-symbols-outlined">verified</span>
+<span class="text-2xl font-bold">1000+</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Repairs Completed</span>
+</div>
+
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-surface-silver shadow-sm">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+<span class="text-2xl font-bold">24-48h</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Avg. Turnaround</span>
+</div>
+
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-surface-silver shadow-sm">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-symbols-outlined">thumb_up</span>
+<span class="text-2xl font-bold">98%</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Satisfaction Rate</span>
+</div>
+</div>
+
+<!-- Testimonials Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Featured Testimonial Card 1 (Rahul Sharma) -->
+<div class="bg-white rounded-2xl shadow-sm border border-surface-silver p-6 relative overflow-hidden group hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold shrink-0 border-2 border-white shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" alt="Rahul Sharma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8cTfdxUUhldVN8a-R6KeRX2h07FXn-wlIU6t0auPD31ldhJDU4PyiwVQ4YnylwUyqC61kEfI-CoSzctb8rSVKMkUXHd3mVEmugmsmU3ehctJ9HJgubUi-5qfwZlh1NEG3K-_6JWIRZlFY4GHx0j3G0S69MoobzNggU4Gai1Gm1xQkSokJea8DgaItvRMjfcAN8qEtpicxMf4yszxDxgIhKNZZNq0B3eAhPwIuayydK1yaV0_7FjGu8Nzfny7N6Dk1zE-Spb-GYqZP"/>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary">Rahul Sharma</h3>
+<p class="text-xs text-on-surface-variant">Business Analyst, Delhi</p>
+</div>
+</div>
+<div class="flex gap-0.5 mb-3">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic mb-4">
+                "My Macbook was completely dead and apple quoted me an insane amount. Shriraghav Tech fixed the motherboard in just 1 day and saved me tons of money!"
+            </p>
+</div>
+<div class="pt-4 border-t border-surface-silver flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">laptop_mac</span>
+<span>Macbook Motherboard Fix</span>
+</div>
+<span class="text-xs text-outline">1 month ago</span>
+</div>
+</div>
+
+<!-- Featured Testimonial Card 2 (Priya Mishra) -->
+<div class="bg-white rounded-2xl shadow-sm border border-surface-silver p-6 relative overflow-hidden group hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold shrink-0 border-2 border-white shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" alt="Priya Mishra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELwTEC7SJYoayXiHmjw9BtuCgNms8Bw-RbX9dd0CgPqsjZcw6mZkpiW5-mGntBdfyl4WdkqRAcv_h2zYLKa1IF3XZMsFlhAPUhEHEcKLalSsEeViMmzvDgfdW57pmexfl8bPi2p0uVDWLp1ghBAjofzpUgpvjRXzKFh2mJMmRh8QzfqiTiaT439pjYEK1s6WrA3R2-PH889uLKnNIRIsy7Z4nNw45-G5PzRz1aslN3lMKfAtCWZXIdBMzmrnX714y-gmtiR9dOOhJ"/>
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary">Priya Mishra</h3>
+<p class="text-xs text-on-surface-variant">Photographer, Dwarka</p>
+</div>
+</div>
+<div class="flex gap-0.5 mb-3">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic mb-4">
+                "Excellent and prompt service. They managed to recover 10 years of family photos from a completely corrupted hard drive. Unbelievable expertise!"
+            </p>
+</div>
+<div class="pt-4 border-t border-surface-silver flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">database</span>
+<span>Critical Data Recovery</span>
+</div>
+<span class="text-xs text-outline">2 weeks ago</span>
+</div>
+</div>
+
+<!-- Testimonial Card 3 (Amit Verma) -->
+<div class="bg-white rounded-2xl shadow-sm border border-surface-silver p-6 relative overflow-hidden group hover:shadow-md transition-shadow duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary font-bold text-xl shrink-0 border-2 border-white shadow-sm">
+A
+</div>
+<div>
+<h3 class="text-lg font-bold text-primary">Amit Verma</h3>
+<p class="text-xs text-on-surface-variant">Software Developer, Janakpuri</p>
+</div>
+</div>
+<div class="flex gap-0.5 mb-3">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic mb-4">
+                "Spilled coffee over my Dell XPS laptop right before a presentation. ShriraghavTech ultra-cleaned the board and fixed it within 6 hours. Lifesavers!"
+            </p>
+</div>
+<div class="pt-4 border-t border-surface-silver flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">water_damage</span>
+<span>Liquid Damage Clean</span>
+</div>
+<span class="text-xs text-outline">3 days ago</span>
+</div>
+</div>
+</div>
+
+<!-- Leave a Review CTA -->
+<section class="p-8 bg-surface-container rounded-3xl text-center border-2 border-dashed border-outline-variant max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-2">rate_review</span>
+<h4 class="text-2xl font-bold text-primary mb-2">Have we fixed your device?</h4>
+<p class="text-sm text-on-surface-variant mb-6">Your feedback helps us provide even better tech support for Delhi.</p>
+<a href="contact.html" class="inline-block py-3.5 px-8 bg-primary text-on-primary font-bold text-sm rounded-xl transition-all duration-200 active:scale-95 shadow-md hover:scale-105">
+                Write a Review
+</a>
+</section>
+</main>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="services.html">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="text-label-sm font-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/20 rounded-full px-4 py-1 transition-transform duration-150 active:scale-90" href="reviews.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm font-bold">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-sm font-label-sm">Contact</span>
+</a>
+</nav>
+
+<!-- FAB -->
+<a class="fixed right-4 md:right-8 bottom-24 md:bottom-8 w-14 h-14 bg-secondary-container text-primary rounded-full shadow-lg flex items-center justify-center z-40 transition-transform active:scale-90 hover:scale-110" href="tel:+918512832150" aria-label="Call Us">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+</body></html>

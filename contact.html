@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>ShriraghavTech - Contact &amp; Booking</title>
+<!-- Google Fonts: Hanken Grotesk and JetBrains Mono -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#575e70",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-dim": "#d9dadb",
+                        "on-primary-fixed": "#141b2b",
+                        "inverse-primary": "#c0c6db",
+                        "on-surface-variant": "#45464c",
+                        "on-tertiary-fixed-variant": "#93000b",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "secondary": "#735c00",
+                        "surface-bright": "#f8f9fa",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#dce2f7",
+                        "on-tertiary-fixed": "#410002",
+                        "secondary-container": "#fed65b",
+                        "outline": "#76777d",
+                        "surface-silver": "#E5E7EB",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#ef453c",
+                        "on-background": "#191c1d",
+                        "on-secondary-fixed": "#241a00",
+                        "primary-container": "#141b2b",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#c0c6db",
+                        "on-secondary-container": "#745c00",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#410002",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#ffb4ab",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "inverse-surface": "#2e3132",
+                        "status-repairing": "#F97316",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "surface-container-high": "#e7e8e9",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#7d8497",
+                        "on-primary-fixed-variant": "#404758"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "margin-tablet": "24px",
+                        "stack-sm": "8px",
+                        "gutter": "12px",
+                        "base": "4px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Hanken Grotesk', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm flex items-center justify-between px-4 sm:px-8 h-16">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="handyman">handyman</span>
+<h1 class="text-headline-sm font-headline-sm font-bold text-primary">Shri Raghav Tech</h1>
+</a>
+
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="reviews.html">Reviews</a>
+<a class="text-primary font-bold font-label-md transition-colors" href="contact.html">Contact</a>
+</div>
+
+<a href="tel:+918512832150" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>+91 85128 32150</span>
+</a>
+</div>
+</header>
+
+<main class="pt-20 pb-28 md:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<!-- Header Section -->
+<section class="space-y-2">
+<span class="text-label-md font-label-md text-secondary uppercase tracking-widest block font-bold">Contact &amp; Support</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary">Let's Fix Your Device</h2>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-2xl">Drop us a message detailing your technical issues, and our experts will get back to you with a free consultation and price quote.</p>
+</section>
+
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Main Booking Form -->
+<section class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
+<form action="#" class="space-y-6" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully! Our technician will reach out to you within 30 minutes.');">
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline uppercase tracking-wider block" for="name">Your Name</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-base py-3 px-0 transition-all placeholder:text-outline-variant" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline uppercase tracking-wider block" for="phone">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-base py-3 px-0 transition-all placeholder:text-outline-variant" id="phone" name="phone" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline uppercase tracking-wider block" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-base py-3 px-0 transition-all placeholder:text-outline-variant" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+</div>
+
+<div class="space-y-2">
+<label class="text-xs font-bold text-outline uppercase tracking-wider block" for="issue">Issue Description</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-base py-3 px-0 transition-all resize-none placeholder:text-outline-variant" id="issue" name="issue" placeholder="Tell us what's wrong with your gadget (e.g. laptop won't turn on, cracked screen, liquid spill)..." required="" rows="4"></textarea>
+</div>
+
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-base transition-all active:scale-95 flex items-center justify-center gap-2 shadow-md hover:bg-gray-900" type="submit">
+<span>Send Diagnostic Request</span>
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+
+<p class="text-xs text-on-surface-variant flex items-center gap-1.5 justify-center opacity-80">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span>Your information is encrypted &amp; privacy guaranteed.</span>
+</p>
+</form>
+</section>
+
+<!-- Direct Contact Section & Map -->
+<section class="lg:col-span-5 space-y-6">
+<div class="p-6 rounded-2xl border border-surface-silver bg-surface-container-low space-y-4 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="bg-primary text-on-primary p-3 rounded-xl shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-primary mb-1">Visit Our Repair Center</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Palam, New Delhi, India 110045</p>
+<p class="text-xs font-bold text-secondary mt-1">Open 7 Days: 10:00 AM - 8:00 PM</p>
+</div>
+</div>
+</div>
+
+<a class="w-full border-2 border-primary text-primary py-4 rounded-xl font-bold text-base transition-all active:scale-95 flex items-center justify-center gap-2 bg-white hover:bg-primary hover:text-white shadow-sm" href="tel:+918512832150">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span>Call +91 85128 32150 Directly</span>
+</a>
+
+<!-- Map Illustration / Satellite View -->
+<div class="w-full h-56 rounded-2xl overflow-hidden relative shadow-md border border-surface-silver">
+<img class="w-full h-full object-cover" alt="Map view of Palam, New Delhi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF1kOZnQrPPpHwW8NQCzzal_vyzI72gDXXjF_tlhYqs0ItIVGhNOTfqN0vsiHfFP3_ZZ33vKRHJW6sNv-WrXyA-3qYdMISkioLVyp6mFCOh6M7M6zmeyK0Gk_E-81ANA1R1qcG1h1Wv25rfIu36QGQGEOkVSFtdkGyd2vSr6P93v8RE8kmCUKWv9BjqQDHGMkrWzpVLWDQ3eV3D_9VvXpBFB9GwlHp1OPTbUIr6EbhFLFvTzcKfzYM9gYD-h_G7xDyQyQhNsuaJA8I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-4">
+<a href="https://maps.google.com/?q=Palam+Delhi" target="_blank" class="px-4 py-2 bg-white text-primary rounded-lg text-xs font-bold shadow-md inline-flex items-center gap-1.5 hover:bg-secondary-container">
+<span class="material-symbols-outlined text-sm">directions</span>
+<span>Open Directions in Maps</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="services.html">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+<span class="text-label-sm font-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="reviews.html">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="text-label-sm font-label-sm">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/20 rounded-full px-4 py-1 transition-transform duration-150 active:scale-90" href="contact.html">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="text-label-sm font-label-sm font-bold">Contact</span>
+</a>
+</nav>
+
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-24 md:bottom-8 right-6 md:right-8 bg-[#25D366] text-white p-4 rounded-full shadow-xl z-40 transition-transform hover:scale-110 active:scale-90 flex items-center justify-center" href="https://wa.me/918512832150?text=Hi%20Shriraghav%20Tech,%20I%20need%20laptop%20repair%20services!" aria-label="WhatsApp Us">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+</body></html>

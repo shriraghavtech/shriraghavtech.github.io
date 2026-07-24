@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>ShriraghavTech - Professional Repair Services</title>
+<!-- Google Fonts: Hanken Grotesk and JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "surface-tint": "#575e70",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#141b2b",
+                    "inverse-primary": "#c0c6db",
+                    "on-surface-variant": "#45464c",
+                    "on-tertiary-fixed-variant": "#93000b",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "secondary": "#735c00",
+                    "surface-bright": "#f8f9fa",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dce2f7",
+                    "on-tertiary-fixed": "#410002",
+                    "secondary-container": "#fed65b",
+                    "outline": "#76777d",
+                    "surface-silver": "#E5E7EB",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#ef453c",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-container": "#141b2b",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c0c6db",
+                    "on-secondary-container": "#745c00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#410002",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-surface": "#2e3132",
+                    "status-repairing": "#F97316",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7d8497",
+                    "on-primary-fixed-variant": "#404758"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "8px",
+                    "gutter": "12px",
+                    "base": "4px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container/30 min-h-screen">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-200 px-4 sm:px-8 h-16 flex items-center justify-between">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<img alt="ShriraghavTech Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu35txVHP88acpDGOwHvGak3679Td5IUVIKCEgUyQXubQLxUXBcUkoFFPiXG2i1XbbSoP_wXbI3ynK1Hr-DA9GXa-VNt4EIZpDnBbk8OvcUTY0rvdUcWqJ1UJxfc2YkCe5aNXzOnXCujL00HePD9LjZMjmG-nTiziPmUkHGn75-OcsQqQ_dXZgMMWrw1x9oTaMLocF-_bS7_Pi4-OKaJOgHLz_4Au0C1AXlqjGq7eSpYrv75_VfmVnTJUIL"/>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">Shri Raghav Tech</span>
+</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold font-label-md transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="reviews.html">Reviews</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-3">
+<a href="tel:+918512832150" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Call Us</span>
+</a>
+</div>
+</div>
+</nav>
+
+<main class="pt-20 pb-28 md:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+<!-- Hero Section -->
+<section class="relative pt-6 pb-8 md:pt-12 md:pb-16 overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-low to-white p-6 sm:p-10 border border-surface-silver/60 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center px-3 py-1 bg-secondary-container/20 border border-secondary/10 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-secondary mr-2" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Trusted by 1000+ Customers</span>
+</div>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight leading-tight">
+                    Empower Your Gadgets.<br/>
+<span class="text-secondary">Fix Your Laptop Today.</span>
+</h1>
+<p class="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Delhi's premier technology hardware repair center. Fast turnarounds, transparent pricing, and built on trust. Micro-soldering, motherboard fixes & critical data recovery.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-2">
+<a href="contact.html" class="w-full sm:w-auto h-14 px-8 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-xl flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] transition-transform">
+<span>Get Free Diagnosis</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a href="services.html" class="w-full sm:w-auto h-14 px-8 border border-surface-silver text-primary font-headline-sm text-headline-sm rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
+<span>Explore Services</span>
+</a>
+</div>
+</div>
+
+<div class="lg:col-span-5 relative hidden lg:flex justify-center items-center">
+<div class="w-72 h-72 rounded-3xl bg-primary-container p-6 shadow-2xl text-white relative transform rotate-3 hover:rotate-0 transition-transform duration-300">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Express Repair Lab</h3>
+<p class="text-sm opacity-80 mb-6">Same-day diagnostics & genuine OEM component replacement in Palam, New Delhi.</p>
+<div class="flex items-center gap-2 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+<span>Lab Active Now</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Signature Services Grid -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-1">What We Do</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-primary">Signature Services</h2>
+</div>
+<a href="services.html" class="text-label-md font-label-md text-secondary hover:underline font-bold">View All Services →</a>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Hardware Repair -->
+<div class="group bg-white p-6 rounded-2xl shadow-sm border border-surface-silver/60 hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">memory</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Advanced Hardware Repair</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Motherboard level chip repairs, screen replacements, keyboard/trackpad fixes, and structural restorations.
+                    </p>
+</div>
+<a href="services.html" class="mt-6 text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+
+<!-- Software Troubleshooting -->
+<div class="group bg-white p-6 rounded-2xl shadow-sm border border-surface-silver/60 hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Software Troubleshooting</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        OS repair, blue screen fixes, virus termination, and system optimization for peak performance.
+                    </p>
+</div>
+<a href="services.html" class="mt-6 text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+
+<!-- Data Recovery -->
+<div class="group bg-white p-6 rounded-2xl shadow-sm border border-surface-silver/60 hover:shadow-md transition-all flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+<div>
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">settings_backup_restore</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Critical Data Recovery</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Reliable retrieval of vital documents from dead hard drives, SSDs, and formatting accidents.
+                    </p>
+</div>
+<a href="services.html" class="mt-6 text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Testimonials / Social Proof -->
+<section class="bg-primary-container rounded-3xl py-10 px-6 sm:px-10 overflow-hidden relative text-white">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-fixed/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest block mb-1">Reviews</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white">What Our Clients Say</h2>
+</div>
+<a href="reviews.html" class="text-label-md font-label-md text-secondary-fixed-dim hover:underline font-bold">See All Reviews →</a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Testimonial 1 -->
+<div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl space-y-4">
+<div class="flex text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm sm:text-base text-on-primary-container italic leading-relaxed">
+                    "My Macbook was completely dead and apple quoted me an insane amount. Shriraghav Tech fixed the motherboard in just 1 day!"
+                </p>
+<div class="flex items-center gap-3 pt-2 border-t border-white/10">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-primary">R</div>
+<div>
+<h4 class="font-bold text-sm text-white">Rahul Sharma</h4>
+<span class="text-xs text-on-primary-container">Business Analyst, Delhi</span>
+</div>
+</div>
+</div>
+
+<!-- Testimonial 2 -->
+<div class="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl space-y-4">
+<div class="flex text-secondary-fixed-dim">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm sm:text-base text-on-primary-container italic leading-relaxed">
+                    "Excellent and prompt service. They managed to recover 10 years of family photos from a corrupted hard drive."
+                </p>
+<div class="flex items-center gap-3 pt-2 border-t border-white/10">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-primary">P</div>
+<div>
+<h4 class="font-bold text-sm text-white">Priya Mishra</h4>
+<span class="text-xs text-on-primary-container">Photographer, Dwarka</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quick Status / Location -->
+<section>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-2xl border border-outline-variant/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-primary">Our Repair Center</h4>
+<p class="text-sm text-on-surface-variant">Palam, New Delhi, India 110045</p>
+</div>
+</div>
+<a href="contact.html" class="w-full sm:w-auto px-6 py-3 bg-primary text-on-primary rounded-xl font-bold text-sm text-center transition-transform active:scale-95">
+            Book Visit / Contact
+        </a>
+</div>
+</section>
+</main>
+
+<!-- FAB for Quick Call (Mobile + Desktop Responsive) -->
+<a class="fixed bottom-24 md:bottom-8 right-4 md:right-8 w-14 h-14 bg-secondary-container text-primary rounded-full shadow-xl flex items-center justify-center z-40 transition-transform duration-150 active:scale-90 hover:scale-110" href="tel:+918512832150" aria-label="Call Shri Raghav Tech">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+</a>
+
+<!-- Mobile BottomNavBar (Hidden on Desktop) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface border-t border-outline-variant shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container/20 rounded-full px-4 py-1 transition-transform duration-150 active:scale-90" href="index.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="services.html">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="font-label-sm text-label-sm mt-0.5">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="reviews.html">
+<span class="material-symbols-outlined">star</span>
+<span class="font-label-sm text-label-sm mt-0.5">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-transform duration-150 active:scale-90" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-sm text-label-sm mt-0.5">Contact</span>
+</a>
+</nav>
+
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>
