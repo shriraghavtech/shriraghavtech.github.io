@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>README | ShriraghavTech Web Portal</title>
+<!-- Google Fonts: Hanken Grotesk and JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "surface-tint": "#575e70",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#141b2b",
+                    "inverse-primary": "#c0c6db",
+                    "on-surface-variant": "#45464c",
+                    "on-tertiary-fixed-variant": "#93000b",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "secondary": "#735c00",
+                    "surface-bright": "#f8f9fa",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dce2f7",
+                    "on-tertiary-fixed": "#410002",
+                    "secondary-container": "#fed65b",
+                    "outline": "#76777d",
+                    "surface-silver": "#E5E7EB",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#ef453c",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-container": "#141b2b",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c0c6db",
+                    "on-secondary-container": "#745c00",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#410002",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-surface": "#2e3132",
+                    "status-repairing": "#F97316",
+                    "error-container": "#ffdad6",
+                    "primary": "#000000",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7d8497",
+                    "on-primary-fixed-variant": "#404758"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Hanken Grotesk', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container/30 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-sm flex items-center justify-between px-4 sm:px-8 h-16">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<h1 class="text-headline-sm font-headline-sm font-bold text-primary">Shri Raghav Tech</h1>
+</a>
+
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="reviews.html">Reviews</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+
+<a href="tel:+918512832150" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>+91 85128 32150</span>
+</a>
+</div>
+</header>
+
+<main class="pt-20 pb-28 md:pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<!-- README Header -->
+<section class="bg-primary-container text-white p-8 sm:p-10 rounded-3xl relative overflow-hidden shadow-xl">
+<div class="relative z-10 space-y-4">
+<div class="inline-flex items-center px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-wider">
+            Web Application Documentation
+        </div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">ShriraghavTech Web Portal</h1>
+<p class="text-base sm:text-lg text-on-primary-container max-w-2xl leading-relaxed">
+            Delhi's premier technology hardware repair center portal. Fully responsive multi-page architecture designed with modern UI principles, Hanken Grotesk typography, and Tailwind CSS.
+        </p>
+</div>
+</section>
+
+<!-- Website Structure Overview -->
+<section class="space-y-6">
+<h2 class="text-2xl font-extrabold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">folder_open</span>
+<span>Project Site Map &amp; Page Directory</span>
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Index -->
+<a href="index.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="text-xs font-bold bg-secondary-container/30 text-secondary px-2.5 py-1 rounded-md uppercase">Main Entry</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">index.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Home page with hero section, signature service previews, client review highlights, and repair center location status.</p>
+</a>
+
+<!-- Services -->
+<a href="services.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">settings_suggest</span>
+<span class="text-xs font-bold bg-secondary-container/30 text-secondary px-2.5 py-1 rounded-md uppercase">Services</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">services.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Bento grid cards for motherboard repairs, software troubleshooting, data recovery, and laboratory showcase.</p>
+</a>
+
+<!-- Reviews -->
+<a href="reviews.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">star</span>
+<span class="text-xs font-bold bg-secondary-container/30 text-secondary px-2.5 py-1 rounded-md uppercase">Reviews</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">reviews.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">4.9/5 rating stats, customer testimonials, verified repair tags, and review submission CTA.</p>
+</a>
+
+<!-- Contact -->
+<a href="contact.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">mail</span>
+<span class="text-xs font-bold bg-secondary-container/30 text-secondary px-2.5 py-1 rounded-md uppercase">Booking</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">contact.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Diagnostic request form, phone hotline, Palam center map view, and instant WhatsApp chat FAB.</p>
+</a>
+
+<!-- Privacy Policy -->
+<a href="privacy-policy.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">privacy_tip</span>
+<span class="text-xs font-bold bg-secondary-container/30 text-secondary px-2.5 py-1 rounded-md uppercase">Legal</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">privacy-policy.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Strict data confidentiality terms, cleanroom hard drive handling guarantees, and zero third-party disclosure.</p>
+</a>
+
+<!-- Readme -->
+<a href="readme.html" class="bg-white p-6 rounded-2xl border border-surface-silver shadow-sm hover:shadow-md transition-all group block border-primary/30">
+<div class="flex items-center justify-between mb-3">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">description</span>
+<span class="text-xs font-bold bg-primary text-on-primary px-2.5 py-1 rounded-md uppercase">Docs</span>
+</div>
+<h3 class="text-lg font-bold text-primary mb-1">readme.html</h3>
+<p class="text-xs text-on-surface-variant leading-relaxed">Project technical architecture, layout design tokens, device responsiveness specs, and deployment details.</p>
+</a>
+</div>
+</section>
+
+<!-- Tech Stack & Features -->
+<section class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/30 space-y-6">
+<h2 class="text-2xl font-extrabold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">code</span>
+<span>Tech Stack &amp; Architecture</span>
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">HTML5 &amp; Semantic Web</h4>
+<p class="text-xs text-on-surface-variant">Accessible landmarks, header, main, nav, section, and article tags.</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">Tailwind CSS</h4>
+<p class="text-xs text-on-surface-variant">Customized color tokens (surface, primary, secondary-container).</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">Google Fonts</h4>
+<p class="text-xs text-on-surface-variant">Hanken Grotesk body &amp; JetBrains Mono label typography.</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">Material Symbols</h4>
+<p class="text-xs text-on-surface-variant">Outlined high-density iconography for hardware &amp; repair tools.</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">100% Device Responsive</h4>
+<p class="text-xs text-on-surface-variant">Mobile app bottom bar + Desktop top navbar + Max-width 7xl container.</p>
+</div>
+<div class="bg-white p-4 rounded-xl border border-surface-silver">
+<h4 class="font-bold text-sm text-primary mb-1">Fast Local Execution</h4>
+<p class="text-xs text-on-surface-variant">Zero build step needed; open any HTML file directly in any modern browser.</p>
+</div>
+</div>
+</section>
+</main>
+
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-outline-variant flex justify-around items-center h-20 px-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="services.html">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="text-label-sm font-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="reviews.html">
+<span class="material-symbols-outlined">star</span>
+<span class="text-label-sm font-label-sm">Reviews</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform duration-150 active:scale-90" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-sm font-label-sm">Contact</span>
+</a>
+</nav>
+</body></html>
