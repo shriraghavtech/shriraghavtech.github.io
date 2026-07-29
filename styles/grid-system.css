@@ -1,0 +1,363 @@
+/* ============================================================
+   SHRI RAGHAV TECH — RESPONSIVE GRID & LAYOUT SYSTEM
+   Version: 2.1.0
+   Author: ShriraghavTech Web Team
+   Description: Centralised layout system — max-width containers,
+   responsive grids, consistent spacing & alignment across all pages.
+   ============================================================ */
+
+/* ——————————————————————————————————————————
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   Matches Tailwind max-w-7xl (1280px) exactly for 100% consistency.
+   —————————————————————————————————————————— */
+:root {
+  /* Container max-widths per breakpoint */
+  --srt-container-xs:   100%;
+  --srt-container-sm:   540px;
+  --srt-container-md:   768px;
+  --srt-container-lg:   1024px;
+  --srt-container-xl:   1280px;
+  --srt-container-2xl:  1280px; /* Aligned with max-w-7xl (1280px / 80rem) */
+
+  /* Horizontal padding (gutters) */
+  --srt-gutter-xs:  1rem;    /* 16px - mobile px-4 */
+  --srt-gutter-sm:  1.5rem;  /* 24px - tablet sm:px-6 */
+  --srt-gutter-md:  1.5rem;
+  --srt-gutter-lg:  2rem;    /* 32px - desktop lg:px-8 */
+  --srt-gutter-xl:  2rem;
+
+  /* Grid column gaps */
+  --srt-gap-xs:     0.75rem;
+  --srt-gap-sm:     1rem;
+  --srt-gap-md:     1.25rem;
+  --srt-gap-lg:     1.5rem;
+  --srt-gap-xl:     2rem;
+
+  /* Section vertical spacing */
+  --srt-section-gap-mobile:  2.5rem;
+  --srt-section-gap-tablet:  3.5rem;
+  --srt-section-gap-desktop: 4.5rem;
+
+  /* Brand colours */
+  --srt-red:         #dc2626;
+  --srt-red-light:   #fef2f2;
+  --srt-amber:       #f59e0b;
+  --srt-slate-dark:  #0f172a;
+
+  /* Layout control */
+  --srt-max-content: 1280px;
+  --srt-nav-height:  4rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrollbar glitches */
+}
+
+a, button, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ——————————————————————————————————————————
+   CORE CONTAINER SYSTEM
+   Standardized centered 1280px max-width container.
+   —————————————————————————————————————————— */
+.srt-container,
+.srt-main-container {
+  width: 100%;
+  max-width: var(--srt-container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--srt-gutter-xs);
+}
+
+.srt-container-fluid {
+  width: 100%;
+  padding-inline: var(--srt-gutter-xs);
+}
+
+.srt-container-narrow {
+  width: 100%;
+  max-width: 768px;
+  margin-inline: auto;
+  padding-inline: var(--srt-gutter-xs);
+}
+
+@media (min-width: 640px) {
+  .srt-container,
+  .srt-main-container,
+  .srt-container-fluid,
+  .srt-container-narrow {
+    padding-inline: var(--srt-gutter-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .srt-container,
+  .srt-main-container,
+  .srt-container-fluid,
+  .srt-container-narrow {
+    padding-inline: var(--srt-gutter-lg);
+  }
+}
+
+/* ——————————————————————————————————————————
+   PAGE WRAPPER & SECTION SPACING
+   —————————————————————————————————————————— */
+.srt-page-wrapper {
+  min-height: 100dvh;
+  padding-top: var(--srt-nav-height);
+}
+
+.srt-main-content {
+  width: 100%;
+  max-width: var(--srt-container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--srt-gutter-xs);
+  padding-block: var(--srt-section-gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .srt-main-content {
+    padding-inline: var(--srt-gutter-sm);
+    padding-block: var(--srt-section-gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .srt-main-content {
+    padding-inline: var(--srt-gutter-lg);
+    padding-block: var(--srt-section-gap-desktop);
+  }
+}
+
+.srt-section {
+  margin-block-end: var(--srt-section-gap-mobile);
+}
+
+@media (min-width: 640px) {
+  .srt-section {
+    margin-block-end: var(--srt-section-gap-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .srt-section {
+    margin-block-end: var(--srt-section-gap-desktop);
+  }
+}
+
+/* ——————————————————————————————————————————
+   RESPONSIVE GRID — 12-COLUMN BASE
+   —————————————————————————————————————————— */
+.srt-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--srt-gap-xs);
+  width: 100%;
+}
+
+@media (min-width: 480px)  { .srt-grid { gap: var(--srt-gap-sm); } }
+@media (min-width: 768px)  { .srt-grid { gap: var(--srt-gap-md); } }
+@media (min-width: 1024px) { .srt-grid { gap: var(--srt-gap-lg); } }
+
+[class*="srt-col-"] { grid-column: span 12 / span 12; }
+
+.srt-col-1  { grid-column: span 1  / span 1;  }
+.srt-col-2  { grid-column: span 2  / span 2;  }
+.srt-col-3  { grid-column: span 3  / span 3;  }
+.srt-col-4  { grid-column: span 4  / span 4;  }
+.srt-col-5  { grid-column: span 5  / span 5;  }
+.srt-col-6  { grid-column: span 6  / span 6;  }
+.srt-col-7  { grid-column: span 7  / span 7;  }
+.srt-col-8  { grid-column: span 8  / span 8;  }
+.srt-col-9  { grid-column: span 9  / span 9;  }
+.srt-col-10 { grid-column: span 10 / span 10; }
+.srt-col-11 { grid-column: span 11 / span 11; }
+.srt-col-12 { grid-column: span 12 / span 12; }
+
+@media (min-width: 640px) {
+  .srt-col-sm-1  { grid-column: span 1  / span 1;  }
+  .srt-col-sm-2  { grid-column: span 2  / span 2;  }
+  .srt-col-sm-3  { grid-column: span 3  / span 3;  }
+  .srt-col-sm-4  { grid-column: span 4  / span 4;  }
+  .srt-col-sm-5  { grid-column: span 5  / span 5;  }
+  .srt-col-sm-6  { grid-column: span 6  / span 6;  }
+  .srt-col-sm-7  { grid-column: span 7  / span 7;  }
+  .srt-col-sm-8  { grid-column: span 8  / span 8;  }
+  .srt-col-sm-9  { grid-column: span 9  / span 9;  }
+  .srt-col-sm-10 { grid-column: span 10 / span 10; }
+  .srt-col-sm-11 { grid-column: span 11 / span 11; }
+  .srt-col-sm-12 { grid-column: span 12 / span 12; }
+}
+
+@media (min-width: 1024px) {
+  .srt-col-lg-1  { grid-column: span 1  / span 1;  }
+  .srt-col-lg-2  { grid-column: span 2  / span 2;  }
+  .srt-col-lg-3  { grid-column: span 3  / span 3;  }
+  .srt-col-lg-4  { grid-column: span 4  / span 4;  }
+  .srt-col-lg-5  { grid-column: span 5  / span 5;  }
+  .srt-col-lg-6  { grid-column: span 6  / span 6;  }
+  .srt-col-lg-7  { grid-column: span 7  / span 7;  }
+  .srt-col-lg-8  { grid-column: span 8  / span 8;  }
+  .srt-col-lg-9  { grid-column: span 9  / span 9;  }
+  .srt-col-lg-10 { grid-column: span 10 / span 10; }
+  .srt-col-lg-11 { grid-column: span 11 / span 11; }
+  .srt-col-lg-12 { grid-column: span 12 / span 12; }
+}
+
+/* ——————————————————————————————————————————
+   PRE-BUILT SEMANTIC GRID LAYOUTS
+   —————————————————————————————————————————— */
+.srt-grid-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--srt-gap-md);
+}
+@media (min-width: 600px)  { .srt-grid-services { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .srt-grid-services { grid-template-columns: repeat(3, 1fr); gap: var(--srt-gap-lg); } }
+
+.srt-grid-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--srt-gap-sm);
+}
+@media (min-width: 768px) { .srt-grid-stats { grid-template-columns: repeat(4, 1fr); gap: var(--srt-gap-lg); } }
+
+.srt-grid-testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--srt-gap-md);
+}
+@media (min-width: 768px) { .srt-grid-testimonials { grid-template-columns: repeat(2, 1fr); gap: var(--srt-gap-lg); } }
+
+.srt-grid-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 1024px) { .srt-grid-hero { grid-template-columns: 7fr 5fr; gap: 3rem; } }
+
+.srt-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 600px)  { .srt-grid-footer { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .srt-grid-footer { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; } }
+
+/* ——————————————————————————————————————————
+   PC DIAGNOSTICS RESPONSIVE GRID LAYOUTS
+   Single-column mobile layout (< 600px)
+   Dual-column tablet layout (600px - 1023px)
+   Multi-column desktop layout (>= 1024px)
+   —————————————————————————————————————————— */
+.srt-grid-diagnostics-dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--srt-gap-md);
+}
+@media (min-width: 1024px) {
+  .srt-grid-diagnostics-dashboard {
+    grid-template-columns: 4fr 8fr;
+    gap: var(--srt-gap-lg);
+  }
+}
+
+.srt-grid-diagnostics-telemetry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--srt-gap-sm);
+}
+@media (min-width: 600px)  { .srt-grid-diagnostics-telemetry { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .srt-grid-diagnostics-telemetry { grid-template-columns: repeat(4, 1fr); gap: var(--srt-gap-md); } }
+
+.srt-grid-diagnostics-shortcuts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--srt-gap-sm);
+  align-items: stretch;
+}
+@media (min-width: 600px)  { .srt-grid-diagnostics-shortcuts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .srt-grid-diagnostics-shortcuts { grid-template-columns: repeat(3, 1fr); gap: var(--srt-gap-md); } }
+
+/* ——————————————————————————————————————————
+   EQUAL HEIGHT FLEXBOX & GRID SYSTEM
+   Forces cards, sections, and grid columns to stretch to 100% equal height
+   regardless of text length or content amount.
+   —————————————————————————————————————————— */
+.srt-equal-height-grid,
+.diag-equal-grid {
+  display: grid !important;
+  align-items: stretch !important;
+}
+
+.srt-equal-height-card,
+.diag-equal-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.srt-grid-diagnostics-dashboard > div,
+.srt-grid-diagnostics-telemetry > div,
+.srt-grid-diagnostics-shortcuts > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ——————————————————————————————————————————
+   COMPONENTS & UTILITIES
+   —————————————————————————————————————————— */
+.srt-nav-inner {
+  width: 100%;
+  max-width: var(--srt-container-2xl);
+  margin-inline: auto;
+  padding-inline: var(--srt-gutter-xs);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--srt-nav-height);
+}
+@media (min-width: 640px)  { .srt-nav-inner { padding-inline: var(--srt-gutter-sm); } }
+@media (min-width: 1024px) { .srt-nav-inner { padding-inline: var(--srt-gutter-lg); } }
+
+.srt-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.srt-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+@media (min-width: 640px) { .srt-card { padding: 1.5rem; } }
+
+.dark .srt-card { background: #0f172a; border-color: #1e293b; }
+
+.srt-live-dot {
+  display: inline-block;
+  width: 0.5rem; height: 0.5rem;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: srt-pulse 1.8s ease-in-out infinite;
+}
+@keyframes srt-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.4); }
+}
+
+/* Print Overrides */
+@media print {
+  header, footer, nav, [aria-label="Mobile Navigation"] { display: none !important; }
+  .srt-container, .srt-main-content { max-width: 100%; padding: 0; margin: 0; }
+  body { font-size: 11pt; line-height: 1.5; }
+}
