@@ -1,0 +1,54 @@
+{
+  "coreSpecialties": [
+    {
+      "category": "Micro-Soldering & BGA Chip-Level Repair",
+      "description": "Infrared BGA reballing, power IC replacement, short-circuit clearing, and MOSFET line diagnostics.",
+      "turnaround": "24 - 48 Hours",
+      "warranty": "90-Day Warranty Coverage"
+    },
+    {
+      "category": "Laptop Motherboard Recovery",
+      "description": "No-display diagnosis, water damage liquid spill cleanup, BIOS flashing, and EC firmware restoration.",
+      "turnaround": "Same Day / Next Day",
+      "warranty": "90-Day Warranty Coverage"
+    },
+    {
+      "category": "Cleanroom Data Retrieval",
+      "description": "HDD head replacement, NVMe SSD controller recovery, corrupted partition restoration, and file salvage.",
+      "turnaround": "48 - 72 Hours",
+      "warranty": "Strict Non-Disclosure & Confidentiality Protocol"
+    },
+    {
+      "category": "PC Diagnostics & Thermal Optimization",
+      "description": "Liquid metal re-pasting, custom fan curve profiling, RAM stability torture testing, and GPU stress analysis.",
+      "turnaround": "Express 2 Hours",
+      "warranty": "Standard Service Guarantee"
+    }
+  ],
+  "supportPageResources": [
+    {
+      "page": "drivers-warranty.html",
+      "features": [
+        "Official OEM Driver Download Directory",
+        "Serial Number Warranty Status Checker",
+        "RMA Tracking Gateway"
+      ]
+    },
+    {
+      "page": "diagnostics.html",
+      "features": [
+        "Interactive PC Diagnostic Tool",
+        "System Health Inspector",
+        "Fault Code Analyzer"
+      ]
+    },
+    {
+      "page": "reviews.html",
+      "features": [
+        "Verified Customer Reviews",
+        "Rating Breakdown",
+        "Testimonial Gallery"
+      ]
+    }
+  ]
+}

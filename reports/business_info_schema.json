@@ -1,0 +1,37 @@
+{
+  "organization": {
+    "name": "ShriraghavTech Repair Center",
+    "brand": "Shri Raghav Tech",
+    "owner": "Nikhil Raghav",
+    "tagline": "Delhi's Premier Laptop & Motherboard Repair Center",
+    "foundingYear": 2026,
+    "licenseType": "Certified Hardware Repair & Micro-Soldering Desk"
+  },
+  "contactDesk": {
+    "primaryEmail": "shriraghavtech@gmail.com",
+    "primaryPhone": "+91 85128 32150",
+    "phoneTelLink": "tel:+918512832150",
+    "address": {
+      "street": "Palam",
+      "city": "New Delhi",
+      "region": "Delhi",
+      "postalCode": "110045",
+      "country": "India"
+    },
+    "geoCoordinates": {
+      "latitude": 28.5878,
+      "longitude": 77.0858
+    },
+    "operatingHours": "Monday - Saturday: 9:30 AM - 8:00 PM"
+  },
+  "digitalPresence": {
+    "websiteUrl": "https://shriraghavtech.github.io/",
+    "ownerPortfolioUrl": "https://i-nikhilraghav.github.io/",
+    "socialProfiles": {
+      "linkedin": "https://www.linkedin.com/company/shriraghavtech",
+      "facebook": "https://www.facebook.com/ShriraghavTech",
+      "instagram": "https://www.instagram.com/shriraghavtech/",
+      "twitterX": "https://x.com/shriraghavtech"
+    }
+  }
+}
