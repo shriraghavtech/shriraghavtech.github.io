@@ -2048,6 +2048,44 @@ Delhi's premier technology hardware repair center. Chip-level micro-soldering, m
 })();
 </script>
 <script>
+function toggleExperienceCollapse() {
+  const container = document.getElementById('experience-section-container');
+  const caret = document.getElementById('experience-caret');
+  const statusText = document.getElementById('experience-status-text');
+  if (!container) return;
+  const isCollapsed = container.classList.contains('max-h-0');
+  if (isCollapsed) {
+    container.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+    container.classList.add('max-h-[5000px]', 'opacity-100');
+    if (caret) caret.style.transform = 'rotate(0deg)';
+    if (statusText) statusText.innerText = 'Click to Collapse History';
+  } else {
+    container.classList.remove('max-h-[5000px]', 'opacity-100');
+    container.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+    if (caret) caret.style.transform = 'rotate(180deg)';
+    if (statusText) statusText.innerText = 'Click to Expand History';
+  }
+}
+
+function toggleCertificationsCollapse() {
+  const container = document.getElementById('certifications-section-container');
+  const caret = document.getElementById('certifications-caret');
+  const statusText = document.getElementById('certifications-status-text');
+  if (!container) return;
+  const isCollapsed = container.classList.contains('max-h-0');
+  if (isCollapsed) {
+    container.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+    container.classList.add('max-h-[10000px]', 'opacity-100');
+    if (caret) caret.style.transform = 'rotate(0deg)';
+    if (statusText) statusText.innerText = 'Click to Collapse Directory';
+  } else {
+    container.classList.remove('max-h-[10000px]', 'opacity-100');
+    container.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+    if (caret) caret.style.transform = 'rotate(180deg)';
+    if (statusText) statusText.innerText = 'Click to Expand Directory';
+  }
+}
+
 function toggleQuickNavCollapse() {
   const container = document.getElementById('quick-nav-grid-container');
   const caret = document.getElementById('quick-nav-caret');
