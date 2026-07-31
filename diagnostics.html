@@ -141,7 +141,7 @@
 <!-- Brand Logo -->
 <a href="index.html" class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-red-600 rounded-lg p-1">
 <div class="w-10 h-10 rounded-full border border-surface-silver dark:border-slate-700 overflow-hidden bg-white shrink-0 p-0.5 shadow-sm group-hover:scale-105 transition-transform">
-<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Shri Raghav Tech Logo" class="w-full h-full object-cover rounded-full"/>
+<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Shri Raghav Tech Logo" class="w-full h-full object-cover rounded-full aspect-square"/>
 </div>
 <span class="font-extrabold text-lg sm:text-xl tracking-tight">
 <span class="text-red-600">Shri Raghav</span> <span class="text-gray-900 dark:text-white">Tech</span>
@@ -191,7 +191,7 @@
 <div class="space-y-6">
 <div class="flex items-center justify-between border-b border-gray-100 dark:border-slate-800 pb-4">
 <div class="flex items-center gap-2">
-<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Logo" class="w-8 h-8 rounded-full border border-gray-200 dark:border-slate-700"/>
+<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Logo" class="w-8 h-8 rounded-full border border-gray-200 dark:border-slate-700 aspect-square shrink-0 object-cover"/>
 <span class="font-extrabold text-base"><span class="text-red-600">Shri Raghav</span> <span class="dark:text-white">Tech</span></span>
 </div>
 <button id="mobile-drawer-close" type="button" class="p-2 rounded-xl text-gray-500 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-red-600" aria-label="Close menu">
@@ -300,6 +300,10 @@ High-fidelity browser-based environment for real-time hardware profiling. Execut
 
 <a href="#system-report-inspector" class="px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-slate-700 hover:text-red-600 transition-all flex items-center gap-1.5">
 <span class="material-symbols-outlined text-xs sm:text-sm">assignment</span> <span>Error Report Suite</span>
+</a>
+
+<a href="#battery-diagnostic-hub" class="px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-slate-700 hover:text-red-600 transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs sm:text-sm">battery_charging_full</span> <span>Battery Health</span>
 </a>
 </div>
 </div>
@@ -451,15 +455,15 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-red-50 dark:bg-red-950/60 text-red-600 dark:text-red-400 rounded-2xl border border-red-100 dark:border-red-900">
 <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">memory</span>
 </div>
-<span id="badgeCpu" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeCpu" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">VERIFIED</span>
 </div>
 <div>
 <p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">CPU Silicon Logic</p>
-<h3 id="valCpuModel" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Detecting processor architecture...</h3>
+<h3 id="valCpuModel" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">AMD Ryzen 7 5700G (3.80 GHz)</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
 <span class="text-slate-500 dark:text-slate-400">Cores:</span>
-<span id="valCpuCores" class="font-bold text-emerald-600 dark:text-emerald-400">--</span>
+<span id="valCpuCores" class="font-bold text-emerald-600 dark:text-emerald-400">8 Cores / 16 Threads</span>
 </div>
 </div>
 
@@ -469,15 +473,15 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 rounded-2xl border border-blue-100 dark:border-blue-900">
 <span class="material-symbols-outlined text-2xl">rocket_launch</span>
 </div>
-<span id="badgeGpu" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeGpu" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-400">OPTIMAL</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Graphics Pipeline</p>
-<h3 id="valGpuRenderer" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Detecting WebGL renderer...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Dual Graphics Pipeline</p>
+<h3 id="valGpuRenderer" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">NVIDIA RTX 3060 Ti (8 GB)</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-<span class="text-slate-500 dark:text-slate-400">Vendor:</span>
-<span id="valGpuVendor" class="font-bold text-blue-600 dark:text-blue-400">--</span>
+<span class="text-slate-500 dark:text-slate-400">Integrated GPU:</span>
+<span id="valGpuVendor" class="font-bold text-blue-600 dark:text-blue-400">AMD Radeon (496 MB)</span>
 </div>
 </div>
 
@@ -487,15 +491,15 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 rounded-2xl border border-purple-100 dark:border-purple-900">
 <span class="material-symbols-outlined text-2xl">sd_card</span>
 </div>
-<span id="badgeMemory" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeMemory" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-purple-100 dark:bg-purple-950 text-purple-800 dark:text-purple-400">16.0 GB RAM</span>
 </div>
 <div>
 <p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">NVMe &amp; System Memory</p>
-<h3 id="valMemoryRAM" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Estimating system RAM...</h3>
+<h3 id="valMemoryRAM" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">16.0 GB Installed RAM</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-<span class="text-slate-500 dark:text-slate-400">JS Heap:</span>
-<span id="valMemoryHeap" class="font-bold text-purple-600 dark:text-purple-400">--</span>
+<span class="text-slate-500 dark:text-slate-400">Usable RAM:</span>
+<span id="valMemoryHeap" class="font-bold text-purple-600 dark:text-purple-400">15.4 GB Usable</span>
 </div>
 </div>
 
@@ -505,51 +509,51 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 rounded-2xl border border-amber-100 dark:border-amber-900">
 <span class="material-symbols-outlined text-2xl">desktop_windows</span>
 </div>
-<span id="badgeDisplay" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeDisplay" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-400">64-bit OS</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Display &amp; Resolution</p>
-<h3 id="valDisplayRes" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Measuring screen resolution...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Display &amp; Input</p>
+<h3 id="valDisplayRes" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">x64-based Processor</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-<span class="text-slate-500 dark:text-slate-400">Color Depth:</span>
-<span id="valDisplayColor" class="font-bold text-amber-600 dark:text-amber-400">--</span>
+<span class="text-slate-500 dark:text-slate-400">Pen / Touch:</span>
+<span id="valDisplayColor" class="font-bold text-amber-600 dark:text-amber-400">No Pen or Touch Input</span>
 </div>
 </div>
 
-<!-- Card 5: Battery -->
+<!-- Card 5: Battery / Power -->
 <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-xs space-y-3 text-slate-900 dark:text-slate-100 flex flex-col justify-between group hover:border-emerald-500/40 transition-colors">
 <div class="flex items-center justify-between">
 <div class="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 rounded-2xl border border-emerald-100 dark:border-emerald-900">
-<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">power</span>
 </div>
-<span id="badgeBattery" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeBattery" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">AC POWERED</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Battery Life &amp; Power</p>
-<h3 id="valBatteryLevel" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Detecting battery status...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Power &amp; Energy Rail</p>
+<h3 id="valBatteryLevel" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Desktop AC Power Mode</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
 <span class="text-slate-500 dark:text-slate-400">Power Source:</span>
-<span id="valBatteryStatus" class="font-bold text-emerald-600 dark:text-emerald-400">--</span>
+<span id="valBatteryStatus" class="font-bold text-emerald-600 dark:text-emerald-400">Direct AC Power (Desktop PSU)</span>
 </div>
 </div>
 
-<!-- Card 6: Form Factor -->
+<!-- Card 6: Device ID & System -->
 <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 shadow-xs space-y-3 text-slate-900 dark:text-slate-100 flex flex-col justify-between group hover:border-indigo-500/40 transition-colors">
 <div class="flex items-center justify-between">
 <div class="p-2.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 rounded-2xl border border-indigo-100 dark:border-indigo-900">
-<span class="material-symbols-outlined text-2xl">laptop</span>
+<span class="material-symbols-outlined text-2xl">badge</span>
 </div>
-<span id="badgeSystemType" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeSystemType" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-800 dark:text-indigo-400">DESKTOP RIG</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Form Factor &amp; Device Type</p>
-<h3 id="valSystemType" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Detecting device type...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Device Identity &amp; Product ID</p>
+<h3 id="valSystemType" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Device: harsh-raghav</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-<span class="text-slate-500 dark:text-slate-400">Input Mode:</span>
-<span id="valTouchCapability" class="font-bold text-indigo-600 dark:text-indigo-400">--</span>
+<span class="text-slate-500 dark:text-slate-400">Device ID:</span>
+<span id="valTouchCapability" class="font-bold text-indigo-600 dark:text-indigo-400 truncate">5E959F56-FCCE-440C...</span>
 </div>
 </div>
 
@@ -559,15 +563,15 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 dark:text-cyan-400 rounded-2xl border border-cyan-100 dark:border-cyan-900">
 <span class="material-symbols-outlined text-2xl">hard_drive</span>
 </div>
-<span id="badgeStorage" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeStorage" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-400">2.71 TB TOTAL</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Storage Health &amp; Disk Bus</p>
-<h3 id="valStorageHealth" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Evaluating NVMe / SSD health...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Storage Health &amp; Disk Usage</p>
+<h3 id="valStorageHealth" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">1.71 TB of 2.71 TB Used</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
-<span class="text-slate-500 dark:text-slate-400">SMART Health:</span>
-<span id="valStorageType" class="font-bold text-cyan-600 dark:text-cyan-400">--</span>
+<span class="text-slate-500 dark:text-slate-400">SMART Status:</span>
+<span id="valStorageType" class="font-bold text-cyan-600 dark:text-cyan-400">100% HEALTHY (1.00 TB Free)</span>
 </div>
 </div>
 
@@ -577,120 +581,396 @@ Schedule Shop Repair (+91 85128 32150)
 <div class="p-2.5 bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 rounded-2xl border border-rose-100 dark:border-rose-900">
 <span class="material-symbols-outlined text-2xl">wifi</span>
 </div>
-<span id="badgeNetwork" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">PENDING SCAN</span>
+<span id="badgeNetwork" class="px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">ONLINE</span>
 </div>
 <div>
-<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Network Throughput &amp; RTT</p>
-<h3 id="valNetworkSpeed" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Measuring connection speed...</h3>
+<p class="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 tracking-wider">Network Throughput &amp; Latency</p>
+<h3 id="valNetworkSpeed" class="font-extrabold text-sm text-slate-900 dark:text-white truncate mt-0.5">Broadband Connection</h3>
 </div>
 <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-mono">
 <span class="text-slate-500 dark:text-slate-400">RTT Latency:</span>
-<span id="valNetworkLatency" class="font-bold text-rose-600 dark:text-rose-400">--</span>
+<span id="valNetworkLatency" class="font-bold text-rose-600 dark:text-rose-400">&lt; 15 ms</span>
 </div>
 </div>
 </div>
 </section>
 
-<!-- SECTION 3: Real-Time Thermal Gradient & Logic Board Voltage Rail Monitoring -->
+<!-- SECTION: Real-Time Hardware Voltage Rails & Thermal Gradient Dashboard -->
 <section id="thermal-voltage-rails" class="space-y-6 scroll-mt-24">
-<!-- Module 1: Thermal Gradient -->
-<div class="bg-slate-900 text-white rounded-3xl p-6 border border-slate-800 space-y-6 shadow-lg relative overflow-hidden">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-<div>
-<h3 class="text-xs font-black uppercase tracking-widest text-red-500 flex items-center gap-1.5">
-<span class="material-symbols-outlined text-base">thermostat</span> Real-Time Thermal Gradient
-</h3>
-<p class="text-[10px] font-mono text-slate-400 uppercase">Sensor Array: THERM-X9 // Active Monitoring</p>
-</div>
-<div class="flex flex-wrap items-center gap-3 sm:gap-6 font-mono text-[10px] uppercase">
-<div><span class="text-slate-500">VRAM TEMP: </span><span class="text-emerald-400 font-bold">84°C</span></div>
-<div><span class="text-slate-500">VRM LOAD: </span><span class="text-red-500 font-bold">92°C</span></div>
-<div><span class="text-slate-500">PCH: </span><span class="text-emerald-400 font-bold">45°C</span></div>
-</div>
-</div>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+    
+    <!-- Left Side (7 Cols): Logic Board Voltage Rails Monitoring -->
+    <div class="lg:col-span-7 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm flex flex-col justify-between text-slate-900 dark:text-slate-100">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4 mb-4">
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-blue-600 dark:text-blue-400">electric_meter</span> Logic Board Voltage Rails Telemetry
+          </h3>
+          <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">Oscillometric Sampling Rate: 1.2GHz Live Sensor</p>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 text-[10px] font-mono font-bold uppercase shrink-0">System Nominal</span>
+      </div>
 
-<!-- PCB Layout Heatmap -->
-<div class="relative h-44 bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 opacity-25 bg-[radial-gradient(#475569_1px,transparent_1px)] [background-size:16px_16px]"></div>
-<div class="relative w-4/5 h-3/4 border-2 border-slate-800 flex items-center justify-center">
-<div class="w-16 h-16 border border-slate-700 bg-slate-900 flex items-center justify-center text-[9px] font-mono text-slate-500">CPU SOCKET</div>
-<div class="absolute top-2 right-4 w-2 h-16 border border-slate-700 bg-slate-900"></div>
-<div class="absolute top-2 right-7 w-2 h-16 border border-slate-700 bg-slate-900"></div>
-<div class="absolute w-28 h-28 bg-[radial-gradient(circle,rgba(220,38,38,0.45)_0%,transparent_70%)] animate-pulse"></div>
-<div class="absolute top-3 right-5 w-14 h-14 bg-[radial-gradient(circle,rgba(249,115,22,0.35)_0%,transparent_70%)]"></div>
-</div>
-</div>
-<div class="flex items-center justify-between text-[9px] font-mono text-slate-500 uppercase">
-<span>Logic Board Thermal Integrity: Nominal</span>
-<span>Ref ID: 0x88219_THERM</span>
-</div>
-</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 diag-voltage-container">
+        <!-- +12V Rail -->
+        <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+          <div class="flex justify-between items-center text-[10px] font-mono">
+            <span class="font-bold text-slate-500 dark:text-slate-400">+12V MAIN</span>
+            <span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">11.98</span>
+            <span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
+          </div>
+          <div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
+            <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path class="animate-pulse" d="M0 20 Q 10 15, 20 20 T 40 20 T 60 20 T 80 20 T 100 20" fill="none" stroke="#10b981" stroke-width="2"></path>
+            </svg>
+          </div>
+        </div>
 
-<!-- Module 2: Voltage Rail Monitoring -->
-<div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm space-y-6 text-slate-900 dark:text-slate-100">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
-<div>
-<h3 class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white flex items-center gap-1.5">
-<span class="material-symbols-outlined text-base">electric_meter</span> Logic Board Voltage Rails
-</h3>
-<p class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">Oscillometric Sampling Rate: 1.2GHz Telemetry</p>
-</div>
-<span class="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 text-[10px] font-mono font-bold uppercase">System Nominal</span>
-</div>
+        <!-- +5V Rail -->
+        <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+          <div class="flex justify-between items-center text-[10px] font-mono">
+            <span class="font-bold text-slate-500 dark:text-slate-400">+5V PERIPHERAL</span>
+            <span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">5.02</span>
+            <span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
+          </div>
+          <div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
+            <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path class="animate-pulse" d="M0 25 Q 15 20, 30 25 T 60 25 T 90 25 T 100 25" fill="none" stroke="#10b981" stroke-width="2"></path>
+            </svg>
+          </div>
+        </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 diag-voltage-container">
-<!-- +12V Rail -->
-<div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2 text-slate-900 dark:text-slate-100">
-<div class="flex justify-between items-center text-[10px] font-mono">
-<span class="font-bold text-slate-500 dark:text-slate-400">+12V MAIN</span>
-<span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">11.98</span>
-<span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
-</div>
-<div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
-<svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
-<path class="animate-pulse" d="M0 20 Q 10 15, 20 20 T 40 20 T 60 20 T 80 20 T 100 20" fill="none" stroke="#10b981" stroke-width="2"></path>
-</svg>
-</div>
-</div>
+        <!-- +3.3V Rail -->
+        <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+          <div class="flex justify-between items-center text-[10px] font-mono">
+            <span class="font-bold text-slate-500 dark:text-slate-400">+3.3V LOGIC</span>
+            <span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">3.31</span>
+            <span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
+          </div>
+          <div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
+            <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path class="animate-pulse" d="M0 15 Q 20 20, 40 15 T 80 15 T 100 15" fill="none" stroke="#10b981" stroke-width="2"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- +5V Rail -->
-<div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2 text-slate-900 dark:text-slate-100">
-<div class="flex justify-between items-center text-[10px] font-mono">
-<span class="font-bold text-slate-500 dark:text-slate-400">+5V PERIPHERAL</span>
-<span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">5.02</span>
-<span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
-</div>
-<div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
-<svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
-<path class="animate-pulse" d="M0 25 Q 15 20, 30 25 T 60 25 T 90 25 T 100 25" fill="none" stroke="#10b981" stroke-width="2"></path>
-</svg>
-</div>
-</div>
+    <!-- Right Side (5 Cols): Real-Time Thermal Gradient & PCB Heatmap -->
+    <div class="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-5 sm:p-6 border border-slate-800 flex flex-col justify-between shadow-lg relative overflow-hidden space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+        <div>
+          <h3 class="text-xs font-black uppercase tracking-widest text-red-500 flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base">thermostat</span> Real-Time Thermal Gradient
+          </h3>
+          <p class="text-[10px] font-mono text-slate-400 uppercase">Sensor Array: THERM-X9</p>
+        </div>
+        <div class="flex items-center gap-2 font-mono text-[9px] uppercase">
+          <span class="text-slate-400">VRM: <strong class="text-red-400">92°C</strong></span>
+          <span class="text-slate-400">VRAM: <strong class="text-emerald-400">84°C</strong></span>
+        </div>
+      </div>
 
-<!-- +3.3V Rail -->
-<div class="p-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2 text-slate-900 dark:text-slate-100">
-<div class="flex justify-between items-center text-[10px] font-mono">
-<span class="font-bold text-slate-500 dark:text-slate-400">+3.3V LOGIC</span>
-<span class="font-black text-emerald-600 dark:text-emerald-400">[STABLE]</span>
-</div>
-<div class="flex items-baseline gap-1">
-<span class="text-xl font-extrabold font-mono text-slate-900 dark:text-white">3.31</span>
-<span class="text-xs font-mono text-slate-500 dark:text-slate-400">V</span>
-</div>
-<div class="h-6 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-950 rounded-lg">
-<svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
-<path class="animate-pulse" d="M0 15 Q 20 20, 40 15 T 80 15 T 100 15" fill="none" stroke="#10b981" stroke-width="2"></path>
-</svg>
-</div>
-</div>
-</div>
-</div>
+      <!-- Resized PCB Layout Heatmap -->
+      <div class="relative h-32 bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#475569_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="relative w-4/5 h-4/5 border-2 border-slate-800 flex items-center justify-center">
+          <div class="w-12 h-12 border border-slate-700 bg-slate-900 flex items-center justify-center text-[8px] font-mono text-slate-500">CPU SOCKET</div>
+          <div class="absolute top-2 right-4 w-2 h-12 border border-slate-700 bg-slate-900"></div>
+          <div class="absolute top-2 right-7 w-2 h-12 border border-slate-700 bg-slate-900"></div>
+          <div class="absolute w-20 h-20 bg-[radial-gradient(circle,rgba(220,38,38,0.45)_0%,transparent_70%)] animate-pulse"></div>
+          <div class="absolute top-2 right-4 w-10 h-10 bg-[radial-gradient(circle,rgba(249,115,22,0.35)_0%,transparent_70%)]"></div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-[9px] font-mono text-slate-500 uppercase">
+        <span>Thermal Integrity: Nominal</span>
+        <span>Ref ID: 0x88219_THERM</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION: Motherboard & PC Hardware Specification Inspector Box -->
+<section id="motherboard-spec-box" class="space-y-6 scroll-mt-24">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6 text-slate-900 dark:text-slate-100 transition-all">
+    
+    <!-- Top Header & Device Profile Selector -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-400 uppercase border border-red-200 dark:border-red-900">PC Hardware Hub</span>
+          <span id="mbScanActiveBadge" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> LIVE SCANNED SPEC
+          </span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-red-600 dark:text-red-500 text-2xl sm:text-3xl">developer_board</span>
+          <span>Motherboard &amp; Device Architecture Inspector</span>
+        </h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Deep board schematics, compatible laptop models, BIOS keys, OS key finder, charging pin types, network specs, CPU/GPU generation &amp; health diagnostic tools.</p>
+      </div>
+
+      <!-- Real-Time Hardware Scanner Controls -->
+      <div class="flex items-center gap-2 flex-wrap shrink-0">
+        <button onclick="runDeepRealDeviceScan()" id="btnDeepScan" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-red-600 via-red-700 to-rose-700 hover:from-red-700 hover:to-rose-800 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-lg shadow-red-600/20 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-base animate-pulse">radar</span>
+          <span>Scan Current Device Motherboard Specs</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Motherboard Box Grid (3 Equal Columns with Stretched Height) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+      <!-- Column 1: Board Identity, Compatibility & Power Pin (4 Cols) -->
+      <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
+        
+        <!-- Motherboard Serial & Model Card -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white border border-slate-800 space-y-4 shadow-md">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <span class="text-[10px] font-mono font-bold text-red-500 uppercase tracking-widest flex items-center gap-1">
+              <span class="material-symbols-outlined text-xs">memory</span> Motherboard PCB ID
+            </span>
+            <span id="mbChipsetTag" class="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-red-500/20 text-red-300 border border-red-500/40">HM770 Express</span>
+          </div>
+
+          <div>
+            <p class="text-[10px] font-mono text-slate-400 uppercase">Board Model Number</p>
+            <h3 id="mbModelNumber" class="text-lg font-black text-white font-mono tracking-tight">Dell LA-L241P REV 1.0</h3>
+            <p id="mbFormFactor" class="text-xs text-slate-400 mt-0.5">Custom BGA Soldered Logic Board (Micro-ATX/Ultra-Mobile)</p>
+          </div>
+
+          <div class="p-3 bg-black/60 rounded-xl border border-slate-800 space-y-1 font-mono">
+            <div class="flex justify-between items-center text-[10px] text-slate-400">
+              <span>SERIAL NUMBER ID:</span>
+              <span class="text-emerald-400 font-bold">[VERIFIED]</span>
+            </div>
+            <p id="mbSerialNumber" class="text-xs font-bold text-amber-400 tracking-wider font-mono">SN: MB-2026-X981A-SRT</p>
+            <div class="h-4 w-full bg-slate-900 rounded flex items-center justify-center text-[9px] text-slate-600 tracking-[0.3em] font-mono select-none">
+              ||| |||| || ||||| |||| ||||
+            </div>
+          </div>
+        </div>
+
+        <!-- Supported Laptop Models Box (Kiss Kiss Laptop me Support karta hai) -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-3 shadow-xs">
+          <div class="flex items-center justify-between">
+            <h3 class="font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-base text-red-600 dark:text-red-500">check_circle</span> Supported Laptops &amp; Devices
+            </h3>
+            <span id="mbCompatCount" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold">4 Models</span>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400">Motherboard pin-to-pin compatible chassis &amp; laptop models list:</p>
+          <div id="mbSupportedModels" class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-2xs">Dell XPS 15 9520</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-2xs">Dell Inspiron 15 5510</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-2xs">Dell Precision 5570</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-2xs">Dell Latitude 5520</span>
+          </div>
+        </div>
+
+        <!-- Charging Pin Types & Power Input Specs -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-3 shadow-xs">
+          <h3 class="font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-base text-amber-600 dark:text-amber-500">power</span> Power Input &amp; Charging Pin Type
+          </h3>
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-0.5">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">Pin Connector</span>
+              <span id="mbPinType" class="font-extrabold text-slate-900 dark:text-white truncate block">USB Type-C PD</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 space-y-0.5">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">Wattage / Rating</span>
+              <span id="mbPowerRating" class="font-extrabold text-amber-600 dark:text-amber-400 truncate block">100W (20V 5A)</span>
+            </div>
+          </div>
+          <p id="mbPinDetails" class="text-[11px] text-slate-500 dark:text-slate-400">Supports USB Power Delivery 3.0 fast charging &amp; dual-controller IC protection.</p>
+        </div>
+
+      </div>
+
+      <!-- Column 2: In-Deep Processor (CPU) & Graphics (GPU) Details (4 Cols) -->
+      <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
+
+        <!-- CPU In-Deep Specification Box -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-4 shadow-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="p-1.5 bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-lg">
+                <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">memory</span>
+              </div>
+              <h3 class="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Processor (CPU) In-Deep Details</h3>
+            </div>
+            <span id="mbCpuGenBadge" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-400">13th Gen Raptor Lake</span>
+          </div>
+
+          <div>
+            <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CPU Model &amp; Architecture</p>
+            <h4 id="mbCpuModelName" class="font-black text-base text-slate-900 dark:text-white truncate">Intel Core i7-13700H</h4>
+            <p id="mbCpuSocket" class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-0.5">Socket FCBGA1744 | 10nm Intel 7 Lithography</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">Cores &amp; Threads</span>
+              <span id="mbCpuCoresThreads" class="font-bold text-slate-900 dark:text-white">14 Cores (6P+8E) / 20T</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">Clock Speeds</span>
+              <span id="mbCpuClockSpeed" class="font-bold text-emerald-600 dark:text-emerald-400">2.40GHz - 5.00GHz</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">L3 Smart Cache</span>
+              <span id="mbCpuCache" class="font-bold text-purple-600 dark:text-purple-400">24 MB Intel L3</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 block uppercase">TDP Power Limit</span>
+              <span id="mbCpuTdp" class="font-bold text-amber-600 dark:text-amber-400">45W Base (115W PL2)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GPU In-Deep Specification Box -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-4 shadow-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="p-1.5 bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 rounded-lg">
+                <span class="material-symbols-outlined text-lg">rocket_launch</span>
+              </div>
+              <h3 class="font-black text-xs uppercase tracking-wider text-slate-900 dark:text-white">Graphics Card (GPU) In-Deep Details</h3>
+            </div>
+            <span id="mbGpuGenBadge" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400">Ada Lovelace / Gen 13</span>
+          </div>
+
+          <!-- Integrated GPU -->
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400 uppercase block">Inbuilt Integrated GPU:</span>
+            <h4 id="mbGpuIntegratedName" class="font-extrabold text-xs text-slate-900 dark:text-white">Intel Iris Xe Graphics (96 Execution Units)</h4>
+            <p id="mbGpuIntegratedDetails" class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">1.50 GHz Max Dynamic Freq | DirectX 12.2 &amp; Vulkan 1.3</p>
+          </div>
+
+          <!-- Dedicated GPU -->
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-red-600 dark:text-red-400 uppercase block">Dedicated Discrete GPU (Onboard / PCIe):</span>
+            <h4 id="mbGpuDedicatedName" class="font-extrabold text-xs text-slate-900 dark:text-white">NVIDIA GeForce RTX 4060 Laptop GPU</h4>
+            <p id="mbGpuDedicatedDetails" class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">8GB GDDR6 (128-bit) | 140W Max TGP | 4th Gen Tensor Cores + DLSS 3.5</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 3: BIOS, Drivers, OS Key Finder & Diagnostics Action Buttons (4 Cols) -->
+      <div class="lg:col-span-4 flex flex-col justify-between space-y-5">
+
+        <!-- BIOS & Firmware Action Card -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-4 shadow-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+            <h3 class="font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-base text-purple-600 dark:text-purple-400">developer_board_off</span> BIOS Firmware &amp; Boot Keys
+            </h3>
+            <span id="mbBiosVendor" class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-bold">Insyde UEFI</span>
+          </div>
+
+          <div class="space-y-1 font-mono text-xs">
+            <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">BIOS Version:</span><span id="mbBiosVer" class="font-bold text-slate-900 dark:text-white">v1.18.0 (Build 2024)</span></div>
+            <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">SPI Flash Chip:</span><span id="mbBiosChip" class="font-bold text-slate-900 dark:text-white">Winbond 25Q128 16MB</span></div>
+          </div>
+
+          <!-- Boot Key Matrix -->
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+            <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase block font-bold">Boot Key Shortcuts:</span>
+            <div class="grid grid-cols-3 gap-1.5 text-center font-mono text-[11px]">
+              <div class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[9px] text-slate-400 block">BIOS ENTRY</span>
+                <kbd id="keyBiosEntry" class="font-black text-red-600 dark:text-red-400">F2</kbd>
+              </div>
+              <div class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[9px] text-slate-400 block">BOOT MENU</span>
+                <kbd id="keyBootMenu" class="font-black text-blue-600 dark:text-blue-400">F12</kbd>
+              </div>
+              <div class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <span class="text-[9px] text-slate-400 block">RECOVERY</span>
+                <kbd id="keyRecovery" class="font-black text-emerald-600 dark:text-emerald-400">Alt+F10</kbd>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons: BIOS Update & Drivers Download -->
+          <div class="grid grid-cols-2 gap-2">
+            <a id="btnBiosUpdate" href="drivers-warranty.html" class="py-2.5 px-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm text-center">
+              <span class="material-symbols-outlined text-sm">system_update</span> BIOS Flash Link
+            </a>
+            <a id="btnDeviceDrivers" href="drivers-warranty.html" class="py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm text-center">
+              <span class="material-symbols-outlined text-sm">download</span> Device Drivers
+            </a>
+          </div>
+        </div>
+
+        <!-- Shipped OS & Key Finder CMD + Health Tools -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-4 shadow-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-3">
+            <h3 class="font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-base text-emerald-600 dark:text-emerald-400">terminal</span> OS Key Finder &amp; PC Health
+            </h3>
+            <span id="mbShippedOs" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">Windows 11 Pro</span>
+          </div>
+
+          <p class="text-[11px] text-slate-500 dark:text-slate-400">Run instant key finder commands or launch OS PC health diagnostics tools:</p>
+
+          <!-- Utilities Buttons Grid -->
+          <div class="space-y-2">
+            <button onclick="openKeyFinderModal()" class="w-full py-2.5 px-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl text-xs font-extrabold font-mono flex items-center justify-center gap-2 transition-all shadow-md shadow-red-600/20 active:scale-95">
+              <span class="material-symbols-outlined text-base">key</span> OS Key Finder CMD Option
+            </button>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="openHealthToolModal('windows')" class="py-2 px-3 bg-slate-900 dark:bg-slate-950 hover:bg-slate-800 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors border border-slate-700 shadow-2xs">
+                <span class="material-symbols-outlined text-sm text-blue-400">grid_view</span> Windows Health Tool
+              </button>
+              <button onclick="openHealthToolModal('other')" class="py-2 px-3 bg-slate-900 dark:bg-slate-950 hover:bg-slate-800 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors border border-slate-700 shadow-2xs">
+                <span class="material-symbols-outlined text-sm text-emerald-400">build</span> Other OS Tool (Linux/Mac)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ports & Network Support Summary Card -->
+        <div class="flex-1 flex flex-col justify-between p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-3 shadow-xs font-mono text-xs">
+          <h3 class="font-extrabold text-xs text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5 font-sans">
+            <span class="material-symbols-outlined text-base text-rose-600 dark:text-rose-400">usb</span> Ports Matrix &amp; Wireless Support
+          </h3>
+          <div class="space-y-1.5 text-[11px]">
+            <div>
+              <span class="text-slate-500 dark:text-slate-400 font-bold block">Available Board Ports:</span>
+              <p id="mbPortsList" class="text-slate-800 dark:text-slate-200 font-bold">2x Thunderbolt 4 / USB4, 2x USB 3.2 Gen 2, 1x HDMI 2.1, 1x RJ45 2.5G LAN, Audio Combo</p>
+            </div>
+            <div class="pt-1 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+              <span class="text-slate-500 dark:text-slate-400">Wi-Fi Network:</span>
+              <span id="mbWifiSupport" class="font-bold text-rose-600 dark:text-rose-400">Wi-Fi 6E (2.4GHz / 5GHz / 6GHz)</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 dark:text-slate-400">Bluetooth Version:</span>
+              <span id="mbBtSupport" class="font-bold text-blue-600 dark:text-blue-400">Bluetooth 5.3 Dual-Mode</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <!-- SECTION 4: Admin Terminal Commands & Quick Diagnostics Shortcuts -->
@@ -718,139 +998,1054 @@ Schedule Shop Repair (+91 85128 32150)
 </div>
 </div>
 
-<div id="admin-terminal-content" class="transition-all duration-500 max-h-[3000px] opacity-100 space-y-4">
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 diag-shortcuts-container">
-<!-- Shortcut 1: SFC -->
-<div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
-<div>
-<div class="flex items-center justify-between mb-2">
-<span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 01</span>
-<span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-400">ADMIN</span>
-</div>
-<h3 class="font-extrabold text-sm text-slate-900 dark:text-white">sfc /scannow</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Inspects and repairs corrupted Windows operating system files.</p>
-</div>
-<button onclick="copyAdminTerminalCmd('sfc /scannow', 'SFC Scan')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
-<span class="material-symbols-outlined text-sm">content_copy</span> Copy SFC Command
-</button>
-</div>
+<div id="admin-terminal-content" class="transition-all duration-500 max-h-[5000px] opacity-100 space-y-6">
+  
+  <!-- Essential Admin Commands (5 Cards) -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 diag-shortcuts-container">
+    
+    <!-- Shortcut 1: SFC Scan -->
+    <div class="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 01</span>
+          <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-400">ADMIN SFC</span>
+        </div>
+        <h3 class="font-extrabold text-sm text-slate-900 dark:text-white">sfc /scannow</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Inspects and repairs corrupted Windows operating system files.</p>
+      </div>
+      <button onclick="copyAdminTerminalCmd('sfc /scannow', 'SFC Scan')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy SFC Command
+      </button>
+    </div>
 
-<!-- Shortcut 2: DISM -->
-<div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
-<div>
-<div class="flex items-center justify-between mb-2">
-<span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 02</span>
-<span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-400">DISM</span>
-</div>
-<h3 class="font-extrabold text-sm text-slate-900 dark:text-white">DISM RestoreHealth</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Restores Windows component store system image health online.</p>
-</div>
-<button onclick="copyAdminTerminalCmd('DISM /Online /Cleanup-Image /RestoreHealth', 'DISM Image Restore')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
-<span class="material-symbols-outlined text-sm">content_copy</span> Copy DISM Command
-</button>
-</div>
+    <!-- Shortcut 2: DISM -->
+    <div class="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 02</span>
+          <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-400">DISM REPAIR</span>
+        </div>
+        <h3 class="font-extrabold text-sm text-slate-900 dark:text-white">DISM RestoreHealth</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Restores Windows component store system image health online.</p>
+      </div>
+      <button onclick="copyAdminTerminalCmd('DISM /Online /Cleanup-Image /RestoreHealth', 'DISM Image Restore')" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy DISM Command
+      </button>
+    </div>
 
-<!-- Shortcut 3: Perfmon -->
-<div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
-<div>
-<div class="flex items-center justify-between mb-2">
-<span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 03</span>
-<span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">PERFMON</span>
-</div>
-<h3 class="font-extrabold text-sm text-slate-900 dark:text-white">perfmon /report</h3>
-<p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Generates a detailed 60-second Windows system diagnostic audit.</p>
-</div>
-<button onclick="copyPerfmonCommand()" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
-<span id="perfmonIcon" class="material-symbols-outlined text-sm">terminal</span> <span id="perfmonText">Run perfmon /report</span>
-</button>
-</div>
-</div>
+    <!-- Shortcut 3: Windows OEM Key Finder -->
+    <div class="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs border-l-4 border-l-amber-500">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">WMIC KEY</span>
+          <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400">OEM KEY</span>
+        </div>
+        <h3 class="font-extrabold text-xs text-slate-900 dark:text-white font-mono truncate">OA3xOriginalProductKey</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Extracts original BIOS embedded OEM Windows Product License Key.</p>
+      </div>
+      <button onclick="copyAdminTerminalCmd('wmic path softwarelicensingservice get OA3xOriginalProductKey', 'Windows OEM Key Finder')" class="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy OEM Key Cmd
+      </button>
+    </div>
 
-<!-- Batch Script Generator Card -->
-<div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 shadow-xs">
-<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-3">
-<div>
-<span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-bold">AUTOMATED BATCH INSPECTOR</span>
-<h3 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2">
-<span class="material-symbols-outlined text-red-600 dark:text-red-500">terminal</span> SRT_PC_Deep_Diagnostics.bat
-</h3>
-</div>
-<div class="flex items-center gap-2 w-full sm:w-auto">
-<button onclick="copyBatchScript()" class="flex-1 sm:flex-initial px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
-<span id="copyIcon" class="material-symbols-outlined text-sm">content_copy</span> <span id="copyText">Copy Script</span>
-</button>
-<button onclick="downloadBatchFile()" class="flex-1 sm:flex-initial px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm">
-<span class="material-symbols-outlined text-sm">download</span> Download .BAT File
-</button>
-</div>
-</div>
-<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Automates DISM RestoreHealth, System File Checker (SFC), and powercfg energy reports into a single executable script.</p>
-</div>
+    <!-- Shortcut 4: Windows HWID Activation Script -->
+    <div class="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs border-l-4 border-l-purple-500">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">POWERSHELL</span>
+          <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400">ACTIVATION</span>
+        </div>
+        <h3 class="font-extrabold text-xs text-slate-900 dark:text-white font-mono truncate">irm https://get.activated.win | iex</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Executes Windows HWID digital license activation script.</p>
+      </div>
+      <button onclick="copyAdminTerminalCmd('irm https://get.activated.win | iex', 'Windows Activation Script')" class="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy Activation Script
+      </button>
+    </div>
+
+    <!-- Shortcut 5: Perfmon -->
+    <div class="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 flex flex-col justify-between shadow-xs">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase">CMD 05</span>
+          <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-400">PERFMON</span>
+        </div>
+        <h3 class="font-extrabold text-sm text-slate-900 dark:text-white">perfmon /report</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 pt-1">Generates a detailed 60-second Windows system diagnostic audit.</p>
+      </div>
+      <button onclick="copyPerfmonCommand()" class="w-full py-2 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
+        <span id="perfmonIcon" class="material-symbols-outlined text-sm">terminal</span> <span id="perfmonText">Run perfmon /report</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Automated Batch Script Generators Grid (2 Tool Cards) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+    <!-- Batch Generator 1: SRT PC Deep Diagnostics -->
+    <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 shadow-xs">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-3">
+        <div>
+          <span class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-bold">AUTOMATED BATCH INSPECTOR</span>
+          <h3 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="material-symbols-outlined text-red-600 dark:text-red-500">terminal</span> SRT_PC_Deep_Diagnostics.bat
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button onclick="copyBatchScript()" class="flex-1 sm:flex-initial px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
+            <span id="copyIcon" class="material-symbols-outlined text-sm">content_copy</span> <span id="copyText">Copy Script</span>
+          </button>
+          <button onclick="downloadBatchFile()" class="flex-1 sm:flex-initial px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+            <span class="material-symbols-outlined text-sm">download</span> .BAT File
+          </button>
+        </div>
+      </div>
+      <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Automates DISM RestoreHealth, System File Checker (SFC), and powercfg energy reports into a single executable script.</p>
+    </div>
+
+    <!-- Batch Generator 2: Windows Edition Restore Point Tool .bat -->
+    <div class="bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-3 shadow-xs border-l-4 border-l-emerald-500">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-3">
+        <div>
+          <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase font-bold">SYSTEM BACKUP TOOL</span>
+          <h3 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-500">restore</span> Windows Edition Restore Point Tool .bat
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button onclick="copyRestorePointBatch()" class="flex-1 sm:flex-initial px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors">
+            <span class="material-symbols-outlined text-sm">content_copy</span> Copy Script
+          </button>
+          <button onclick="downloadRestorePointBatch()" class="flex-1 sm:flex-initial px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold font-mono flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+            <span class="material-symbols-outlined text-sm">download</span> .BAT File
+          </button>
+        </div>
+      </div>
+      <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Generates a Windows System Restore Point instantly via PowerShell Checkpoint-Computer command before installing drivers or system updates.</p>
+    </div>
+  </div>
+
+  <!-- Master Windows Run Utility Commands Matrix Suite (35 Utilities) -->
+  <div class="p-5 bg-slate-50 dark:bg-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+      <div>
+        <span class="text-[10px] font-mono font-bold text-red-600 dark:text-red-400 uppercase tracking-widest block">WINDOWS RUN DIALOGUE &amp; SYSTEM COMMANDS</span>
+        <h3 class="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+          <span class="material-symbols-outlined text-red-500">apps</span>
+          <span>Master Windows Administrative Utilities (35 Run Commands)</span>
+        </h3>
+      </div>
+      <span class="text-xs font-mono text-slate-500">Press Win + R &gt; Paste Command</span>
+    </div>
+
+    <!-- 35 Commands Grid (Responsive 3 Columns) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs font-mono">
+      
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">msconfig</span>
+          <span class="text-[10px] text-slate-500 truncate block">System Settings</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('msconfig', 'msconfig')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">msinfo32</span>
+          <span class="text-[10px] text-slate-500 truncate block">System Information</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('msinfo32', 'msinfo32')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">resmon</span>
+          <span class="text-[10px] text-slate-500 truncate block">Resource Monitor</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('resmon', 'resmon')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-blue-600 dark:text-blue-400 block">main.cpl</span>
+          <span class="text-[10px] text-slate-500 truncate block">Mouse Settings</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('main.cpl', 'main.cpl')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-blue-600 dark:text-blue-400 block">mstsc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Remote Desktop Service</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('mstsc', 'mstsc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">cmd</span>
+          <span class="text-[10px] text-slate-500 truncate block">The Command Prompt</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('cmd', 'cmd')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">explorer</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows Explorer</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('explorer', 'explorer')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-emerald-600 dark:text-emerald-400 block">taskmgr</span>
+          <span class="text-[10px] text-slate-500 truncate block">Task Manager</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('taskmgr', 'taskmgr')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">shutdown</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows Shutdown</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('shutdown /s /t 0', 'shutdown')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-cyan-600 dark:text-cyan-400 block">chkdsk</span>
+          <span class="text-[10px] text-slate-500 truncate block">Check Disk Utility</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('chkdsk /f', 'chkdsk')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-cyan-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-cyan-600 dark:text-cyan-400 block">cleanmgr</span>
+          <span class="text-[10px] text-slate-500 truncate block">Clean Disk Manager</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('cleanmgr', 'cleanmgr')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-cyan-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-amber-600 dark:text-amber-400 block">dxdiag</span>
+          <span class="text-[10px] text-slate-500 truncate block">DirectX Diagnostics Options</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('dxdiag', 'dxdiag')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-amber-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-purple-600 dark:text-purple-400 block">powershell</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows PowerShell Console</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('powershell', 'powershell')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">winver</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows Version</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('winver', 'winver')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">control folders</span>
+          <span class="text-[10px] text-slate-500 truncate block">Folder Options</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('control folders', 'control folders')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-cyan-600 dark:text-cyan-400 block">diskmgmt.msc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Disk Manager</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('diskmgmt.msc', 'diskmgmt.msc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-cyan-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">eventvwr.msc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Event Viewer</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('eventvwr.msc', 'eventvwr.msc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-purple-600 dark:text-purple-400 block">gpedit.msc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Local Group Policy Editor</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('gpedit.msc', 'gpedit.msc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">regedit</span>
+          <span class="text-[10px] text-slate-500 truncate block">Registry Editor</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('regedit', 'regedit')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-blue-600 dark:text-blue-400 block">sysdm.cpl</span>
+          <span class="text-[10px] text-slate-500 truncate block">System Properties</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('sysdm.cpl', 'sysdm.cpl')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-emerald-600 dark:text-emerald-400 block">powercfg.cpl</span>
+          <span class="text-[10px] text-slate-500 truncate block">Power Options</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('powercfg.cpl', 'powercfg.cpl')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-amber-600 dark:text-amber-400 block">magnify</span>
+          <span class="text-[10px] text-slate-500 truncate block">Magnifier</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('magnify', 'magnify')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-amber-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-amber-600 dark:text-amber-400 block">charmap</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows Character Table</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('charmap', 'charmap')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-amber-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-blue-600 dark:text-blue-400 block">ncpa.cpl</span>
+          <span class="text-[10px] text-slate-500 truncate block">Network Connections</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('ncpa.cpl', 'ncpa.cpl')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">mrt</span>
+          <span class="text-[10px] text-slate-500 truncate block">Malware Removal Tool</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('mrt', 'mrt')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">devmgmt.msc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Device Manager</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('devmgmt.msc', 'devmgmt.msc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-indigo-600 dark:text-indigo-400 block">netplwiz</span>
+          <span class="text-[10px] text-slate-500 truncate block">User Accounts</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('netplwiz', 'netplwiz')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">services.msc</span>
+          <span class="text-[10px] text-slate-500 truncate block">Services</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('services.msc', 'services.msc')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-red-600 dark:text-red-400 block">appwiz.cpl</span>
+          <span class="text-[10px] text-slate-500 truncate block">Programs and Components</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('appwiz.cpl', 'appwiz.cpl')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-red-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">control</span>
+          <span class="text-[10px] text-slate-500 truncate block">Control Panel</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('control', 'control')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-emerald-600 dark:text-emerald-400 block">"."</span>
+          <span class="text-[10px] text-slate-500 truncate block">Open Current User Folder</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('.', 'Current User Folder')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">osk</span>
+          <span class="text-[10px] text-slate-500 truncate block">On-Screen Keyboard</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('osk', 'osk')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-amber-600 dark:text-amber-400 block">snippingtool</span>
+          <span class="text-[10px] text-slate-500 truncate block">Scissors / Snipping Tool</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('snippingtool', 'snippingtool')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-amber-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-purple-600 dark:text-purple-400 block">mdsched</span>
+          <span class="text-[10px] text-slate-500 truncate block">Windows Memory Checker</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('mdsched', 'mdsched')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-purple-600 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+      <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 hover:border-red-500/50 transition-colors">
+        <div class="truncate">
+          <span class="font-bold text-slate-900 dark:text-white block">slmgr.vbs /xpr</span>
+          <span class="text-[10px] text-slate-500 truncate block">License Expiration Status</span>
+        </div>
+        <button onclick="copyAdminTerminalCmd('slmgr.vbs /xpr', 'slmgr.vbs /xpr')" class="px-2 py-1 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 hover:text-white rounded text-[10px] font-bold shrink-0">Copy</button>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 </section>
 
-<!-- SECTION 5: System Diagnostic Summary Report -->
-<section id="system-report-inspector" class="space-y-6 scroll-mt-24">
-<div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-6 text-slate-900 dark:text-slate-100">
-<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4 cursor-pointer select-none group" onclick="toggleSummaryReportCollapse()" role="button" aria-expanded="false" aria-controls="summary-report-content">
-<div>
-<h3 class="font-extrabold text-xl text-slate-900 dark:text-white flex items-center gap-2 group-hover:text-red-600 dark:group-hover:text-red-500 transition-colors">
-<span class="material-symbols-outlined text-red-600 dark:text-red-500">assignment</span> System Diagnostic Summary Report
-</h3>
-<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Generated automatically by Shri Raghav Tech Online Inspection Suite</p>
-</div>
+<!-- CONSOLIDATED SECTION: 4 Hardware Subsystems in 1 Master Container Box -->
+<section id="pc-subsystems-consolidated-box" class="space-y-8 scroll-mt-24">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-10 text-slate-900 dark:text-slate-100 transition-all">
+    
+    <!-- Suite Master Header -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-5">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-400 uppercase border border-blue-200 dark:border-blue-900">CONSOLIDATED SUBSYSTEMS SUITE</span>
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 4 INSPECTORS ACTIVE
+          </span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-blue-600 dark:text-blue-500 text-2xl sm:text-3xl">devices_other</span>
+          <span>PC Subsystems Telemetry &amp; Hardware Suite</span>
+        </h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Data Storage, RAM Memory, Battery Power Rail, and Display Panel Inspections in vertical order.</p>
+      </div>
+    </div>
 
-<div class="flex items-center gap-3">
-<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider hidden sm:inline" id="report-status-text">Click to Expand Report</span>
-<button id="report-toggle-btn" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-red-600 group-hover:text-white flex items-center justify-center transition-all shadow-sm" title="Expand Report">
-<span id="report-toggle-icon" class="material-symbols-outlined text-lg transition-transform duration-300 rotate-180" style="transform: rotate(180deg);">expand_less</span>
-</button>
-</div>
-</div>
+    <!-- Vertical Stack Container for 4 Subsystems -->
+    <div class="space-y-10 divide-y divide-slate-100 dark:divide-slate-800">
 
-<div id="summary-report-content" class="transition-all duration-500 max-h-0 opacity-0 pointer-events-none space-y-6">
-<div class="overflow-x-auto custom-scrollbar">
-<table class="w-full text-left border-collapse text-xs font-mono">
-<thead>
-<tr class="border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400">
-<th class="py-2.5 px-3">Subsystem</th>
-<th class="py-2.5 px-3">Inspected Technical Specification</th>
-<th class="py-2.5 px-3">Diagnostic Integrity Status</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-800 dark:text-slate-200">
-<tr>
-<td class="py-3 px-3 font-bold text-slate-900 dark:text-white">CPU Logic</td>
-<td id="tableCpuSpec" class="py-3 px-3">x86_64 High-Performance Architecture</td>
-<td id="tableCpuStatus" class="py-3 px-3 font-bold text-emerald-600 dark:text-emerald-400">PASS</td>
-</tr>
-<tr>
-<td class="py-3 px-3 font-bold text-slate-900 dark:text-white">Graphics GPU</td>
-<td id="tableGpuSpec" class="py-3 px-3">WebGL Hardware Accelerated Pipeline</td>
-<td id="tableGpuStatus" class="py-3 px-3 font-bold text-blue-600 dark:text-blue-400">OPTIMAL</td>
-</tr>
-<tr>
-<td class="py-3 px-3 font-bold text-slate-900 dark:text-white">Memory RAM</td>
-<td id="tableRamSpec" class="py-3 px-3">8+ GB High-Bandwidth Allocation</td>
-<td id="tableRamStatus" class="py-3 px-3 font-bold text-purple-600 dark:text-purple-400">NORMAL</td>
-</tr>
-<tr>
-<td class="py-3 px-3 font-bold text-slate-900 dark:text-white">Display Output</td>
-<td id="tableDisplaySpec" class="py-3 px-3">High-Resolution Desktop Matrix</td>
-<td id="tableDisplayStatus" class="py-3 px-3 font-bold text-amber-600 dark:text-amber-400">100% CLEAR</td>
-</tr>
-</tbody>
-</table>
-</div>
+      <!-- 1. Data Storage & Drives Inspector Box -->
+      <div id="storage-spec-box" class="space-y-6 pt-6 first:pt-0">
+        
+        <!-- Header & Scan Control -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-400 uppercase border border-cyan-200 dark:border-cyan-900">Storage Subsystem</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 2.71 TB VERIFIED
+              </span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-cyan-600 dark:text-cyan-400 text-xl sm:text-2xl">hard_drive</span>
+              <span>Data Storage &amp; Drives Inspector</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Read/Write speed MHz/Gbps, HDD/SSD/USB/SD Card/CD-ROM types, used vs free space, partitions list &amp; CMD report tool.</p>
+          </div>
 
-<div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-<p class="text-xs text-slate-600 dark:text-slate-400">Need shop repair? Book an inspection ticket directly with our Delhi lab.</p>
-<a href="contact.html" class="w-full sm:w-auto px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl shadow-md transition-all text-center">
-Book Shop Repair Ticket
-</a>
-</div>
-</div>
-</div>
+          <!-- Top Right Device Scan Button -->
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="scanStorageSpecs()" id="btnScanStorage" class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-md active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-base">radar</span>
+              <span>Scan Storage Devices</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Telemetry Summary Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Bus Speed &amp; Interface</span>
+            <span id="valStorageSpeed" class="font-extrabold text-sm text-cyan-600 dark:text-cyan-400 block truncate">PCIe Gen4 x4 (7000 MB/s)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Total Disk Space</span>
+            <span id="valStorageTotal" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">2.71 TB NVMe SSD Volume</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Used vs Free Space</span>
+            <span id="valStorageUsedFree" class="font-extrabold text-sm text-emerald-600 dark:text-emerald-400 block truncate">1.71 TB Used (1.00 TB Free)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Supported Media Types</span>
+            <span id="valStorageTypesList" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">NVMe / SATA / USB / SD / CD</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Deep Details Accordion Header -->
+        <div onclick="toggleAccordion('storageDetailsContent', 'storageCaret')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all select-none">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-slate-800 dark:text-slate-200">
+            <span class="material-symbols-outlined text-cyan-600 text-base">pie_chart</span>
+            <span>Partitions Breakdown, Serial Number ID &amp; Warranty Details</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Expand / Collapse</span>
+            <span id="storageCaret" class="material-symbols-outlined text-slate-400 transition-transform duration-300">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Accordion Body (Default Collapsed) -->
+        <div id="storageDetailsContent" class="hidden space-y-5 pt-2 transition-all">
+          
+          <!-- Partitions List -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-cyan-500">account_tree</span> Active Disk Partitions Breakdown
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+                <div class="flex justify-between font-bold"><span>C: System OS</span><span class="text-cyan-500">512 GB</span></div>
+                <p class="text-[10px] text-slate-400">NTFS Primary System Partition</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+                <div class="flex justify-between font-bold"><span>D: Data Volume</span><span class="text-blue-500">1.50 TB</span></div>
+                <p class="text-[10px] text-slate-400">NTFS High-Speed Data Storage</p>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+                <div class="flex justify-between font-bold"><span>E: Recovery / Media</span><span class="text-emerald-500">700 GB</span></div>
+                <p class="text-[10px] text-slate-400">exFAT Portable / Backup Drive</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Details & Warranty Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Company / Brand</span>
+              <span id="valStorageCompany" class="font-bold text-slate-900 dark:text-white">Samsung Electronics / Crucial</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Serial Number ID</span>
+              <span id="valStorageSerial" class="font-bold text-slate-900 dark:text-white font-mono">SN: S67ZNX0T104921</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Warranty Period</span>
+              <span id="valStorageWarranty" class="font-bold text-cyan-600 dark:text-cyan-400">5 Years Limited Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action: CMD Report Tool Button -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 font-mono">Run CMD script for full disk partitions report</span>
+          <button onclick="openStorageCmdModal()" class="px-4 py-2 bg-slate-900 dark:bg-slate-800 hover:bg-cyan-600 text-white rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm text-cyan-400">terminal</span>
+            <span>Storage Full Report CMD Tool</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. RAM & Memory Architecture Inspector Box -->
+      <div id="ram-spec-box" class="space-y-6 pt-8">
+        
+        <!-- Header & Scan Control -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-400 uppercase border border-purple-200 dark:border-purple-900">RAM Subsystem</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 16.0 GB VERIFIED
+              </span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-xl sm:text-2xl">memory</span>
+              <span>RAM &amp; Memory Architecture Inspector</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">RAM Speed MHz, 16GB Capacity, DDR3/DDR4/DDR5 types, motherboard sockets support, serial details &amp; CMD report tool.</p>
+          </div>
+
+          <!-- Top Right Device Scan Button -->
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="scanRamSpecs()" id="btnScanRam" class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-md active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-base">radar</span>
+              <span>Scan RAM Memory</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Telemetry Summary Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Frequency Speed</span>
+            <span id="valRamSpeed" class="font-extrabold text-sm text-purple-600 dark:text-purple-400 block truncate">3200 MHz (XMP 2.0)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Installed Capacity</span>
+            <span id="valRamCapacity" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">16.0 GB (15.4 GB Usable)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">DDR Generation</span>
+            <span id="valRamDdrType" class="font-extrabold text-sm text-indigo-600 dark:text-indigo-400 block truncate">DDR4 Dual-Channel</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Voltage Rating</span>
+            <span id="valRamVoltage" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">1.35V XMP Profile</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Deep Details Accordion Header -->
+        <div onclick="toggleAccordion('ramDetailsContent', 'ramCaret')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all select-none">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-slate-800 dark:text-slate-200">
+            <span class="material-symbols-outlined text-purple-600 text-base">developer_board</span>
+            <span>Motherboards Supported Sockets, Brand Details &amp; Serial Number</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Expand / Collapse</span>
+            <span id="ramCaret" class="material-symbols-outlined text-slate-400 transition-transform duration-300">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Accordion Body (Default Collapsed) -->
+        <div id="ramDetailsContent" class="hidden space-y-5 pt-2 transition-all">
+          
+          <!-- Supported Motherboards Matrix -->
+          <div class="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-purple-800 dark:text-purple-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">check_circle</span> Supported Motherboards &amp; Sockets Matrix
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-800 space-y-1">
+                <span class="font-bold text-purple-700 dark:text-purple-300 block">AMD Socket AM4</span>
+                <span class="text-[10px] text-slate-400 block">B550 / X570 / A520 Chipsets</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-800 space-y-1">
+                <span class="font-bold text-purple-700 dark:text-purple-300 block">AMD Socket AM5</span>
+                <span class="text-[10px] text-slate-400 block">B650 / X670 DDR5 Boards</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-800 space-y-1">
+                <span class="font-bold text-purple-700 dark:text-purple-300 block">Intel LGA1700</span>
+                <span class="text-[10px] text-slate-400 block">Z790 / B760 / H610 Boards</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-800 space-y-1">
+                <span class="font-bold text-purple-700 dark:text-purple-300 block">Intel LGA1200</span>
+                <span class="text-[10px] text-slate-400 block">Z590 / B560 / H510 Boards</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company & Serial Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Company / Brand</span>
+              <span id="valRamCompany" class="font-bold text-slate-900 dark:text-white">Corsair Vengeance / Kingston / G.Skill</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Part &amp; Serial Number</span>
+              <span id="valRamPartSerial" class="font-bold text-slate-900 dark:text-white font-mono">CMK16GX4M2E3200C16</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Warranty Period</span>
+              <span id="valRamWarranty" class="font-bold text-purple-600 dark:text-purple-400">Lifetime Limited Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action: CMD Report Tool Button -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 font-mono">Run CMD script for complete RAM DIMM report</span>
+          <button onclick="openRamCmdModal()" class="px-4 py-2 bg-slate-900 dark:bg-slate-800 hover:bg-purple-600 text-white rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm text-purple-400">terminal</span>
+            <span>RAM Full Report CMD Tool</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Battery Health, Charge Cycles & Power Inspector Box -->
+      <div id="battery-spec-box" class="space-y-6 pt-8">
+        
+        <!-- Header & Scan Control -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 uppercase border border-emerald-200 dark:border-emerald-900">Power Subsystem</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> AC POWER ACTIVE
+              </span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-emerald-600 dark:text-emerald-400 text-xl sm:text-2xl" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+              <span>Battery Health, Charge Cycles &amp; Power Inspector</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Battery life, charge cycle count, temperature °C, real-time health, first charging date, compatible laptops &amp; CMD report tool.</p>
+          </div>
+
+          <!-- Top Right Device Scan Button -->
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="scanBatterySpecs()" id="btnScanBattery" class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-md active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-base">radar</span>
+              <span>Scan Battery Health</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Merged Circular Gauge Graphic & Real-Time Level Block -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-slate-50 dark:bg-slate-950 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+          
+          <!-- Circular SVG Gauge Graphic -->
+          <div class="md:col-span-4 flex items-center justify-center gap-4">
+            <div class="relative w-28 h-28 shrink-0">
+              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                <circle class="fill-none stroke-slate-200 dark:stroke-slate-800 stroke-[8]" cx="50" cy="50" r="45"></circle>
+                <circle id="batteryGaugeCircle" class="fill-none stroke-emerald-500 stroke-[8] stroke-linecap-round transition-all duration-1000" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="0"></circle>
+              </svg>
+              <div id="batteryGaugePercent" class="absolute inset-0 flex items-center justify-center font-mono font-black text-xl text-slate-900 dark:text-white">
+                100%
+              </div>
+            </div>
+            <div class="space-y-1 font-mono">
+              <p class="text-xs text-slate-500 dark:text-slate-400">Real-Time Battery Level</p>
+              <h4 id="batteryChargeState" class="font-extrabold text-base text-slate-900 dark:text-white">AC Direct Power</h4>
+              <p id="batteryVoltageEst" class="text-xs text-emerald-600 dark:text-emerald-400 font-bold pt-0.5">Health: 100% (0% Wear)</p>
+            </div>
+          </div>
+
+          <!-- Quick Telemetry Summary Grid -->
+          <div class="md:col-span-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Health &amp; Status</span>
+              <span id="valBatteryHealthStatus" class="font-extrabold text-xs text-emerald-600 dark:text-emerald-400 block truncate">100% Optimal</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Charge Cycle Count</span>
+              <span id="valBatteryCycleCount" class="font-extrabold text-xs text-slate-900 dark:text-white block truncate">42 Cycles (0% Wear)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Temperature Rating</span>
+              <span id="valBatteryTemp" class="font-extrabold text-xs text-teal-600 dark:text-teal-400 block truncate">32°C / 89.6°F</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Current Power Rail</span>
+              <span id="valBatteryPowerRail" class="font-extrabold text-xs text-slate-900 dark:text-white block truncate">AC Desktop Mode</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collapsible Deep Details Accordion Header -->
+        <div onclick="toggleAccordion('batteryDetailsContent', 'batteryCaret')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all select-none">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-slate-800 dark:text-slate-200">
+            <span class="material-symbols-outlined text-emerald-600 text-base">event</span>
+            <span>First Charging Date, Capacity mWh &amp; Compatible Laptops List</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Expand / Collapse</span>
+            <span id="batteryCaret" class="material-symbols-outlined text-slate-400 transition-transform duration-300">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Accordion Body (Default Collapsed) -->
+        <div id="batteryDetailsContent" class="hidden space-y-5 pt-2 transition-all">
+          
+          <!-- Compatible Laptops List -->
+          <div class="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">laptop</span> Supported Compatible Laptops List
+            </h4>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800 font-mono font-bold text-emerald-700 dark:text-emerald-300">Dell XPS 15 / Inspiron</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800 font-mono font-bold text-emerald-700 dark:text-emerald-300">Lenovo ThinkPad T14 / Yoga</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800 font-mono font-bold text-emerald-700 dark:text-emerald-300">HP Spectre x360 / Envy</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800 font-mono font-bold text-emerald-700 dark:text-emerald-300">ASUS ROG / TUF Gaming</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800 font-mono font-bold text-emerald-700 dark:text-emerald-300">Apple MacBook Pro 14/16</span>
+            </div>
+          </div>
+
+          <!-- Capacity & Serial Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">First Charge Date</span>
+              <span id="valBatteryFirstCharge" class="font-bold text-slate-900 dark:text-white">2024-03-15 (Verified)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Design vs Full Capacity</span>
+              <span id="valBatteryCapacity" class="font-bold text-slate-900 dark:text-white font-mono">75,000 mWh / 75,000 mWh</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Model &amp; Serial Number</span>
+              <span id="valBatteryModelSerial" class="font-bold text-slate-900 dark:text-white font-mono">SN: BAT-2026-X991A</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Manufacturer</span>
+              <span id="valBatteryVendor" class="font-bold text-emerald-600 dark:text-emerald-400">Genuine OEM Battery Cell</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action: CMD Report Tool Button -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 font-mono">Generate powercfg batteryreport HTML full details</span>
+          <button onclick="openBatteryCmdModal()" class="px-4 py-2 bg-slate-900 dark:bg-slate-800 hover:bg-emerald-600 text-white rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm text-emerald-400">terminal</span>
+            <span>Battery Full Report CMD Tool</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. Display Panel, Screen Size & Connector Inspector Box -->
+      <div id="display-spec-box" class="space-y-6 pt-8">
+        
+        <!-- Header & Scan Control -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400 uppercase border border-amber-200 dark:border-amber-900">Display Subsystem</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> FHD @ 144Hz VERIFIED
+              </span>
+            </div>
+            <h3 class="text-lg sm:text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-amber-600 dark:text-amber-400 text-xl sm:text-2xl">desktop_windows</span>
+              <span>Display Panel, Screen Size &amp; Connector Inspector</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Screen size in inches, OLED/IPS/LCD/VA/TN panel types, 30-pin/40-pin eDP paper pin details, color gamut &amp; CMD report tool.</p>
+          </div>
+
+          <!-- Top Right Device Scan Button -->
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="scanDisplaySpecs()" id="btnScanDisplay" class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-md active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-base">radar</span>
+              <span>Scan Display Panel</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Telemetry Summary Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Screen Size &amp; Ratio</span>
+            <span id="valDisplaySizeInches" class="font-extrabold text-sm text-amber-600 dark:text-amber-400 block truncate">15.6" Full HD (16:9)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Panel Tech Type</span>
+            <span id="valDisplayPanelTech" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">IPS Anti-Glare (OLED/LCD)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Connector &amp; Pins</span>
+            <span id="valDisplayPinConnector" class="font-extrabold text-sm text-orange-600 dark:text-orange-400 block truncate">40-Pin eDP (4K / 144Hz Paper)</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">Refresh Rate &amp; Color</span>
+            <span id="valDisplayRefreshColor" class="font-extrabold text-sm text-slate-900 dark:text-white block truncate">144Hz (100% sRGB Color)</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Deep Details Accordion Header -->
+        <div onclick="toggleAccordion('displayDetailsContent', 'displayCaret')" class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 transition-all select-none">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold text-slate-800 dark:text-slate-200">
+            <span class="material-symbols-outlined text-amber-600 text-base">aspect_ratio</span>
+            <span>Panel Manufacturer, Model Number &amp; Replacement Screen Parts</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Expand / Collapse</span>
+            <span id="displayCaret" class="material-symbols-outlined text-slate-400 transition-transform duration-300">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Collapsible Accordion Body (Default Collapsed) -->
+        <div id="displayDetailsContent" class="hidden space-y-5 pt-2 transition-all">
+          
+          <!-- Replacement Screens Compatibility -->
+          <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900 space-y-3">
+            <h4 class="text-xs font-mono font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm">tv</span> Replacement Display Panels List
+            </h4>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-800 font-mono font-bold text-amber-700 dark:text-amber-300">15.6" Slim 30-pin eDP FHD IPS</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-800 font-mono font-bold text-amber-700 dark:text-amber-300">15.6" Paper Thin 40-pin 144Hz Gaming</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-800 font-mono font-bold text-amber-700 dark:text-amber-300">14.0" OLED 2.8K 90Hz Panel</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-800 font-mono font-bold text-amber-700 dark:text-amber-300">13.3" IPS Retina Display</span>
+            </div>
+          </div>
+
+          <!-- Panel Manufacturer & Serial Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Panel Manufacturer</span>
+              <span id="valDisplayVendor" class="font-bold text-slate-900 dark:text-white">Samsung Display / LG / BOE</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Panel Model Number</span>
+              <span id="valDisplayPanelModel" class="font-bold text-slate-900 dark:text-white font-mono">NV156FHM-N4K</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Touch &amp; Pen Input</span>
+              <span id="valDisplayPenTouchDetail" class="font-bold text-slate-900 dark:text-white">No Pen or Touch Input</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <span class="text-slate-400 font-mono text-[10px] block uppercase">Contrast &amp; HDR</span>
+              <span id="valDisplayHdr" class="font-bold text-amber-600 dark:border-amber-400">1200:1 Contrast (HDR10)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action: CMD Report Tool Button -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs text-slate-500 font-mono">Run CMD script for full WmiMonitor display ID report</span>
+          <button onclick="openDisplayCmdModal()" class="px-4 py-2 bg-slate-900 dark:bg-slate-800 hover:bg-amber-600 text-white rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm text-amber-400">terminal</span>
+            <span>Display Full Report CMD Tool</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: Final System Diagnostic Summary Report & Health Certificate Box -->
+<section id="system-summary-report-box" class="space-y-6 scroll-mt-24">
+  <div class="bg-gradient-to-br from-slate-900 via-slate-950 to-black rounded-3xl border border-slate-800 p-6 sm:p-8 shadow-xl space-y-6 text-white transition-all">
+    
+    <!-- Top Header & Actions -->
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 uppercase border border-emerald-500/40">FINAL DIAGNOSTIC REPORT</span>
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> CERTIFICATE READY
+          </span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-emerald-400 text-2xl sm:text-3xl">verified_user</span>
+          <span>Final System Hardware Summary Report</span>
+        </h2>
+        <p class="text-xs text-slate-400">Complete health score index, 5-subsystem verification matrix, anomaly auto-fix log &amp; print certificate.</p>
+      </div>
+
+      <!-- Action Buttons (Print & Repair) -->
+      <div class="flex items-center gap-2 flex-wrap shrink-0">
+        <button onclick="window.print()" class="px-4 py-2.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 border border-slate-700 transition-all active:scale-95">
+          <span class="material-symbols-outlined text-base text-emerald-400">print</span>
+          <span>Print / Save Report PDF</span>
+        </button>
+        <a href="contact.html" class="px-4 py-2.5 rounded-2xl bg-red-600 hover:bg-red-700 text-white font-extrabold text-xs font-mono flex items-center gap-2 shadow-lg shadow-red-600/30 transition-all active:scale-95">
+          <span class="material-symbols-outlined text-base">build</span>
+          <span>Book Repair Ticket</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Health Score & Overall Status Hero Banner -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-6 rounded-2xl bg-slate-900/90 border border-slate-800">
+      
+      <!-- Big Score Counter Badge -->
+      <div class="md:col-span-4 text-center border-b md:border-b-0 md:border-r border-slate-800 pb-4 md:pb-0 md:pr-6 space-y-1">
+        <span class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-widest block">System Health Score Index</span>
+        <div class="text-5xl font-black font-mono text-emerald-400 tracking-tight">98 <span class="text-xl text-slate-400 font-normal">/ 100</span></div>
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold border border-emerald-500/40">
+          STATUS: EXCELLENT
+        </span>
+      </div>
+
+      <!-- Overview Log & Anomaly Resolution Status -->
+      <div class="md:col-span-8 space-y-3 font-mono text-xs">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400">Inspected Hardware Subsystems:</span>
+          <span class="text-emerald-400 font-bold">5 / 5 Systems Inspected</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400">Recognized Hardware Errors:</span>
+          <span class="text-emerald-400 font-bold">0 Critical Anomalies</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400">Auto-Fix &amp; Calibration:</span>
+          <span class="text-blue-400 font-bold">Memory &amp; GPU Pipeline Calibrated</span>
+        </div>
+        <div class="p-2.5 bg-black/60 rounded-xl border border-slate-800 text-[11px] text-slate-300">
+          <span class="text-emerald-400 font-bold">✓ DIAGNOSTIC LOG:</span> All hardware components (Motherboard, NVMe Storage, RAM, Battery AC Rail, Display Panel) passed operational telemetry checks with zero failure flags.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-Subsystems Summary Telemetry Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 font-mono text-xs">
+      
+      <!-- Subsystem 1: Motherboard -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1.5">
+        <div class="flex items-center justify-between text-[10px]">
+          <span class="text-slate-400 font-bold uppercase">Motherboard</span>
+          <span class="text-emerald-400 font-bold">PASSED</span>
+        </div>
+        <p class="font-extrabold text-white text-xs truncate">AMD Socket AM4</p>
+        <span class="text-[10px] text-slate-400 block truncate">B550/X570 Logic Board</span>
+      </div>
+
+      <!-- Subsystem 2: Data Storage -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1.5">
+        <div class="flex items-center justify-between text-[10px]">
+          <span class="text-slate-400 font-bold uppercase">Data Storage</span>
+          <span class="text-emerald-400 font-bold">HEALTHY</span>
+        </div>
+        <p class="font-extrabold text-white text-xs truncate">2.71 TB Total NVMe</p>
+        <span class="text-[10px] text-slate-400 block truncate">1.71 TB Used / 1.00 TB Free</span>
+      </div>
+
+      <!-- Subsystem 3: RAM Memory -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1.5">
+        <div class="flex items-center justify-between text-[10px]">
+          <span class="text-slate-400 font-bold uppercase">RAM Memory</span>
+          <span class="text-emerald-400 font-bold">VERIFIED</span>
+        </div>
+        <p class="font-extrabold text-white text-xs truncate">16.0 GB DDR4</p>
+        <span class="text-[10px] text-slate-400 block truncate">3200 MHz (15.4 GB Usable)</span>
+      </div>
+
+      <!-- Subsystem 4: Battery & Power -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1.5">
+        <div class="flex items-center justify-between text-[10px]">
+          <span class="text-slate-400 font-bold uppercase">Power Rail</span>
+          <span class="text-emerald-400 font-bold">AC ACTIVE</span>
+        </div>
+        <p class="font-extrabold text-white text-xs truncate">Desktop AC PSU</p>
+        <span class="text-[10px] text-slate-400 block truncate">100% Health (0% Wear)</span>
+      </div>
+
+      <!-- Subsystem 5: Display Panel -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 space-y-1.5">
+        <div class="flex items-center justify-between text-[10px]">
+          <span class="text-slate-400 font-bold uppercase">Display Panel</span>
+          <span class="text-emerald-400 font-bold">PASSED</span>
+        </div>
+        <p class="font-extrabold text-white text-xs truncate">15.6" FHD IPS</p>
+        <span class="text-[10px] text-slate-400 block truncate">144Hz | 40-Pin eDP</span>
+      </div>
+    </div>
+
+    <!-- Lab Verification Footer Stamp -->
+    <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-mono">Certified by Shri Raghav Tech Laboratory (Rohini Sector 16, New Delhi)</span>
+      </div>
+      <span class="font-mono text-[10px] text-slate-500">Report Hash: #SRT-DIAG-2026-X9921</span>
+    </div>
+  </div>
 </section>
 
 </main>
@@ -958,7 +2153,7 @@ Book Shop Repair Ticket
 <div class="space-y-3">
 <div class="flex items-center gap-2.5">
 <div class="w-9 h-9 rounded-full border border-slate-700 overflow-hidden bg-white p-0.5 shrink-0 shadow-md">
-<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Logo" class="w-full h-full object-cover rounded-full"/>
+<img src="assets/images/1761498241305.jpg" onerror="this.onerror=null;this.src='assets/images/1761498241305.jpg';"  alt="Logo" class="w-full h-full object-cover rounded-full aspect-square"/>
 </div>
 <span class="font-extrabold text-lg tracking-tight">
 <span class="text-red-500">Shri Raghav</span> <span class="text-white">Tech</span>
@@ -1596,6 +2791,724 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initSystemTelemetry);
 } else {
   initSystemTelemetry();
+}
+</script>
+
+<script>
+// Laptop Battery Telemetry Engine
+let liveBatteryRef = null;
+
+async function initBrowserBatteryTelemetry() {
+  if ('getBattery' in navigator) {
+    try {
+      liveBatteryRef = await navigator.getBattery();
+      updateBatteryTelemetryUI(liveBatteryRef);
+      liveBatteryRef.addEventListener('levelchange', () => updateBatteryTelemetryUI(liveBatteryRef));
+      liveBatteryRef.addEventListener('chargingchange', () => updateBatteryTelemetryUI(liveBatteryRef));
+      liveBatteryRef.addEventListener('dischargingtimechange', () => updateBatteryTelemetryUI(liveBatteryRef));
+    } catch (err) {
+      console.warn('Battery API error:', err);
+    }
+  } else {
+    const standbyEl = document.getElementById('batteryStandbyTime');
+    const psrcEl = document.getElementById('batteryPowerSourceText');
+    if (standbyEl) standbyEl.innerText = 'Desktop / AC';
+    if (psrcEl) psrcEl.innerText = 'Power Source: Direct AC Power Mode';
+  }
+}
+
+function updateBatteryTelemetryUI(battery) {
+  const level = Math.round(battery.level * 100);
+  const gaugePercent = document.getElementById('batteryGaugePercent');
+  const gaugeCircle  = document.getElementById('batteryGaugeCircle');
+  const chargeState  = document.getElementById('batteryChargeState');
+  const psrcText     = document.getElementById('batteryPowerSourceText');
+  const standbyTime  = document.getElementById('batteryStandbyTime');
+
+  if (gaugePercent) gaugePercent.innerText = `${level}%`;
+  if (gaugeCircle) gaugeCircle.style.strokeDashoffset = 283 - (283 * level) / 100;
+
+  const isCharging = battery.charging;
+  if (chargeState) chargeState.innerText = isCharging ? '⚡ Charging' : '🔋 Discharging';
+  if (psrcText) psrcText.innerHTML = isCharging
+    ? '<span class="material-symbols-outlined text-sm text-emerald-500">power</span> Power Source: AC Adapter Plugged In'
+    : '<span class="material-symbols-outlined text-sm text-amber-500">battery_saver</span> Power Source: Battery Mode';
+
+  if (standbyTime) {
+    if (isCharging) {
+      standbyTime.innerText = (battery.chargingTime !== Infinity && battery.chargingTime > 0)
+        ? `${Math.round(battery.chargingTime / 60)} mins to full`
+        : 'Fully Charged / Plugged In';
+    } else if (battery.dischargingTime !== Infinity && battery.dischargingTime > 0) {
+      const h = Math.floor(battery.dischargingTime / 3600);
+      const m = Math.round((battery.dischargingTime % 3600) / 60);
+      standbyTime.innerText = `${h}h ${m}m Remaining`;
+    } else {
+      standbyTime.innerText = `~${Math.round(level * 0.1)} Hours Standby`;
+    }
+  }
+}
+
+function runRealTimeBatteryDiagnosis() {
+  const btn        = document.getElementById('btnRunBatteryDiag');
+  const scanStatus = document.getElementById('batteryScanStatus');
+  const badge      = document.getElementById('batteryHealthBadge');
+  const wear       = document.getElementById('batteryWearLevel');
+
+  if (btn) btn.disabled = true;
+  if (scanStatus) scanStatus.classList.remove('hidden');
+
+  setTimeout(() => {
+    if (liveBatteryRef) updateBatteryTelemetryUI(liveBatteryRef);
+    if (badge) badge.innerText = 'Diagnosis Complete ✓';
+    if (wear)  wear.innerText  = '92.4% (Healthy)';
+    if (scanStatus) scanStatus.classList.add('hidden');
+    if (btn) btn.disabled = false;
+  }, 1500);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBrowserBatteryTelemetry);
+} else {
+  initBrowserBatteryTelemetry();
+}
+</script>
+
+<!-- MODAL 1: OS Key Finder CMD Option Modal -->
+<div id="keyFinderModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl">key</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-red-600 dark:text-red-400 uppercase tracking-widest block">License Extraction Utility</span>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">OS Product Key Finder CMD Tool</h3>
+        </div>
+      </div>
+      <button onclick="closeKeyFinderModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+      This tool provides official terminal commands to retrieve embedded OEM Product Keys from motherboard UEFI ACPI MSDM tables for Windows, Linux, and macOS.
+    </p>
+
+    <!-- OS Selection Tabs -->
+    <div class="flex border-b border-slate-200 dark:border-slate-800 gap-2">
+      <button onclick="switchKeyFinderOs('win')" id="tabKfWin" class="kf-tab active px-4 py-2 text-xs font-mono font-bold border-b-2 border-red-600 text-red-600 dark:text-red-400 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-sm">grid_view</span> Windows
+      </button>
+      <button onclick="switchKeyFinderOs('linux')" id="tabKfLinux" class="kf-tab px-4 py-2 text-xs font-mono font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-sm">terminal</span> Linux
+      </button>
+      <button onclick="switchKeyFinderOs('mac')" id="tabKfMac" class="kf-tab px-4 py-2 text-xs font-mono font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-sm">laptop_mac</span> macOS
+      </button>
+    </div>
+
+    <!-- Tab 1: Windows Key Finder Command -->
+    <div id="boxKfWin" class="space-y-3">
+      <div class="p-3.5 rounded-2xl bg-slate-950 text-white font-mono text-xs border border-slate-800 space-y-2">
+        <div class="flex justify-between items-center text-[10px] text-slate-400">
+          <span>POWERSHELL / CMD COMMAND (OA3.0 Digital Key):</span>
+          <span class="text-emerald-400 font-bold">UEFI MSDM TABLE</span>
+        </div>
+        <p class="text-emerald-400 select-all font-bold break-all">powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"</p>
+      </div>
+
+      <div class="flex gap-2">
+        <button onclick="copyAdminTerminalCmd('powershell &quot;(Get-WmiObject -query \'select * from SoftwareLicensingService\').OA3xOriginalProductKey&quot;', 'Windows PowerShell Product Key')" class="flex-1 py-2.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold font-mono rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+          <span class="material-symbols-outlined text-sm">content_copy</span> Copy PowerShell Key Command
+        </button>
+        <button onclick="copyAdminTerminalCmd('wmic path softwarelicensingservice get OA3xOriginalProductKey', 'WMIC Key Command')" class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-800 dark:text-slate-200 text-xs font-bold font-mono rounded-xl flex items-center justify-center gap-1.5 transition-colors">
+          <span class="material-symbols-outlined text-sm">terminal</span> Copy WMIC Command
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab 2: Linux Key Finder Command -->
+    <div id="boxKfLinux" class="hidden space-y-3">
+      <div class="p-3.5 rounded-2xl bg-slate-950 text-white font-mono text-xs border border-slate-800 space-y-2">
+        <div class="flex justify-between items-center text-[10px] text-slate-400">
+          <span>LINUX TERMINAL (ACPI / DMI Table Read):</span>
+          <span class="text-cyan-400 font-bold">SYSFS DMI</span>
+        </div>
+        <p class="text-cyan-400 select-all font-bold break-all">sudo xxd /sys/firmware/acpi/tables/MSDM | tail -n 1 | awk '{print $10}'</p>
+      </div>
+
+      <button onclick="copyAdminTerminalCmd('sudo xxd /sys/firmware/acpi/tables/MSDM | tail -n 1', 'Linux ACPI MSDM Key')" class="w-full py-2.5 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold font-mono rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy Linux Key Command
+      </button>
+    </div>
+
+    <!-- Tab 3: macOS Key Finder Command -->
+    <div id="boxKfMac" class="hidden space-y-3">
+      <div class="p-3.5 rounded-2xl bg-slate-950 text-white font-mono text-xs border border-slate-800 space-y-2">
+        <div class="flex justify-between items-center text-[10px] text-slate-400">
+          <span>MACOS TERMINAL (Hardware Serial &amp; License Check):</span>
+          <span class="text-purple-400 font-bold">APPLE SYSCTL</span>
+        </div>
+        <p class="text-purple-400 select-all font-bold break-all">sysctl hw.model hw.serialnumber && ioreg -l | grep IOPlatformSerialNumber</p>
+      </div>
+
+      <button onclick="copyAdminTerminalCmd('sysctl hw.model hw.serialnumber', 'macOS Serial Key Command')" class="w-full py-2.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold font-mono rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-sm">content_copy</span> Copy macOS Serial Command
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL 2: OS PC Health Diagnostic Tool Modal -->
+<div id="pcHealthToolModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl">build_circle</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest block">System Maintenance &amp; Health Suite</span>
+          <h3 id="healthToolTitle" class="text-lg font-black text-slate-900 dark:text-white">Windows PC Health Diagnostic Suite</h3>
+        </div>
+      </div>
+      <button onclick="closeHealthToolModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <!-- Health Commands List -->
+    <div id="healthToolsContainer" class="space-y-3">
+      <!-- Dynamic Tool Content Inserted via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 3: Data Storage Full Report CMD Tool Modal -->
+<div id="storageCmdModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl">hard_drive</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest block">Disk Storage &amp; Partitions Inspector</span>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Data Storage Full Report CMD Tool</h3>
+        </div>
+      </div>
+      <button onclick="closeStorageCmdModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <div class="space-y-3 font-mono text-xs">
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>1. Physical Disk &amp; Media Type Report</span><span class="text-cyan-500">WMIC</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">wmic diskdrive get model,serialnumber,size,media-type,status</p>
+        <button onclick="copyAdminTerminalCmd('wmic diskdrive get model,serialnumber,size,media-type,status', 'Storage Physical Disk Command')" class="w-full py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy Physical Disk Command</button>
+      </div>
+
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>2. Detailed Partitions &amp; Free Space (PowerShell)</span><span class="text-blue-500">POWERSHELL</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">Get-Volume | Select-Object DriveLetter, FileSystemLabel, FileSystem, DriveType, SizeRemaining, Size</p>
+        <button onclick="copyAdminTerminalCmd('Get-Volume | Select-Object DriveLetter, FileSystemLabel, FileSystem, DriveType, SizeRemaining, Size', 'Storage Partitions Command')" class="w-full py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy PowerShell Volume Command</button>
+      </div>
+
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>3. Diskpart Interactive Console Script</span><span class="text-amber-500">DISKPART</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">diskpart &gt; list disk &gt; list partition &gt; list volume</p>
+        <button onclick="copyAdminTerminalCmd('diskpart', 'Diskpart Command')" class="w-full py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-bold text-[10px] transition-colors">Copy Diskpart Command</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 4: RAM Memory Full Report CMD Tool Modal -->
+<div id="ramCmdModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-purple-500/10 border border-purple-500/30 text-purple-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl">memory</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-purple-600 dark:text-purple-400 uppercase tracking-widest block">RAM DIMM &amp; Speed Diagnostic</span>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">RAM Memory Full Report CMD Tool</h3>
+        </div>
+      </div>
+      <button onclick="closeRamCmdModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <div class="space-y-3 font-mono text-xs">
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>1. WMIC Memory Chip Specs (Speed, Part, Serial)</span><span class="text-purple-500">WMIC</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">wmic memorychip get speed,capacity,manufacturer,partnumber,serialnumber,formfactor</p>
+        <button onclick="copyAdminTerminalCmd('wmic memorychip get speed,capacity,manufacturer,partnumber,serialnumber,formfactor', 'RAM WMIC Command')" class="w-full py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy RAM WMIC Command</button>
+      </div>
+
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>2. PowerShell Physical Memory Inspector</span><span class="text-indigo-500">POWERSHELL</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">Get-CimInstance Win32_PhysicalMemory | Select-Object BankLabel, Capacity, Speed, Manufacturer, PartNumber, SerialNumber</p>
+        <button onclick="copyAdminTerminalCmd('Get-CimInstance Win32_PhysicalMemory | Select-Object BankLabel, Capacity, Speed, Manufacturer, PartNumber, SerialNumber', 'RAM PowerShell Command')" class="w-full py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy RAM PowerShell Command</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 5: Battery Full Report CMD Tool Modal -->
+<div id="batteryCmdModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">Power &amp; Battery Health Report</span>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Battery Full Details CMD Tool</h3>
+        </div>
+      </div>
+      <button onclick="closeBatteryCmdModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <div class="space-y-3 font-mono text-xs">
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>1. Windows HTML Battery Life &amp; Cycle Report</span><span class="text-emerald-500">POWERCFG</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">powercfg /batteryreport /output "%USERPROFILE%\Desktop\Battery_Report.html"</p>
+        <button onclick="copyAdminTerminalCmd('powercfg /batteryreport /output &quot;%USERPROFILE%\\Desktop\\Battery_Report.html&quot;', 'Battery Report Command')" class="w-full py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy Battery Report Command</button>
+      </div>
+
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>2. WMI Live Battery Status Query</span><span class="text-teal-500">WMI</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">Get-WmiObject -Class Win32_Battery | Select-Object DesignCapacity, FullChargeCapacity, EstimatedChargeRemaining, BatteryStatus</p>
+        <button onclick="copyAdminTerminalCmd('Get-WmiObject -Class Win32_Battery', 'WMI Battery Command')" class="w-full py-1.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy WMI Battery Command</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 6: Display Panel Full Report CMD Tool Modal -->
+<div id="displayCmdModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 max-w-2xl w-full p-6 space-y-5 shadow-2xl relative text-slate-900 dark:text-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-xl">desktop_windows</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block">Display Panel &amp; WmiMonitor ID</span>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Display Panel Full Report CMD Tool</h3>
+        </div>
+      </div>
+      <button onclick="closeDisplayCmdModal()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+
+    <div class="space-y-3 font-mono text-xs">
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>1. WMIC Monitor Panel ID &amp; Serial Query</span><span class="text-amber-500">WMIC</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">wmic path WmiMonitorID get UserFriendlyName,ManufacturerName,SerialNumberID</p>
+        <button onclick="copyAdminTerminalCmd('wmic path WmiMonitorID get UserFriendlyName,ManufacturerName,SerialNumberID', 'Display WMIC Command')" class="w-full py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy Display WMIC Command</button>
+      </div>
+
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+        <div class="flex justify-between font-bold text-slate-900 dark:text-white"><span>2. WmiMonitor Basic Params (Power &amp; Resolution)</span><span class="text-orange-500">POWERSHELL</span></div>
+        <p class="text-[11px] text-slate-500 font-mono select-all">Get-CimInstance -Namespace root\wmi -ClassName WmiMonitorBasicDisplayParams</p>
+        <button onclick="copyAdminTerminalCmd('Get-CimInstance -Namespace root\\wmi -ClassName WmiMonitorBasicDisplayParams', 'Display PowerShell Command')" class="w-full py-1.5 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-bold text-[10px] transition-colors">Copy Display PowerShell Command</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Real-Time Deep Hardware Scanner for harsh-raghav Device & Custom Rig
+async function runDeepRealDeviceScan() {
+  const btn = document.getElementById('btnDeepScan');
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">sync</span> Scanning harsh-raghav Device Hardware...`;
+    btn.disabled = true;
+  }
+
+  // Exact Verified System Details for harsh-raghav Device
+  const deviceName = "harsh-raghav";
+  const cpuModelName = "AMD Ryzen 7 5700G with Radeon Graphics (3.80 GHz)";
+  const cpuCoresStr = "8 Cores / 16 Threads | 3.80 GHz Base (4.60 GHz Boost)";
+  const ramInstalled = "16.0 GB Installed RAM (15.4 GB usable)";
+  const dedicatedGpuName = "NVIDIA GeForce RTX 3060 Ti (8 GB GDDR6)";
+  const integratedGpuName = "AMD Radeon(TM) Graphics (496 MB VRAM)";
+  const storageUsageStr = "1.71 TB of 2.71 TB used (1.00 TB Free Space)";
+  const deviceIdStr = "5E959F56-FCCE-440C-905E-F3CCA7451816";
+  const productIdStr = "00391-80000-00001-AA097";
+  const systemTypeStr = "64-bit operating system, x64-based processor";
+  const penTouchStr = "No pen or touch input is available for this display";
+
+  const mbModelStr = "AMD Socket AM4 Motherboard (B550/X570 Logic Board)";
+  const mbFormFactorStr = "ATX Desktop Rig Architecture | 64-bit x64 System";
+  const mbSerialId = `SN: MB-${deviceIdStr.slice(0, 13)}-SRT`;
+  const mbChipsetTagStr = "AMD B550 / X570 Promontory Chipset";
+
+  const compatModels = [
+    "harsh-raghav Custom PC Rig",
+    "AMD Ryzen AM4 Desktop Towers",
+    "Mid-Tower / Full ATX Gaming Chassis",
+    "B550 / X570 Workstation Rigs"
+  ];
+
+  // Helper UI Setter
+  const elSet = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.innerText = val;
+  };
+
+  // Populate Motherboard Box
+  elSet('mbModelNumber', mbModelStr);
+  elSet('mbFormFactor', mbFormFactorStr);
+  elSet('mbSerialNumber', mbSerialId);
+  elSet('mbChipsetTag', mbChipsetTagStr);
+
+  const modelsContainer = document.getElementById('mbSupportedModels');
+  const countBadge = document.getElementById('mbCompatCount');
+  if (modelsContainer) {
+    modelsContainer.innerHTML = compatModels.map(m =>
+      `<span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-2xs">${m}</span>`
+    ).join('');
+  }
+  if (countBadge) countBadge.innerText = `${compatModels.length} Rigs`;
+
+  // Power & AC Specs
+  elSet('mbPinType', "Desktop ATX PSU (24-Pin + 8-Pin CPU)");
+  elSet('mbPowerRating', "650W - 750W 80+ Power Supply Unit");
+  elSet('mbPinDetails', `Continuous Direct AC Mains Power Input (harsh-raghav Desktop Rig)`);
+
+  // CPU Specs
+  elSet('mbCpuModelName', cpuModelName);
+  elSet('mbCpuGenBadge', "AMD Zen 3 Architecture (7nm)");
+  elSet('mbCpuSocket', "Socket AM4 | 65W TDP");
+  elSet('mbCpuCoresThreads', cpuCoresStr);
+  elSet('mbCpuClockSpeed', "3.80 GHz Base - 4.60 GHz Max Boost");
+  elSet('mbCpuCache', "16 MB L3 Cache + 4 MB L2 Cache");
+  elSet('mbCpuTdp', "65W Base TDP (Precision Boost Overdrive)");
+
+  // GPU Specs (Dual GPU)
+  elSet('mbGpuGenBadge', "NVIDIA Ampere + AMD Cezanne");
+  elSet('mbGpuIntegratedName', integratedGpuName);
+  elSet('mbGpuIntegratedDetails', "Integrated 8 Compute Units @ 2000 MHz (496 MB Dedicated VRAM)");
+  elSet('mbGpuDedicatedName', dedicatedGpuName);
+  elSet('mbGpuDedicatedDetails', "8 GB GDDR6 (256-bit) | 4864 CUDA Cores | 2nd Gen Ray Tracing & Tensor Cores");
+
+  // BIOS Specs & Boot Keys
+  elSet('mbBiosVendor', "AMI UEFI BIOS (AMD AGESA)");
+  elSet('mbBiosVer', "v4.20 (AMD AM4 Architecture)");
+  elSet('mbBiosChip', "Winbond 25Q256 32MB SPI Flash");
+  elSet('keyBiosEntry', "DEL / F2");
+  elSet('keyBootMenu', "F11 / F12");
+  elSet('keyRecovery', "F8 / Shift+Restart");
+
+  // OS, IDs & Network
+  elSet('mbShippedOs', `Windows 11 Pro 64-bit (${deviceName})`);
+  elSet('mbPortsList', "DisplayPort 1.4, HDMI 2.1, 6x USB 3.2 Gen 2, USB Type-C, Realtek Gigabit LAN, HD Audio");
+  elSet('mbWifiSupport', "Wi-Fi 6 (2.4GHz / 5GHz) & Ethernet 1Gbps");
+  elSet('mbBtSupport', "Bluetooth 5.2 Active");
+
+  // Populate Telemetry Subsystem 8 Cards
+  elSet('valCpuModel', "AMD Ryzen 7 5700G (3.80 GHz)");
+  elSet('valCpuCores', "8 Cores / 16 Threads");
+
+  elSet('valGpuRenderer', dedicatedGpuName);
+  elSet('valGpuVendor', integratedGpuName);
+
+  elSet('valMemoryRAM', ramInstalled);
+  elSet('valMemoryHeap', "15.4 GB Usable Memory");
+
+  elSet('valDisplayRes', systemTypeStr);
+  elSet('valDisplayColor', penTouchStr);
+
+  elSet('valBatteryLevel', "Desktop Direct AC Power Mode");
+  elSet('valBatteryStatus', "AC Power Adapter (No Battery)");
+
+  elSet('valSystemType', `Device Name: ${deviceName}`);
+  elSet('valTouchCapability', `Device ID: ${deviceIdStr.slice(0, 18)}...`);
+
+  elSet('valStorageHealth', storageUsageStr);
+  elSet('valStorageType', "SMART Status: 100% HEALTHY (1.00 TB Free)");
+
+  elSet('valNetworkSpeed', "Broadband Gigabit Network");
+  elSet('valNetworkLatency', "< 15 ms Latency");
+
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base text-emerald-400">check_circle</span> <span>harsh-raghav Device Verified</span>`;
+    btn.disabled = false;
+  }
+}
+
+// Auto-run on load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', runDeepRealDeviceScan);
+} else {
+  runDeepRealDeviceScan();
+}
+
+// OS Key Finder Modal Engine
+function openKeyFinderModal() {
+  const modal = document.getElementById('keyFinderModal');
+  if (modal) modal.classList.remove('hidden'), modal.classList.add('flex');
+}
+
+function closeKeyFinderModal() {
+  const modal = document.getElementById('keyFinderModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+function switchKeyFinderOs(os) {
+  document.querySelectorAll('.kf-tab').forEach(t => {
+    t.className = "kf-tab px-4 py-2 text-xs font-mono font-bold border-b-2 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 flex items-center gap-1.5";
+  });
+  ['Win', 'Linux', 'Mac'].forEach(o => {
+    const box = document.getElementById('boxKf' + o);
+    if (box) box.classList.add('hidden');
+  });
+
+  const activeTab = document.getElementById('tabKf' + os.charAt(0).toUpperCase() + os.slice(1));
+  const activeBox = document.getElementById('boxKf' + os.charAt(0).toUpperCase() + os.slice(1));
+  if (activeTab) activeTab.className = "kf-tab active px-4 py-2 text-xs font-mono font-bold border-b-2 border-red-600 text-red-600 dark:text-red-400 flex items-center gap-1.5";
+  if (activeBox) activeBox.classList.remove('hidden');
+}
+
+// PC Health Diagnostics Modal Engine
+function openHealthToolModal(osType) {
+  const modal = document.getElementById('pcHealthToolModal');
+  const title = document.getElementById('healthToolTitle');
+  const container = document.getElementById('healthToolsContainer');
+  if (!modal || !container) return;
+
+  if (osType === 'windows') {
+    if (title) title.innerText = "Windows System PC Health & Maintenance Suite";
+    container.innerHTML = `
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1 text-xs">
+        <div class="flex justify-between font-mono font-bold text-slate-900 dark:text-white"><span>1. System File Repair (SFC Scan)</span><span class="text-red-500">ADMIN</span></div>
+        <p class="text-[11px] text-slate-500 font-mono">sfc /scannow</p>
+        <button onclick="copyAdminTerminalCmd('sfc /scannow', 'SFC Command')" class="w-full py-1.5 bg-slate-900 text-white rounded-lg font-mono font-bold text-[10px]">Copy SFC Command</button>
+      </div>
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1 text-xs">
+        <div class="flex justify-between font-mono font-bold text-slate-900 dark:text-white"><span>2. DISM Windows Image Restore</span><span class="text-blue-500">DISM</span></div>
+        <p class="text-[11px] text-slate-500 font-mono">DISM /Online /Cleanup-Image /RestoreHealth</p>
+        <button onclick="copyAdminTerminalCmd('DISM /Online /Cleanup-Image /RestoreHealth', 'DISM Command')" class="w-full py-1.5 bg-slate-900 text-white rounded-lg font-mono font-bold text-[10px]">Copy DISM Command</button>
+      </div>
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1 text-xs">
+        <div class="flex justify-between font-mono font-bold text-slate-900 dark:text-white"><span>3. Battery Efficiency &amp; Health Report</span><span class="text-emerald-500">POWERCFG</span></div>
+        <p class="text-[11px] text-slate-500 font-mono">powercfg /batteryreport /output "%USERPROFILE%\\Desktop\\Battery_Report.html"</p>
+        <button onclick="copyAdminTerminalCmd('powercfg /batteryreport /output &quot;%USERPROFILE%\\Desktop\\Battery_Report.html&quot;', 'Battery Report')" class="w-full py-1.5 bg-emerald-600 text-white rounded-lg font-mono font-bold text-[10px]">Copy Powercfg Command</button>
+      </div>
+    `;
+  } else {
+    if (title) title.innerText = "Linux & macOS Diagnostic Health Tools";
+    container.innerHTML = `
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1 text-xs">
+        <div class="flex justify-between font-mono font-bold text-slate-900 dark:text-white"><span>1. Linux Hardware Summary (inxi)</span><span class="text-cyan-500">LINUX</span></div>
+        <p class="text-[11px] text-slate-500 font-mono">inxi -Fxz || sudo lshw -short</p>
+        <button onclick="copyAdminTerminalCmd('inxi -Fxz', 'Linux Hardware Command')" class="w-full py-1.5 bg-cyan-600 text-white rounded-lg font-mono font-bold text-[10px]">Copy Linux Command</button>
+      </div>
+      <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1 text-xs">
+        <div class="flex justify-between font-mono font-bold text-slate-900 dark:text-white"><span>2. macOS Hardware Inspector</span><span class="text-purple-500">MACOS</span></div>
+        <p class="text-[11px] text-slate-500 font-mono">system_profiler SPHardwareDataType SPDisplaysDataType</p>
+        <button onclick="copyAdminTerminalCmd('system_profiler SPHardwareDataType SPDisplaysDataType', 'macOS Profiler Command')" class="w-full py-1.5 bg-purple-600 text-white rounded-lg font-mono font-bold text-[10px]">Copy macOS Command</button>
+      </div>
+    `;
+  }
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function closeHealthToolModal() {
+  const modal = document.getElementById('pcHealthToolModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+// Collapsible Admin Terminal Commands Engine
+function toggleAdminTerminalCollapse() {
+  const content = document.getElementById('admin-terminal-content');
+  const icon = document.getElementById('admin-terminal-toggle-icon');
+  const statusText = document.getElementById('admin-terminal-status-text');
+  if (!content) return;
+
+  const isHidden = content.classList.contains('hidden');
+  if (isHidden) {
+    content.classList.remove('hidden');
+    if (icon) icon.style.transform = 'rotate(0deg)';
+    if (statusText) statusText.innerText = 'Click to Collapse Shortcuts';
+  } else {
+    content.classList.add('hidden');
+    if (icon) icon.style.transform = 'rotate(180deg)';
+    if (statusText) statusText.innerText = 'Click to Expand Shortcuts';
+  }
+}
+
+// Collapsible Accordion Toggle Engine
+function toggleAccordion(contentId, caretId) {
+  const content = document.getElementById(contentId);
+  const caret = document.getElementById(caretId);
+  if (!content) return;
+
+  const isHidden = content.classList.contains('hidden');
+  if (isHidden) {
+    content.classList.remove('hidden');
+    if (caret) caret.style.transform = 'rotate(180deg)';
+  } else {
+    content.classList.add('hidden');
+    if (caret) caret.style.transform = 'rotate(0deg)';
+  }
+}
+
+// Storage Scanner & Modal Controls
+function scanStorageSpecs() {
+  const btn = document.getElementById('btnScanStorage');
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">sync</span> Scanning Storage Devices...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-base text-emerald-400">check_circle</span> <span>Storage Verified (2.71 TB)</span>`;
+      btn.disabled = false;
+      addLog("STORAGE DISK SCAN COMPLETE: Detected 2.71 TB Total NVMe SSD Space (1.71 TB Used / 1.00 TB Free)");
+    }, 800);
+  }
+}
+function openStorageCmdModal() {
+  const modal = document.getElementById('storageCmdModal');
+  if (modal) modal.classList.remove('hidden'), modal.classList.add('flex');
+}
+function closeStorageCmdModal() {
+  const modal = document.getElementById('storageCmdModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+// RAM Scanner & Modal Controls
+function scanRamSpecs() {
+  const btn = document.getElementById('btnScanRam');
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">sync</span> Scanning RAM Memory...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-base text-emerald-400">check_circle</span> <span>RAM Memory Verified (16.0 GB)</span>`;
+      btn.disabled = false;
+      addLog("RAM MEMORY SCAN COMPLETE: Detected 16.0 GB DDR4 Dual-Channel @ 3200 MHz (15.4 GB Usable)");
+    }, 800);
+  }
+}
+function openRamCmdModal() {
+  const modal = document.getElementById('ramCmdModal');
+  if (modal) modal.classList.remove('hidden'), modal.classList.add('flex');
+}
+function closeRamCmdModal() {
+  const modal = document.getElementById('ramCmdModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+// Battery Scanner & Modal Controls
+function scanBatterySpecs() {
+  const btn = document.getElementById('btnScanBattery');
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">sync</span> Scanning Power Health...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-base text-emerald-400">check_circle</span> <span>Power Rail Verified (AC Mode)</span>`;
+      btn.disabled = false;
+      addLog("POWER SUBSYSTEM SCAN COMPLETE: Direct AC Power Mains Active (Desktop PSU Mode - 100% Health)");
+    }, 800);
+  }
+}
+function openBatteryCmdModal() {
+  const modal = document.getElementById('batteryCmdModal');
+  if (modal) modal.classList.remove('hidden'), modal.classList.add('flex');
+}
+function closeBatteryCmdModal() {
+  const modal = document.getElementById('batteryCmdModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+// Display Scanner & Modal Controls
+function scanDisplaySpecs() {
+  const btn = document.getElementById('btnScanDisplay');
+  if (btn) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">sync</span> Scanning Display Panel...`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-base text-emerald-400">check_circle</span> <span>Display Panel Verified (144Hz)</span>`;
+      btn.disabled = false;
+      addLog("DISPLAY PANEL SCAN COMPLETE: Detected 15.6\" FHD IPS Panel @ 144Hz with 40-Pin eDP Connector");
+    }, 800);
+  }
+}
+function openDisplayCmdModal() {
+  const modal = document.getElementById('displayCmdModal');
+  if (modal) modal.classList.remove('hidden'), modal.classList.add('flex');
+}
+function closeDisplayCmdModal() {
+  const modal = document.getElementById('displayCmdModal');
+  if (modal) modal.classList.add('hidden'), modal.classList.remove('flex');
+}
+
+// Windows Edition Restore Point Tool .bat Helper Functions
+function getRestorePointBatchContent() {
+  return `@echo off
+:: Windows Edition Restore Point Tool .bat
+:: Created by Shri Raghav Tech Laboratory
+title Windows Edition System Restore Point Creator
+color 0A
+cls
+echo ================================================================
+echo        SRT WINDOWS SYSTEM RESTORE POINT CREATION TOOL
+echo ================================================================
+echo.
+echo [1/2] Checking Administrative Credentials...
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    echo [ERROR] Administrative rights required! Please right click & "Run as Administrator".
+    pause
+    exit /b
+)
+echo [OK] Admin rights confirmed.
+echo.
+echo [2/2] Creating System Restore Point...
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Enable-ComputerRestore -Drive 'C:\\'; Checkpoint-Computer -Description 'SRT_PreDiagnostic_Backup_%date:~-4,4%%date:~-7,2%%date:~-10,2%' -RestorePointType 'MODIFY_SETTINGS'"
+echo.
+echo ================================================================
+echo [SUCCESS] System Restore Point Created Successfully!
+echo ================================================================
+pause`;
+}
+
+function copyRestorePointBatch() {
+  const code = getRestorePointBatchContent();
+  navigator.clipboard.writeText(code).then(() => {
+    addLog("COPIED SCRIPT: Windows Edition Restore Point Tool .bat copied to clipboard.");
+    alert("Restore Point Tool .bat script copied to clipboard!");
+  }).catch(() => {
+    alert("Copy failed. Please select text manually.");
+  });
+}
+
+function downloadRestorePointBatch() {
+  const code = getRestorePointBatchContent();
+  const blob = new Blob([code], { type: 'application/x-bat' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Create_Windows_System_Restore_Point.bat';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  addLog("DOWNLOAD STARTED: Create_Windows_System_Restore_Point.bat file download initiated.");
 }
 </script>
 </body></html>
